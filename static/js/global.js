@@ -8,13 +8,15 @@ $(document).ready(function(){
 
 	change_sub_menu();
 
+	activar_menu_selected();
+
 	if(window.location.hash === "#/"){
 		activa_home();
 	}else{
 		var item_sidebar = $(".sub_sidebar a[href='"+ window.location.hash +"']");
 
-		$("#"+item_sidebar.attr('class')+" a").addClass('active');
-		item_sidebar.parents("ul").addClass('block_imp');
+		$("#"+item_sidebar.attr('class')+" a").addClass('active active2');
+		item_sidebar.parents("ul").addClass('block_imp active');
 		item_sidebar.addClass('active');
 
 		$(".contenedor_sidebar").removeClass('none');
@@ -26,19 +28,6 @@ $(document).ready(function(){
 		activa_home();
 	});
 	
-	activar_menu_selected();
-	/*$(".cuerpo, .menu_superior").on("mouseover",function(){
-
-		$(".cuerpo").removeClass("col-lg-9 col-md-9 col-lg-offset-2 col-md-offset-3");
-		$(".cuerpo").addClass("col-lg-12 col-md-12");
-
-		$(".cuerpo_pagina").removeClass('col-lg-8 col-md-12 col-lg-offset-2');
-		$(".cuerpo_pagina").addClass('col-lg-6 col-md-9 col-lg-offset-3 col-md-offset-2');
-
-		$(".contenedor_sidebar").removeClass("block_imp");
-		$(".subir").removeClass("subir_active");
-	});*/
-
 });
 
 function activa_home(){
@@ -58,11 +47,7 @@ function activar_sub_menu(item_nav,sub_item_nav){
 		$(this).addClass("active");
 		$(sub_item_nav).addClass("block_imp");
 	});
-	$(item_nav).on("mouseout",function(){
-		$(this).removeClass("active");
-		//$(sub_item_nav).removeClass("block_imp");
-	});
-	
+
 	$(sub_item_nav+" a").on("click",function(){
 		$(".sub_sidebar ul,.sub_sidebar a").removeClass("active");
 		$("#sidebar_left a").removeClass("active2");
@@ -88,11 +73,18 @@ function change_sub_menu(){
 }
 
 function activar_menu_selected(){
-	$("#sidebar_hidden").mouseover(function(e) {
-		var longitud = $(".sub_sidebar ul");
-		if($(".sub_sidebar a.active").length){
-			$(".sub_sidebar ul").removeClass('block_imp');
+	$("#sidebar_hidden, .cuerpo, .menu_superior").mouseover(function(e) {
+		if(window.location.hash === "#/"){
+			activa_home();
+			$("#sidebar_left a.active").removeClass("active");
+			$(".contenedor_sidebar").removeClass('block_imp');
+		}else{
+			var longitud = $(".sub_sidebar ul");
+			if($(".sub_sidebar a.active").length){
+				$(".sub_sidebar ul").removeClass('block_imp');
+				$("#sidebar_left a.active").removeClass("active");
+			}
+			$(".sub_sidebar ul.active").addClass('block_imp');
 		}
-		$(".sub_sidebar ul.active").addClass('block_imp');
 	});
 }
