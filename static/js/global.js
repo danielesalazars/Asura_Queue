@@ -8,8 +8,6 @@ $(document).ready(function(){
 
 	change_sub_menu();
 
-	activar_menu_selected();
-
 	if(window.location.hash === "#/"){
 		activa_home();
 	}else{
@@ -28,6 +26,7 @@ $(document).ready(function(){
 		activa_home();
 	});
 	
+	activar_menu_selected();
 	/*$(".cuerpo, .menu_superior").on("mouseover",function(){
 
 		$(".cuerpo").removeClass("col-lg-9 col-md-9 col-lg-offset-2 col-md-offset-3");
@@ -58,6 +57,10 @@ function activar_sub_menu(item_nav,sub_item_nav){
 		$(".sub_sidebar ul").removeClass("block_imp");
 		$(this).addClass("active");
 		$(sub_item_nav).addClass("block_imp");
+	});
+	$(item_nav).on("mouseout",function(){
+		$(this).removeClass("active");
+		//$(sub_item_nav).removeClass("block_imp");
 	});
 	
 	$(sub_item_nav+" a").on("click",function(){
