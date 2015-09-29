@@ -36,7 +36,7 @@ a{
 	background-color: #f3f4f8;	
 }
 .color_rojo{
-	color: #ed7d7d;
+	color: #ed7d7b;
 }
 .color_verde{
 	color: #8CC63E;
@@ -348,6 +348,8 @@ table thead th.borde_azul{
 }
 table thead th{
 	border-bottom: 1px solid #e3e6eb;
+	color: #7fd0d9;		/*---AQUI SE CAMBIO--*/
+	font-size: 16px;	/*---AQUI SE CAMBIO--*/
 }
 
 table thead th{
