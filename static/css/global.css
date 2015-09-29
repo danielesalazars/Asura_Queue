@@ -365,3 +365,77 @@ table tbody td div{
 	border: 1px solid #e3e6eb;
 	padding-bottom: 3em;
 }
+
+/*-----*/
+table thead th div{
+	margin-left: 0px;
+}
+.f_14{
+	font-size: 14px;
+}
+.f_16{
+	font-size: 16px;
+}
+.color_gris_claro{
+	color: #a6b0ba;
+}
+.color_amarillo{
+	color: #ede664;
+}
+.color_azul{
+	color: #44aac3;
+}
+.color_celeste{
+	color: #7dcfda;
+}
+.color_melon{
+	color: #f1b67e;
+}
+.dbe4e9{
+	color: #dbe4e9;
+}
+.ml_10{
+	margin-left: 10px;
+}
+.ml_25{
+	margin-left: 25px;
+}
+.mt_30 {
+	margin-top: 30px;
+}
+.pt_1-5em{
+	padding-top: 1.5em;
+}
+.pt_4em{
+	padding-top: 4em;
+}
+.pb_1em{
+	padding-bottom: 1em;
+}
+.pl_70{
+	padding-left: 70px;
+}
+.pl_87{
+	padding-left: 87px;
+}
+.pl_2em{
+	padding-left: 2em;
+}
+table thead th.borde_gris{
+	padding: 0.5em 0em;
+}
+.combx{
+	background-color: #f2f3f8;
+	border: 1px solid #e3e6eb;
+}
+/*#clic:hover {
+background-color: #e3e6eb;
+color: #7fd0d9 !important;
+background: url("../img/calendar.png") no-repeat  right 5px center;
+}*/
+.ft_calendar input{
+	background-color: #f3f4f8;
+	border: 1px solid #e3e6eb;
+
+}
+
