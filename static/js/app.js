@@ -28,7 +28,7 @@ angular.module('Sistema')
 })
 .controller("atencionController",function($scope, $http, $routeParams){
 })
-.controller("mod_atencion5Controller",function($scope, $http, $routeParams){
+.controller("mod_atencion2Controller",function($scope, $http, $routeParams){
 })
 .controller("supervisionController",function($scope, $http, $routeParams){
 })

@@ -58,9 +58,9 @@ angular.module('Sistema',['ngRoute'])
 			controller:		"atencionController",
 			templateUrl:	"./templates/atencion/index.html"
 		})
-		.when("/atencion/mod_atencion5",{
+		.when("/atencion/mod_atencion2",{
 			controller:		"mod_atencion5Controller",
-			templateUrl:	"./templates/atencion/mod_atencion5.html"
+			templateUrl:	"./templates/atencion/mod_atencion2.html"
 		})
 		.when("/atencion/supervision",{
 			controller:		"supervisionController",

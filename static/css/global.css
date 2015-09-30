@@ -75,6 +75,20 @@ a{
 	color: #dbe4e9;
 }
 
+.fondo_rojo{
+	font-size: 45px;
+	background-color: #ed7d7d;
+	color: #fff;
+	border-radius: 45px;
+	padding: 5px 8px 5px 8px;
+}
+.fondo_celeste{
+	font-size: 45px;
+	background-color: #7fd0d9;
+	color: #fff;
+	border-radius: 45px;
+	padding: 5px 8px 5px 8px;
+}
 /* padding y margin */
 .padding_center{
 	padding-top: 55px;
@@ -477,3 +491,4 @@ table thead th.borde_gris{
 	position: absolute;
 	right: 0;
 }
+
