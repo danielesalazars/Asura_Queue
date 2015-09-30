@@ -44,6 +44,24 @@ a{
 .color_gris_oscuro{
 	color: #586979;
 }
+.color_gris_claro{
+	color: #a6b0ba;
+}
+.color_amarillo{
+	color: #ede664;
+}
+.color_azul{
+	color: #44aac3;
+}
+.color_celeste{
+	color: #7dcfda;
+}
+.color_melon{
+	color: #f1b67e;
+}
+.dbe4e9{
+	color: #dbe4e9;
+}
 /* padding y margin */
 .padding_center{
 	padding-top: 55px;
@@ -51,11 +69,20 @@ a{
 .pl_0{
 	padding-left: 0 !important;
 }
+.pl_2em{
+	padding-left: 2em;
+}
 .pl_10{
 	padding-left: 10px;
 }
 .pl_56{
 	padding-left: 56px;
+}
+.pl_70{
+	padding-left: 70px;
+}
+.pl_87{
+	padding-left: 87px;
 }
 .pr_0{
 	padding-right: 0 !important;
@@ -63,11 +90,20 @@ a{
 .pr_1em{
 	padding-right: 1em;
 }
+.pb_1em{
+	padding-bottom: 1em;
+}
 .pb_2em{
 	padding-bottom: 2em;
 }
 .pb_3em{
 	padding-bottom: 3em;
+}
+.pt_1-5em{
+	padding-top: 1.5em;
+}
+.pt_4em{
+	padding-top: 4em;
 }
 .mr_0{
 	margin-right: 0;
@@ -78,8 +114,17 @@ a{
 .ml_0{
 	margin-left: 0;
 }
+.ml_10{
+	margin-left: 10px;
+}
+.ml_25{
+	margin-left: 25px;
+}
 .mt_10 {
 	margin-top: 10px;
+}
+.mt_30 {
+	margin-top: 30px;
 }
 /* border */
 .bb_1{
@@ -89,6 +134,12 @@ a{
 	border-top:	1px solid #e3e6eb;
 }
 /* size font */
+.f_14{
+	font-size: 14px;
+}
+.f_16{
+	font-size: 16px;
+}
 .f_23{
 	font-size: 23px;
 }
@@ -334,11 +385,6 @@ a{
 		padding-left: 0;		
 	}
 }
-/*
-@media (max-width: 768px) {
-	.pl_65 {	padding: 0;		}
-}
-*/
 
 /* Tablas */
 table thead th.borde_azul{
@@ -348,94 +394,30 @@ table thead th.borde_azul{
 }
 table thead th{
 	border-bottom: 1px solid #e3e6eb;
-}
-
-table thead th{
 	padding: 0.5em 1em;
 }
-
+table thead th.borde_gris{
+	padding: 0.5em 0em;
+}
+table thead th div{
+	margin-left: 0px;
+}
 table tbody td div{
 	margin: 0 0 0 1em ;
 	padding: 0.5em 0;
 	border-bottom: 1px solid #e3e6eb;
 }
-
 .border_tabla{
 	border-radius: 4px;
 	border: 1px solid #e3e6eb;
 	padding-bottom: 3em;
 }
-
-/*-----*/
-table thead th div{
-	margin-left: 0px;
-}
-.f_14{
-	font-size: 14px;
-}
-.f_16{
-	font-size: 16px;
-}
-.color_gris_claro{
-	color: #a6b0ba;
-}
-.color_amarillo{
-	color: #ede664;
-}
-.color_azul{
-	color: #44aac3;
-}
-.color_celeste{
-	color: #7dcfda;
-}
-.color_melon{
-	color: #f1b67e;
-}
-.dbe4e9{
-	color: #dbe4e9;
-}
-.ml_10{
-	margin-left: 10px;
-}
-.ml_25{
-	margin-left: 25px;
-}
-.mt_30 {
-	margin-top: 30px;
-}
-.pt_1-5em{
-	padding-top: 1.5em;
-}
-.pt_4em{
-	padding-top: 4em;
-}
-.pb_1em{
-	padding-bottom: 1em;
-}
-.pl_70{
-	padding-left: 70px;
-}
-.pl_87{
-	padding-left: 87px;
-}
-.pl_2em{
-	padding-left: 2em;
-}
-table thead th.borde_gris{
-	padding: 0.5em 0em;
-}
 .combx{
 	background-color: #f2f3f8;
 	border: 1px solid #e3e6eb;
 }
-/*#clic:hover {
-background-color: #e3e6eb;
-color: #7fd0d9 !important;
-background: url("../img/calendar.png") no-repeat  right 5px center;
-}*/
 .ft_calendar input{
 	background-color: #f3f4f8;
 	border: 1px solid #e3e6eb;
 
 }
-
