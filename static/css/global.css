@@ -322,7 +322,7 @@ a{
   	line-height: 1.5em;
 }
 .subir_active{
-	margin-left: 215px;
+	padding-left: 215px;
 }
 /* PAGINA DE CONFIGURACION */
 .configuracion h2{
