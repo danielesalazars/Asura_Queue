@@ -77,5 +77,9 @@ angular.module('Sistema',['ngRoute'])
 		.when("/reportes",{
 			controller:		"reportesController",
 			templateUrl:	"./templates/reportes/index.html"
+		})
+		.when("/reportes/clt_atendidos",{
+			controller:		"clt_atendidosController",
+			templateUrl:	"./templates/reportes/clt_atendidos.html"
 		});
 });

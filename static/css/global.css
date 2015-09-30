@@ -393,6 +393,18 @@ table thead th div{
 .color_melon{
 	color: #f1b67e;
 }
+.color_morado{
+	color: #8f68d3;
+}
+.color_purpura{
+	color: #bf63ce;
+}
+.color_melon2{
+	color: #e07877;
+}
+.color_melon3{
+	color: #e1af6a;
+}
 .dbe4e9{
 	color: #dbe4e9;
 }
@@ -433,7 +445,7 @@ table thead th.borde_gris{
 /*#clic:hover {
 background-color: #e3e6eb;
 color: #7fd0d9 !important;
-background: url("../img/calendar.png") no-repeat  right 5px center;
+background: url("../img/calendar.png") no-repeat  right 5px center es TABLE;
 }*/
 .ft_calendar input{
 	background-color: #f3f4f8;

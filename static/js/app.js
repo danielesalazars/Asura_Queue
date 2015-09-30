@@ -38,3 +38,5 @@ angular.module('Sistema')
 })
 .controller("reportesController",function($scope, $http, $routeParams){
 });
+.controller("clt_atendidosController",function($scope, $http, $routeParams){
+});
