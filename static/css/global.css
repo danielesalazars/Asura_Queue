@@ -25,6 +25,9 @@ a{
 .h_47_LightC{
 	font-family: 'HelveticaNeue_47_LightCondensed';
 }
+.h_Cond{
+	font-family: 'HelveticaNeue_Condensed';
+}
 .h_Thin{
 	font-family: 'HelveticaNeue_Thin';
 }
@@ -80,7 +83,7 @@ a{
 	background-color: #ed7d7d;
 	color: #fff;
 	border-radius: 45px;
-	padding: 5px 8px 5px 8px;
+	padding: 4px 10px 6px 9px;
 }
 .fondo_celeste{
 	font-size: 45px;
@@ -88,6 +91,7 @@ a{
 	color: #fff;
 	border-radius: 45px;
 	padding: 5px 8px 5px 8px;
+	padding-left: 6px;
 }
 /* padding y margin */
 .padding_center{
@@ -95,6 +99,9 @@ a{
 }
 .pr_0{ 
 	padding-right: 0 !important;
+}
+.pr_6{ 
+	padding-right: 6px;
 }
 .pr_1em{
 	padding-right: 1em;
