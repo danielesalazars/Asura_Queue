@@ -2,6 +2,7 @@ angular.module('Sistema')
 
 .controller("homeController",function($scope, $http, $routeParams){
 })
+/* Configuración */
 .controller("configurarController",function($scope, $http, $routeParams){
 })
 .controller("rolesController",function($scope, $http, $routeParams){
@@ -14,6 +15,7 @@ angular.module('Sistema')
 })
 .controller("peticionesController",function($scope, $http, $routeParams){
 })
+/* Planificación */
 .controller("planificacionController",function($scope, $http, $routeParams){
 })
 .controller("localesController",function($scope, $http, $routeParams){
@@ -22,10 +24,12 @@ angular.module('Sistema')
 })
 .controller("logicaController",function($scope, $http, $routeParams){
 })
+/* Video */
 .controller("videoController",function($scope, $http, $routeParams){
 })
 .controller("playlistController",function($scope, $http, $routeParams){
 })
+/* Atención */
 .controller("atencionController",function($scope, $http, $routeParams){
 })
 .controller("mod_atencion2Controller",function($scope, $http, $routeParams){
@@ -36,7 +40,8 @@ angular.module('Sistema')
 })
 .controller("msj_alertaController",function($scope, $http, $routeParams){
 })
+/* Reporte */
 .controller("reportesController",function($scope, $http, $routeParams){
-});
+})
 .controller("clt_atendidosController",function($scope, $http, $routeParams){
 });

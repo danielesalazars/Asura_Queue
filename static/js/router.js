@@ -6,6 +6,7 @@ angular.module('Sistema',['ngRoute'])
 			controller:		"homeController",
 			templateUrl:	"./templates/home.html"
 		})
+		/* Configuración */
 		.when("/configurar",{
 			controller:		"configurarController",
 			templateUrl:	"./templates/configuracion/index.html"
@@ -30,6 +31,7 @@ angular.module('Sistema',['ngRoute'])
 			controller:		"peticionesController",
 			templateUrl:	"./templates/configuracion/peticiones.html"
 		})
+		/* Planificación */
 		.when("/planificacion",{
 			controller:		"planificacionController",
 			templateUrl:	"./templates/planificacion/index.html"
@@ -46,6 +48,7 @@ angular.module('Sistema',['ngRoute'])
 			controller:		"logicaController",
 			templateUrl:	"./templates/planificacion/logica.html"
 		})
+		/* Video */
 		.when("/video",{
 			controller:		"videoController",
 			templateUrl:	"./templates/video/index.html"
@@ -54,12 +57,13 @@ angular.module('Sistema',['ngRoute'])
 			controller:		"playlistController",
 			templateUrl:	"./templates/video/playlist.html"
 		})
+		/* Atención */
 		.when("/atencion",{
 			controller:		"atencionController",
 			templateUrl:	"./templates/atencion/index.html"
 		})
 		.when("/atencion/mod_atencion2",{
-			controller:		"mod_atencion5Controller",
+			controller:		"mod_atencion2Controller",
 			templateUrl:	"./templates/atencion/mod_atencion2.html"
 		})
 		.when("/atencion/supervision",{
@@ -74,6 +78,7 @@ angular.module('Sistema',['ngRoute'])
 			controller:		"msj_alertaController",
 			templateUrl:	"./templates/atencion/msj_alerta.html"
 		})
+		/* Reportes */
 		.when("/reportes",{
 			controller:		"reportesController",
 			templateUrl:	"./templates/reportes/index.html"
