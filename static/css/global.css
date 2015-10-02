@@ -434,27 +434,26 @@ a{
 	}
 }
 /* Tablas */
+table{
+	border-collapse: separate;
+}
+table td{
+	border-top: 0 !important;
+	border-bottom: 1px solid #e3e6eb;
+}
 table thead th.borde_azul{
-	border-bottom: 2px solid #7fd0d9;
-	color: #7fd0d9; 
-	font-size: 16px;
+	border-bottom: 2px solid #7fd0d9 !important;
 }
 table thead th{
-	border-bottom: 1px solid #e3e6eb;
+	border-bottom: 1px solid #e3e6eb !important;
 	color: #7fd0d9;
 	font-size: 16px;
-	padding: 0.5em 1em;
 }
-table thead th.borde_gris{
-	padding: 0.5em 0em;
+table tbody td:first-child{
+	border-left: 1.5em solid #fff;
 }
-table thead th div{
-	margin-left: 0px;
-}
-table tbody td div{
-	margin: 0 0 0 1em ;
-	padding: 0.5em 0;
-	border-bottom: 1px solid #e3e6eb;
+table tbody td:last-child{
+	border-right: 1.5em solid #fff;
 }
 .border_tabla{
 	border-radius: 4px;
