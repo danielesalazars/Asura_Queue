@@ -147,6 +147,9 @@ a{
 .pl_2em{
 	padding-left: 2em;
 }
+.pt_1{
+	padding-top: 1em;
+}
 .pt_1-5em{
 	padding-top: 1.5em;
 }
@@ -510,6 +513,9 @@ table tbody tr:last-child td{
 .tabla_usuarios tr:hover td{
 	color: #7fd0d9;
 	cursor: pointer;
+}
+.fila_naranja td{	
+	color: #f1b67e !important;
 }
 /*TextBox supervision.html*/
 .ft_calendar {
