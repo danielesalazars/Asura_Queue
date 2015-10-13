@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 	activar_menu_selected();
 
-	if(window.location.hash === "#/"){
+	if(window.location.hash === "#/" || window.location.hash == ""){
 		activa_home();
 	}else{
 		var item_sidebar = $(".sub_sidebar a[href='"+ window.location.hash +"']");

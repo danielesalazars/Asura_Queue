@@ -17,6 +17,14 @@ td{
 }
 a{
 	outline: none !important;
+	text-decoration: none !important;
+}
+/* float */
+.left{
+	float: left;
+}
+.right{
+	float: right;
 }
 /* fonts */
 .h_37_ThinC{
@@ -86,13 +94,44 @@ a{
 .dbe4e9{
 	color: #dbe4e9;
 }
+<<<<<<< HEAD
 
+=======
+.a4afb9{
+	color: #a4afb9
+}
+.c596B79{
+	color: #596B79;
+}
+.fondo_rojo{
+	font-size: 45px;
+	background-color: #ed7d7d;
+	color: #fff;
+	border-radius: 45px;
+	padding: 4px 10px 6px 9px;
+}
+.fondo_celeste{
+	font-size: 45px;
+	background-color: #7fd0d9;
+	color: #fff;
+	border-radius: 45px;
+	padding: 5px 8px 5px 8px;
+	padding-left: 6px;
+}
+/* bordes */
+.bb_0{
+	border-bottom: 0;
+}
+>>>>>>> configuracion
 /* padding y margin */
 .padding_center{
 	padding-top: 55px;
 }
 .pr_0{ 
 	padding-right: 0 !important;
+}
+.pr_5{
+	padding-right: 5px;
 }
 .pr_6{ 
 	padding-right: 6px;
@@ -109,11 +148,16 @@ a{
 .pl_10{
 	padding-left: 10px;
 }
+<<<<<<< HEAD
 .pl_12{
 	padding-left: 12px !important;
 }
 .pl_56{
 	padding-left: 56px;
+=======
+.pl_50{
+	padding-left: 50px;
+>>>>>>> configuracion
 }
 .pl_70{
 	padding-left: 70px;
@@ -127,14 +171,20 @@ a{
 .pt_1-5em{
 	padding-top: 1.5em;
 }
+.pt_2{
+	padding-top: 2px;
+}
+.pt_4{
+	padding-top: 4px;
+}
 .pt_2-5em{
 	padding-top: 2.5em;
 }
 .pt_4em{
 	padding-top: 4em;
 }
-.pb_1em{
-	padding-bottom: 1em;
+.pb_03em{
+	padding-bottom: 0.3em;
 }
 .pb_1-5em{
 	padding-bottom: 1.5em !important;
@@ -183,6 +233,9 @@ a{
 	border-top:	1px solid #e3e6eb;
 }
 /* size font */
+.f_13{
+	font-size: 13px;
+}
 .f_14{
 	font-size: 14px;
 }
@@ -237,7 +290,7 @@ a{
 /* Iconos superiores y laterales */
 .navbar i,
 .sidebar i{
-	font-size: 1.5em;
+	font-size: 16px;
 }
 /* block */
 .none{
@@ -257,7 +310,7 @@ a{
 	position: fixed;
 	left: 0;
 	right: 0;
-	padding-left: 56px;
+	padding-left: 50px;
 	z-index: 9;
 }
 .navbar-default{
@@ -269,7 +322,7 @@ a{
 }
 #logo{
 	background-color: #8dc63f;
-	height: 54px;
+	height: 53px;
 }
 #logo a{
 	padding-top:13px !important;
@@ -289,8 +342,7 @@ a{
 .usuario{
 	background-color: transparent;
 	color: #3fb8c6 !important;
-	font-size: 1.5em;
-	padding-top: 18px !important;
+	font-size: 1em;
 }
 .usuario:hover{
 	color: #40B8C8;
@@ -305,7 +357,7 @@ a{
 }
 .sidebar a{
 	display: block;
-	padding: 12px !important;
+	padding: 8px !important;
 }
 .sidebar ul li a:hover,
 .sidebar ul li a:focus,
@@ -326,6 +378,12 @@ a{
 	left: 0;
 	z-index: 1000;
 }
+#sidebar_left a{
+  	height: 46px;
+  	line-height: 46px;
+  	padding: 0 !important;
+  	width: 50px;
+}
 #sidebar_hidden{
 	position: relative;
 	height: 100%;
@@ -342,7 +400,7 @@ a{
 	padding-right: 0;
 	margin-right: 0;
 	height: 100%;
-	top: 56px;
+	top: 54px;
   	z-index: 9;
 }
 .sub_sidebar{
@@ -359,7 +417,10 @@ a{
 	color: #5A6A79;
 	font-family: 'HelveticaNeue_47_LightCondensed';
 	font-size: 1em;
-	padding: 11px 1em !important;
+	padding: 9px 1em !important;
+}
+.sub_sidebar i.color_rojo{
+	color: #ed7d7b !important;
 }
 .sub_sidebar ul li a:hover,
 .sub_sidebar ul li a:focus,
@@ -373,6 +434,8 @@ a{
 	padding-left: 15px !important;
 	font-family: 'HelveticaNeue_47_LightCondensed';
 	font-size: 1.2em;
+  	padding-top: 11px !important;
+  	padding-bottom: 10px !important;
 }
 .exclamacion{
 	font-size: 1em !important;
@@ -400,7 +463,7 @@ a{
     padding-left: 56px;
     position: absolute;
     bottom: 5.2em;
-    width: 215px;
+    width: 205px;
     height: 2.5em;
     background-color: #fff;
 }
@@ -447,41 +510,51 @@ a{
 	}
 }
 /* Tablas */
+th,
+td{
+	background: transparent !important;
+	vertical-align: middle !important;
+}
+table td{
+	border-top: 0 !important;
+	border-bottom: 1px solid #e3e6eb;
+}
 table thead th.borde_azul{
-	border-bottom: 2px solid #7fd0d9;
-	color: #7fd0d9; 
-	font-size: 16px;
+	border-bottom: 2px solid #7fd0d9 !important;
 }
 
 table tbody tr:last-child td{ 
 	border:0 !important; 
 }
 table thead th{
+<<<<<<< HEAD
 	font-family: 'HelveticaNeue_Condensed';
 	border-bottom: 1px solid #e3e6eb;
+=======
+	border-bottom: 1px solid #e3e6eb !important;
+>>>>>>> configuracion
 	color: #7fd0d9;
 	font-size: 16px;
-	padding: 0.5em 1em;
 }
-table thead th.borde_gris{
-	padding: 0.5em 0em;
-}
-table thead th div{
-	margin-left: 0px;
-}
-table tbody td div{
-	margin: 0 0 0 1em ;
-	padding: 0.5em 0;
-	border-bottom: 1px solid #e3e6eb;
+table tbody tr:last-child td{
+	border-bottom: 0;
 }
 .border_tabla{
 	border-radius: 4px;
 	border: 1px solid #e3e6eb;
-	padding-bottom: 3em;
+	overflow: hidden;
 }
 .combx{
 	background-color: #f2f3f8;
 	border: 1px solid #e3e6eb;
+}
+/* Tabla Roles y Tabla Usuarios */
+.tabla_roles tr.active td,
+.tabla_roles tr:hover td,
+.tabla_usuarios tr.active td,
+.tabla_usuarios tr:hover td{
+	color: #7fd0d9;
+	cursor: pointer;
 }
 /*TextBox supervision.html*/
 .ft_calendar {
