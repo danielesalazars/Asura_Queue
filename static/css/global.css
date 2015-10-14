@@ -7,7 +7,7 @@ i{
 	color: #8293a3;
 }
 h1{
-	padding-bottom: 1em;
+	padding-bottom: 0.5em;
 }
 p,
 th,
@@ -46,8 +46,17 @@ a{
 .f3f4f8{
 	background-color: #f3f4f8;	
 }
+.e5edf0{
+	background-color: #e5edf0;
+}
+.fadddd{
+	background-color: #fadddd!important	
+}
 .color_rojo{
 	color: #ed7d7b;
+}
+.color_rojo_off{
+	color: #fadddd !important;
 }
 .color_verde{
 	color: #8CC63E;
@@ -65,7 +74,7 @@ a{
 	color: #44aac3;
 }
 .color_celeste{
-	color: #7dcfda;
+	color: #7dcfda !important;
 }
 .color_melon{
 	color: #f1b67e;
@@ -85,6 +94,9 @@ a{
 .dbe4e9{
 	color: #dbe4e9;
 }
+<<<<<<< HEAD
+
+=======
 .a4afb9{
 	color: #a4afb9
 }
@@ -110,6 +122,7 @@ a{
 .bb_0{
 	border-bottom: 0;
 }
+>>>>>>> configuracion
 /* padding y margin */
 .padding_center{
 	padding-top: 55px;
@@ -135,8 +148,16 @@ a{
 .pl_10{
 	padding-left: 10px;
 }
+<<<<<<< HEAD
+.pl_12{
+	padding-left: 12px !important;
+}
+.pl_56{
+	padding-left: 56px;
+=======
 .pl_50{
 	padding-left: 50px;
+>>>>>>> configuracion
 }
 .pl_70{
 	padding-left: 70px;
@@ -168,14 +189,17 @@ a{
 .pb_03em{
 	padding-bottom: 0.3em;
 }
-.pb_1em{
-	padding-bottom: 1em;
+.pb_1-5em{
+	padding-bottom: 1.5em !important;
 }
 .pb_2em{
 	padding-bottom: 2em;
 }
 .pb_3em{
 	padding-bottom: 3em;
+}
+.pb_5em{
+	padding-bottom: 5em;
 }
 .mr_0{
 	margin-right: 0;
@@ -221,11 +245,23 @@ a{
 .f_16{
 	font-size: 16px;
 }
+.f_19{
+	font-size: 19px;
+}
 .f_23{
 	font-size: 23px;
 }
+.f_21{
+	font-size: 21px;
+}
+.f_90{
+	font-size: 90px;
+}
 .f_1em{
 	font-size: 1em;
+}
+.f_3em{
+	font-size: 3em;
 }
 .f_4em{
 	font-size: 4em;
@@ -489,8 +525,17 @@ table td{
 table thead th.borde_azul{
 	border-bottom: 2px solid #7fd0d9 !important;
 }
+
+table tbody tr:last-child td{ 
+	border:0 !important; 
+}
 table thead th{
+<<<<<<< HEAD
+	font-family: 'HelveticaNeue_Condensed';
+	border-bottom: 1px solid #e3e6eb;
+=======
 	border-bottom: 1px solid #e3e6eb !important;
+>>>>>>> configuracion
 	color: #7fd0d9;
 	font-size: 16px;
 }
@@ -520,6 +565,8 @@ table tbody tr:last-child td{
 /*TextBox supervision.html*/
 .ft_calendar {
 	position: relative;
+	font-family: 'HelveticaNeue_47_LightCondensed';
+	color: #586979;
 }
 .ft_calendar input{
 	background-color: #f3f4f8;
@@ -534,3 +581,52 @@ table tbody tr:last-child td{
 	background-color: #f3f4f8;
 	border: 1px solid #e3e6eb;
 }
+/*---*/
+.formato_cabecera span, 
+.formato_cabecera i {
+	float: left;
+	margin-right: 10px;	
+}
+.formato_cabecera span {
+	color: #ed7d7b;
+	font-family: 'HelveticaNeue_Condensed';
+	display: block;
+	line-height: 16px;
+	padding-top: 3px;
+}
+
+.formato_cabecera i {
+	font-size: 27px;
+}
+.fondo_rojo{
+	background-color: #ed7d7d;
+	color: #fff;
+	border-radius: 45px;
+	padding: 5px 9px 6px 9px;
+}
+.fondo_celeste{
+	background-color: #7fd0d9;
+	color: #fff;
+	border-radius: 45px;
+	padding: 6px 7px 5px 7px; 	
+}
+
+/*--Parte superior "Agregar <i>"--*/
+.etiqueta_add span, 
+.etiqueta_add i {
+	float: right;
+	padding-top: 16px;
+}
+.etiqueta_add span {
+	font-family: 'HelveticaNeue_37_ThinCondensed';
+	color: #586979;
+	padding-right: 0px;
+}
+
+.etiqueta_add i {
+	font-size: 23px;
+	margin-right: 10px;
+	padding-left: 5px;
+	margin-top: -2px; 
+}
+
