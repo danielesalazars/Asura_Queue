@@ -26,6 +26,10 @@ a{
 .right{
 	float: right;
 }
+/* width */ 
+.w_90_por{	
+	width: 90%;		
+}
 /* fonts */
 .h_37_ThinC{
 	font-family: 'HelveticaNeue_37_ThinCondensed';
@@ -165,17 +169,17 @@ a{
 .pl_2em{
 	padding-left: 2em;
 }
-.pt_1{
-	padding-top: 1em;
-}
-.pt_1-5em{
-	padding-top: 1.5em;
-}
 .pt_2{
 	padding-top: 2px;
 }
 .pt_4{
 	padding-top: 4px;
+}
+.pt_1{
+	padding-top: 1em;
+}
+.pt_1-5em{
+	padding-top: 1.5em;
 }
 .pt_2-5em{
 	padding-top: 2.5em;
@@ -213,6 +217,9 @@ a{
 .mr_5{
 	margin-right: 5px;
 }
+.mr_15{
+	margin-right: 15px;
+}
 .ml_10{
 	margin-left: 10px;
 }
@@ -246,6 +253,15 @@ a{
 }
 .f_23{
 	font-size: 23px;
+}
+.f_40{
+	font-size: 40px;
+}
+.f_47{
+	font-size: 47px;
+}
+.f_55{
+	font-size: 55px;
 }
 .f_90{
 	font-size: 90px;

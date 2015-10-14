@@ -19,6 +19,10 @@ angular.module('Sistema',['ngRoute'])
 			controller:		"usuariosController",
 			templateUrl:	"./templates/configuracion/usuarios.html"
 		})
+		.when("/configurar/logicakioscos",{
+			controller:		"logicakioscosController",
+			templateUrl:	"./templates/configuracion/logicakioscos.html"
+		})
 		.when("/configurar/estilos",{
 			controller:		"estilosController",
 			templateUrl:	"./templates/configuracion/estilos.html"

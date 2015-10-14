@@ -9,6 +9,8 @@ angular.module('Sistema')
 })
 .controller("usuariosController",function($scope, $http, $routeParams){
 })
+.controller("logicakioscosController",function($scope, $http, $routeParams){
+})
 .controller("estilosController",function($scope, $http, $routeParams){
 })
 .controller("seguridadController",function($scope, $http, $routeParams){
