@@ -94,9 +94,6 @@ a{
 .dbe4e9{
 	color: #dbe4e9;
 }
-<<<<<<< HEAD
-
-=======
 .a4afb9{
 	color: #a4afb9
 }
@@ -122,7 +119,12 @@ a{
 .bb_0{
 	border-bottom: 0;
 }
->>>>>>> configuracion
+.bb_1{
+	border-bottom: 1px solid #e3e6eb;
+}
+.bt_1{
+	border-top:	1px solid #e3e6eb;
+}
 /* padding y margin */
 .padding_center{
 	padding-top: 55px;
@@ -148,16 +150,11 @@ a{
 .pl_10{
 	padding-left: 10px;
 }
-<<<<<<< HEAD
 .pl_12{
 	padding-left: 12px !important;
 }
-.pl_56{
-	padding-left: 56px;
-=======
 .pl_50{
 	padding-left: 50px;
->>>>>>> configuracion
 }
 .pl_70{
 	padding-left: 70px;
@@ -188,6 +185,9 @@ a{
 }
 .pb_03em{
 	padding-bottom: 0.3em;
+}
+.pb_1em{
+	padding-bottom: 1em;
 }
 .pb_1-5em{
 	padding-bottom: 1.5em !important;
@@ -228,13 +228,6 @@ a{
 .mt_30 {
 	margin-top: 30px;
 }
-/* border */
-.bb_1{
-	border-bottom: 1px solid #e3e6eb;
-}
-.bt_1{
-	border-top:	1px solid #e3e6eb;
-}
 /* size font */
 .f_13{
 	font-size: 13px;
@@ -248,11 +241,11 @@ a{
 .f_19{
 	font-size: 19px;
 }
-.f_23{
-	font-size: 23px;
-}
 .f_21{
 	font-size: 21px;
+}
+.f_23{
+	font-size: 23px;
 }
 .f_90{
 	font-size: 90px;
@@ -530,12 +523,7 @@ table tbody tr:last-child td{
 	border:0 !important; 
 }
 table thead th{
-<<<<<<< HEAD
-	font-family: 'HelveticaNeue_Condensed';
-	border-bottom: 1px solid #e3e6eb;
-=======
 	border-bottom: 1px solid #e3e6eb !important;
->>>>>>> configuracion
 	color: #7fd0d9;
 	font-size: 16px;
 }
@@ -622,7 +610,6 @@ table tbody tr:last-child td{
 	color: #586979;
 	padding-right: 0px;
 }
-
 .etiqueta_add i {
 	font-size: 23px;
 	margin-right: 10px;
