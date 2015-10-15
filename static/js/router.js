@@ -44,6 +44,10 @@ angular.module('Sistema',['ngRoute'])
 			controller:		"localesController",
 			templateUrl:	"./templates/planificacion/locales.html"
 		})
+		.when("/planificacion/jerarquia",{
+			controller:		"jerarquiaController",
+			templateUrl:	"./templates/planificacion/jerarquia.html"
+		})
 		.when("/planificacion/gatencion",{
 			controller:		"gatencionController",
 			templateUrl:	"./templates/planificacion/gatencion.html"

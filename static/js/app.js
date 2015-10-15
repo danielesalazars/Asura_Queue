@@ -22,6 +22,8 @@ angular.module('Sistema')
 })
 .controller("localesController",function($scope, $http, $routeParams){
 })
+.controller("jerarquiaController",function($scope, $http, $routeParams){
+})
 .controller("gatencionController",function($scope, $http, $routeParams){
 })
 .controller("logicaController",function($scope, $http, $routeParams){
