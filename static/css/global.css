@@ -43,6 +43,9 @@ a{
 .h_Thin{
 	font-family: 'HelveticaNeue_Thin';
 }
+.cursiva{
+	font-style: italic;
+}
 /* fondos y colores */
 .ffffff{
 	background-color: #fff;	
@@ -80,19 +83,19 @@ a{
 .color_celeste{
 	color: #7dcfda !important;
 }
-.color_melon{
-	color: #f1b67e;
-}
 .color_morado{
 	color: #8f68d3;
 }
 .color_purpura{
 	color: #bf63ce;
 }
-.color_melon2{
+.color_melon{
+	color: #f1b67e;
+}
+.e07877{
 	color: #e07877;
 }
-.color_melon3{
+.e1af6a{
 	color: #e1af6a;
 }
 .dbe4e9{
@@ -222,6 +225,9 @@ a{
 }
 .ml_17{
 	margin-left: 17px;
+}
+.ml_20{
+	margin-left: 20px;
 }
 .ml_25{
 	margin-left: 25px;
@@ -642,10 +648,10 @@ table tbody tr:last-child td{
 	padding-right: 0px;
 }
 .etiqueta_add i {
-	font-size: 23px;
+	font-size: 21px;
 	margin-right: 10px;
 	padding-left: 5px;
-	margin-top: -2px; 
+	margin-top: 1px; 
 }
 /*-Logica Kiosco-*/
 .formato_logicak span,
@@ -671,3 +677,47 @@ table tbody tr:last-child td{
 .formato_l_h i {
 	line-height: 21px;
 }
+/*Pestañas*/
+.contenedor_pestana{
+    background: #fff;
+	font-family: "HelveticaNeue_Condensed";
+	float: top;
+    font-size: 16px;
+}
+#pestanas ul{
+    margin-left: -40px;
+    margin-top: -10px;
+}
+#pestanas li{
+    list-style-type: none;
+    float: left;
+    text-align: center;
+    margin: 0px -1px -1px -0px;
+    background: #e5edf0;
+    padding: 12px 15px 10px 20px; /*margenes de los tabs*/
+}
+#pestanas a:link{
+	color: #8293a3; /*gris*/
+}
+#contenidopestanas{
+    clear: both;  
+	/* padding-left: 20px;
+	padding: 20px 0px 20px 20px; largo de la tabla
+    border-top-left-radius: 0px;
+    width: 1025px;*/
+}
+.cont_pestana_l{
+	font-size: 15px;
+	color: #586979;
+	float:left;
+	margin-top: 15px;
+	padding-bottom: 2em;
+}
+.cont_pestana_r{
+	font-size: 15px;
+	color: #586979;
+	float:right;
+	margin-top: 15px;
+	padding-bottom: 2em;
+}
+
