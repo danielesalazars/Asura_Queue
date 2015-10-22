@@ -10,10 +10,12 @@ h1{
 	padding-bottom: 0.5em;
 }
 p,
-th,
 td{
 	font-family: 'HelveticaNeue_47_LightCondensed';
 	color: #687a8b;
+}
+th{
+	font-family: 'HelveticaNeue_Condensed';
 }
 a{
 	outline: none !important;
@@ -253,6 +255,9 @@ a{
 }
 .f_14{
 	font-size: 14px;
+}
+.f_15{
+	font-size: 15px;
 }
 .f_16{
 	font-size: 16px;
