@@ -24,6 +24,12 @@ a{
 .pointer{
 	cursor: pointer;
 }
+.overflow{
+	overflow: hidden;
+}
+.relative{
+	position: relative;
+}
 /* float */
 .left{
 	float: left;
@@ -40,6 +46,15 @@ a{
 }
 .w_37{
 	width: 37px;
+}
+.w_70{
+	width: 70px;
+}
+.w_75{
+	width: 75px;
+}
+.w_150{
+	width: 150px;
 }
 /* fonts */
 .h_37_ThinC{
@@ -69,6 +84,9 @@ a{
 }
 .fadddd{
 	background-color: #fadddd!important	
+}
+.color_F7D0D1{
+	color: #F7D0D1;
 }
 .color_blanco{
 	color:#fff !important;
@@ -170,6 +188,9 @@ a{
 }
 .pr_2em{
 	padding-right: 2em;
+}
+.pr_3em{
+	padding-right: 3em;
 }
 .pl_0{
 	padding-left: 0 !important;
@@ -281,6 +302,9 @@ a{
 }
 .m_0{
 	margin: 0;
+}
+.mlr_10{
+	padding: 0 10px;
 }
 /* size font */
 .f_13{
@@ -810,16 +834,25 @@ table tbody tr:last-child td{
 	position: absolute;
 	right: 15px;
 	z-index: 9;
+	padding-bottom: 2em;
 }
 .slide_flotante .border_tabla{
 	height: 100%;
 }
 .slide_usuarios,
 .slide_seguridad{
-	top: 25%;
+	top: 15%;
 }
 .slide_peticiones{
 	top: 30%;
+}
+.slide_p_atencion,
+.slide_p_logica,
+.slide_a_mod2{
+	top: 5%;
+}
+.slide_a_atencion5{
+	top: 17%;
 }
 /* formularios flotantes */
 .input_for{
@@ -844,7 +877,34 @@ table tbody tr:last-child td{
 .zoom_mapa{
 	position: absolute;
     right: 10px;
-    margin-top: -20px;
+    margin-top: -19px;
+}
+.cuadro_color{
+	background: red;
+    width: 25px;
+    height: 19px;
+    position: absolute;
+    right: 26px;
+    margin-top: -22px;
+}
+.list_criterios{
+	background-color: #f3f4f8;
+    border: 1px solid #e3e6eb;
+    padding: 5px;
+}
+.add_criterio{
+	position: absolute;
+    right: 23px;
+    margin-top: -19px;
+}
+.delete_criterio{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.item_criterio{
+	position: relative;
+	height: 25px;
 }
 /*
 .circle-search a{
