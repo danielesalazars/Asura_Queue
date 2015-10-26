@@ -5,7 +5,7 @@
 	<div class="col-lg-7 col-md-7">
 		<div class="contenedor_pestana border_tabla ml_17">
 				<div id="pestanas">
-					<ul id="lista">
+					<ul class="m_0 p_0" id="lista">
 						<li id="pestana1"><a href='javascript:cambiarPestanna(pestanas,pestana1);'>Clientes</a></li>
 						<li id="pestana2"><a href='javascript:cambiarPestanna(pestanas,pestana2);'>Jerarquías</a></li>
 						<li id="pestana3"><a href='javascript:cambiarPestanna(pestanas,pestana3);'>Importar datos</a></li>
@@ -13,17 +13,19 @@
 				</div>
 				<div id="contenidopestanas">
 					<div id="cpestana1">
-						<a class="cont_pestana_l ml_44" href="#">
-							<span class="h_47_LightC left pr_5 pt_2">Agregar cliente</span>
-							<i class="f_23 color_verde fa fa-plus-circle left"></i>
-						</a>
-						<a class="cont_pestana_r ml_44 mr_10" href="#">
-							<i class="f_23 color_verde fa fa-file-excel-o"></i>
-							<select name="jerarquia" class="combx right">
+						<div class="col-lg-12 colmd-12 pt_1">
+							<a class="cont_pestana_l" href="#">
+								<span class="h_47_LightC left pr_5 pt_2">Agregar cliente</span>
+								<i class="f_23 color_verde fa fa-plus-circle left"></i>
+							</a>
+							<span class="h_47_LightC pr_5 pt_2 pl_2em">Jerarquía</span>
+							<select name="jerarquia" class="combx">
 								<option value="todos">Todos</option>
 							</select> 
-							<span class="h_47_LightC right pr_5 pt_2 ml_44">Jerarquía</span>
-						</a>
+							<a class="cont_pestana_r mr_10" href="#">
+								<i class="f_23 color_verde fa fa-file-excel-o"></i>
+							</a>
+						</div>
 						<table class="table tabla_usuarios f_15">
 							<thead>
 								<tr>
@@ -196,6 +198,31 @@
 				</div>
 			</div>
 	</div>
-	<div class="col-lg-3 col-md-3">
+	<!-- 
+	<div class="slide_flotante slide_usuarios">
+		<div class="ffffff border_tabla ml_17 pt_5 pb_1em">
+			<div class="plr_15 text-right">
+				<i class="fa fa-times pointer"></i>
+			</div>
+			<div class="plr_15 h_Cond color_azul bb_1 pb_03em mt_0">Editar cliente / contacto</div>
+			<div class="plr_15 pt_1">
+				<label for="" class="h_47_LightC mb_0">Nombre de contacto</label><br>
+				<input class="h_47_LightC w_100_por input_for" type="text" placeholder="Guillermo Valdés">
+			</div>
+			<div class="plr_15 pt_1">	
+				<label for="" class="h_47_LightC mb_0">Jerarquía</label><br>
+				<select name="" id="" class="h_47_LightC w_100_por input_for">
+					<option>3 Seleccionados</option>
+				</select>
+			</div>
+			<div class="plr_15 pt_1">	
+				<label for="" class="h_47_LightC mb_0">Identificación</label><br>
+				<input class="h_47_LightC w_100_por input_for" type="text" placeholder="09547623">
+			</div>
+			<div class="text-center boton_guardar pt_1">
+				<i class="dbe4e9 f_90 fa fa-check-circle pointer"></i>
+			</div>
+		</div>
 	</div>
+	-->
 </div>

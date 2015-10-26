@@ -21,6 +21,9 @@ a{
 	outline: none !important;
 	text-decoration: none !important;
 }
+.pointer{
+	cursor: pointer;
+}
 /* float */
 .left{
 	float: left;
@@ -31,6 +34,12 @@ a{
 /* width */ 
 .w_100_por{	
 	width: 100%;		
+}
+.w_90_por{	
+	width: 90%;		
+}
+.w_37{
+	width: 37px;
 }
 /* fonts */
 .h_37_ThinC{
@@ -138,8 +147,14 @@ a{
 	border-top:	1px solid #e3e6eb;
 }
 /* padding y margin */
+.p_0{
+	padding: 0;
+}
 .padding_center{
 	padding-top: 55px;
+}
+.plr_15{
+	padding: 0 15px;
 }
 .pr_0{ 
 	padding-right: 0 !important;
@@ -152,6 +167,9 @@ a{
 }
 .pr_1em{
 	padding-right: 1em;
+}
+.pr_2em{
+	padding-right: 2em;
 }
 .pl_0{
 	padding-left: 0 !important;
@@ -189,6 +207,9 @@ a{
 .pt_1{
 	padding-top: 1em;
 }
+.pt_5{
+	padding-top: 5px;
+}
 .pt_1-5em{
 	padding-top: 1.5em;
 }
@@ -216,12 +237,6 @@ a{
 .pb_5em{
 	padding-bottom: 5em;
 }
-.mr_0{
-	margin-right: 0;
-}
-.mr_10{
-	margin-right: 10px;
-}
 .ml_0{
 	margin-left: 0;
 }
@@ -240,17 +255,32 @@ a{
 .ml_44{
 	margin-left: 44px;
 }
+.mr_0{
+	margin-right: 0;
+}
 .mr_5{
 	margin-right: 5px;
 }
+.mr_10{
+	margin-right: 10px;
+}
 .mr_15{
 	margin-right: 15px;
+}
+.mt_0{
+	margin-top: 0;
 }
 .mt_10 {
 	margin-top: 10px;
 }
 .mt_30 {
 	margin-top: 30px;
+}
+.mb_0{
+	margin-bottom: 0;
+}
+.m_0{
+	margin: 0;
 }
 /* size font */
 .f_13{
@@ -352,7 +382,7 @@ a{
 	left: 0;
 	right: 0;
 	padding-left: 50px;
-	z-index: 9;
+	z-index: 99;
 }
 .navbar-default{
 	margin: 0;
@@ -595,6 +625,13 @@ table tbody tr:last-child td{
 .fila_naranja td{	
 	color: #f1b67e !important;
 }
+.table_slide td{
+	border:0;
+	padding: 0 !important;
+}
+.table_slide tr:first-child td{
+	padding-top: 4px !important;
+}
 /*TextBox supervision.html*/
 .ft_calendar {
 	position: relative;
@@ -692,16 +729,15 @@ table tbody tr:last-child td{
 	float: top;
     font-size: 16px;
 }
-#pestanas ul{
-    margin-left: -40px;
-    margin-top: -10px;
-}
 #pestanas li{
     list-style-type: none;
     float: left;
     text-align: center;
     margin: 0px -1px -1px -0px;
     background: #e5edf0;
+}
+#pestanas li a{
+	display: block;
     padding: 12px 15px 10px 20px; /*margenes de los tabs*/
 }
 #pestanas a:link{
@@ -718,14 +754,12 @@ table tbody tr:last-child td{
 	font-size: 15px;
 	color: #586979;
 	float:left;
-	margin-top: 15px;
 	padding-bottom: 2em;
 }
 .cont_pestana_r{
 	font-size: 15px;
 	color: #586979;
 	float:right;
-	margin-top: 15px;
 	padding-bottom: 2em;
 }
 /*Pestaña Importa Datos*/
@@ -770,6 +804,47 @@ table tbody tr:last-child td{
 	text-align: center;
 	width: 78px;
 	height: 78px;
+}
+/* slide flotantes de la derecha */
+.slide_flotante{
+	position: absolute;
+	right: 15px;
+	z-index: 9;
+}
+.slide_flotante .border_tabla{
+	height: 100%;
+}
+.slide_usuarios,
+.slide_seguridad{
+	top: 25%;
+}
+.slide_peticiones{
+	top: 30%;
+}
+/* formularios flotantes */
+.input_for{
+	background-color: #f3f4f8;
+	border: 1px solid #e3e6eb;
+}
+.input_calendar{
+	position: relative;
+}
+.input_calendar input{
+	padding: 0 23px 0 10px;
+}
+.input_calendar i{
+	position: absolute;
+	right: 20px;
+	margin-top: 5px;
+}
+.boton_guardar{
+    bottom: 15px;
+    width: 100%;
+}
+.zoom_mapa{
+	position: absolute;
+    right: 10px;
+    margin-top: -20px;
 }
 /*
 .circle-search a{
