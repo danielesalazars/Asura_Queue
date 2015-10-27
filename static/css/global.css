@@ -326,7 +326,7 @@ a{
 	font-size: 21px;
 }
 .f_23{
-	font-size: 23px;
+	font-size: 23px !important;
 }
 .f_32{
 	font-size: 32px !important;
@@ -657,23 +657,23 @@ table tbody tr:last-child td{
 	padding-top: 4px !important;
 }
 /*TextBox supervision.html*/
-.ft_calendar {
+.rango_calendar{
 	position: relative;
 	font-family: 'HelveticaNeue_47_LightCondensed';
 	color: #586979;
+	padding-bottom: 20px;
+	padding-top: 20px;
 }
-.ft_calendar input{
+.rango_calendar input{
+	padding: 0 23px 0 10px;
 	background-color: #f3f4f8;
 	border: 1px solid #e3e6eb;
 	color: #586979;
 }
-.ft_calendar i{
+.rango_calendar i{
 	position: absolute;
-	right: 0;
-}
-.ft_calendar input{
-	background-color: #f3f4f8;
-	border: 1px solid #e3e6eb;
+	right: 5px;
+	margin-top: 5px;
 }
 /*-Icono Music-*/
 .formato_cabecera span, 
