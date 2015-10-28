@@ -11,8 +11,41 @@ angular.module('Sistema')
 })
 .controller("logicakioscosController",function($scope, $http, $routeParams){
 })
+
 .controller("estilosController",function($scope, $http, $routeParams){
+    console.log($routeParams);
+    if( $routeParams.estilo == "kioscos_generales" ||
+        $routeParams.estilo == "kioscos_textos" ||
+        $routeParams.estilo == "kioscos_botones" ||
+        $routeParams.estilo == "kioscos_menu" ){
+               
+        $scope.estilo = "./templates/configuracion/estilos/kioscos.html";
+
+    }
+    switch($routeParams.estilo){
+        case "consola":
+            $scope.estilo = "./templates/configuracion/estilos/consola.html";
+            break;
+        case "kioscos_generales":
+            $scope.img_estilos_kioscos = './static/img/img_generales.png';
+            $scope.estilos_kiosco = './templates/configuracion/estilos/kioscos/generales.html';
+            break;
+        case "kioscos_textos":
+            $scope.img_estilos_kioscos = './static/img/img_generales.png';
+            $scope.estilos_kiosco = './templates/configuracion/estilos/kioscos/textos.html';
+            break;
+        case "kioscos_botones":
+            $scope.img_estilos_kioscos = './static/img/img_generales.png';
+            $scope.estilos_kiosco = './templates/configuracion/estilos/kioscos/botones.html';
+            break;
+        case "kioscos_menu":
+            $scope.img_estilos_kioscos = './static/img/img_kiosco.png';
+            $scope.estilos_kiosco = './templates/configuracion/estilos/kioscos/menu.html';
+            break;
+    }
+
 })
+
 .controller("seguridadController",function($scope, $http, $routeParams){
 })
 .controller("peticionesController",function($scope, $http, $routeParams){

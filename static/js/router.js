@@ -23,10 +23,21 @@ angular.module('Sistema',['ngRoute'])
 			controller:		"logicakioscosController",
 			templateUrl:	"./templates/configuracion/logicakioscos.html"
 		})
+		/* ZONA DE ESTILOS */
 		.when("/configurar/estilos",{
 			controller:		"estilosController",
 			templateUrl:	"./templates/configuracion/estilos.html"
 		})
+			.when("/configurar/estilos/:estilo",{
+				controller:		"estilosController",
+				templateUrl:	"./templates/configuracion/estilos.html"
+			})
+				.when("/configurar/estilos/:estilo/:kiosco",{
+					//controller:		"estilos_kiosco_Controller",
+					templateUrl:	"./templates/configuracion/estilos.html"
+				})
+
+
 		.when("/configurar/seguridad",{
 			controller:		"seguridadController",
 			templateUrl:	"./templates/configuracion/seguridad.html"

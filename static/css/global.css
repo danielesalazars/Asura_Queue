@@ -30,6 +30,9 @@ a{
 .relative{
 	position: relative;
 }
+.absolute{
+	position: absolute;
+}
 /* float */
 .left{
 	float: left;
@@ -38,14 +41,23 @@ a{
 	float: right;
 }
 /* width */ 
-.w_100_por{	
-	width: 100%;		
-}
 .w_90_por{	
 	width: 90%;		
 }
+.w_100_por{	
+	width: 100%;		
+}
+.w_32{
+	width: 32px;
+}
 .w_37{
 	width: 37px;
+}
+.w_45{
+	width: 45px;
+}
+.w_55{
+	width: 55px;
 }
 .w_70{
 	width: 70px;
@@ -53,8 +65,29 @@ a{
 .w_75{
 	width: 75px;
 }
+.w_80{
+	width: 80px;
+}
+.w_90{
+	width: 90px;
+}
+.w_115{
+	width: 115px;
+}
+.w_120{
+	width: 120px;
+}
+.w_140{
+	width: 140px;
+}
 .w_150{
 	width: 150px;
+}
+.w_160{
+	width: 160px;
+}
+.w_225{
+	width: 225px;
 }
 /* fonts */
 .h_37_ThinC{
@@ -168,11 +201,17 @@ a{
 .p_0{
 	padding: 0;
 }
+.p_10{
+	padding: 10px;
+}
 .padding_center{
 	padding-top: 55px;
 }
 .plr_15{
 	padding: 0 15px;
+}
+.plr_3em{
+	padding: 0 3em;
 }
 .pr_0{ 
 	padding-right: 0 !important;
@@ -198,6 +237,12 @@ a{
 .pl_2em{
 	padding-left: 2em;
 }
+.pl_3em{
+	padding-left: 3em;
+}
+.pl_5{
+	padding-left: 10px;
+}
 .pl_10{
 	padding-left: 10px;
 }
@@ -213,9 +258,6 @@ a{
 .pl_87{
 	padding-left: 87px;
 }
-.pl_2em{
-	padding-left: 2em;
-}
 .pt_2{
 	padding-top: 2px;
 }
@@ -227,6 +269,9 @@ a{
 }
 .pt_1{
 	padding-top: 1em;
+}
+.pt_2{
+	padding-top: 2em;
 }
 .pt_5{
 	padding-top: 5px;
@@ -434,6 +479,9 @@ a{
   	padding-left: 10px;
   	padding-top: 3px;
 }
+.title_left{
+	float: left !important;
+}
 .usuario{
 	background-color: transparent;
 	color: #3fb8c6 !important;
@@ -629,6 +677,7 @@ table thead th{
 table tbody tr:last-child td{
 	border-bottom: 0;
 }
+.border_tabla_absolute,
 .border_tabla{
 	border-radius: 4px;
 	border: 1px solid #e3e6eb;
@@ -854,6 +903,14 @@ table tbody tr:last-child td{
 .slide_a_atencion5{
 	top: 17%;
 }
+.div_flotante_slide{
+	position: absolute;
+	width: 257px;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: 14%;
+}
 /* formularios flotantes */
 .input_for{
 	background-color: #f3f4f8;
@@ -884,8 +941,14 @@ table tbody tr:last-child td{
     width: 25px;
     height: 19px;
     position: absolute;
-    right: 26px;
+    right: 27px;
     margin-top: -22px;
+}
+.cuadro_color_r_3{
+	right: 3px;
+}
+.cuadro_color_r_38{
+	right: 38px;
 }
 .list_criterios{
 	background-color: #f3f4f8;
@@ -905,6 +968,23 @@ table tbody tr:last-child td{
 .item_criterio{
 	position: relative;
 	height: 25px;
+}
+/* tabs */
+.tabla_encabezado{
+	margin: 10px;
+}
+.tabla_encabezado td{
+	padding: 5px 0 !important;
+	text-align: center;
+}
+.tabs li{
+	list-style: none;
+	float: left;
+}
+.tabs_sin_a li,
+.tabs li a{
+	display: block;
+	padding: 10px;
 }
 /*
 .circle-search a{
