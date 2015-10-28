@@ -76,6 +76,18 @@ angular.module('Sistema')
 .controller("localesController",function($scope, $http, $routeParams){
 })
 .controller("jerarquiaController",function($scope, $http, $routeParams){
+    //$scope.hola = "hola mundo soy daniel";
+    $scope.planificacion_jerarquia ='./templates/planificacion/jerarquias/clientes.html';
+    
+    switch($routeParams.jerarquia){
+        case "jerarquias":
+            $scope.planificacion_jerarquia ='./templates/planificacion/jerarquias/jerarquias.html';
+            break;
+        case "importar":
+            $scope.planificacion_jerarquia ='./templates/planificacion/jerarquias/importar.html';
+            break;
+    }
+    console.log($routeParams);
 })
 .controller("gatencionController",function($scope, $http, $routeParams){
 })
@@ -103,7 +115,7 @@ angular.module('Sistema')
 .controller("clt_atendidosController",function($scope, $http, $routeParams){
 });
 
-/* Llamando pestañas en jerarquia.html */
+/* Llamando pestañas en jerarquia.html 
 function cambiarPestanna(pestannas,pestanna) {
     // Obtiene los elementos con los identificadores pasados.
     pestanna = document.getElementById(pestanna.id);
@@ -134,3 +146,4 @@ function cambiarPestanna(pestannas,pestanna) {
     });
 
 }
+*/

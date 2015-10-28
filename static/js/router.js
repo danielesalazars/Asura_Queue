@@ -36,8 +36,7 @@ angular.module('Sistema',['ngRoute'])
 					//controller:		"estilos_kiosco_Controller",
 					templateUrl:	"./templates/configuracion/estilos.html"
 				})
-
-
+		/***********************/
 		.when("/configurar/seguridad",{
 			controller:		"seguridadController",
 			templateUrl:	"./templates/configuracion/seguridad.html"
@@ -59,6 +58,11 @@ angular.module('Sistema',['ngRoute'])
 			controller:		"jerarquiaController",
 			templateUrl:	"./templates/planificacion/jerarquia.html"
 		})
+			.when("/planificacion/jerarquia/:jerarquia",{
+				controller:		"jerarquiaController",
+				templateUrl:	"./templates/planificacion/jerarquia.html"
+			})
+		/***********************/
 		.when("/planificacion/gatencion",{
 			controller:		"gatencionController",
 			templateUrl:	"./templates/planificacion/gatencion.html"
