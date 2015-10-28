@@ -13,34 +13,54 @@ angular.module('Sistema')
 })
 
 .controller("estilosController",function($scope, $http, $routeParams){
-    console.log($routeParams);
-    if( $routeParams.estilo == "kioscos_generales" ||
-        $routeParams.estilo == "kioscos_textos" ||
-        $routeParams.estilo == "kioscos_botones" ||
-        $routeParams.estilo == "kioscos_menu" ){
+    if( $routeParams.estilo == "kioscos_generales"  ||
+        $routeParams.estilo == "kioscos_textos"     ||
+        $routeParams.estilo == "kioscos_botones"    ||
+        $routeParams.estilo == "kioscos_menu"        ){
                
         $scope.estilo = "./templates/configuracion/estilos/kioscos.html";
 
     }
+    if( $routeParams.estilo == "videos_generales"   ||
+        $routeParams.estilo == "videos_colores"     ){
+               
+        $scope.estilo = "./templates/configuracion/estilos/videos.html";
+
+    }
+
     switch($routeParams.estilo){
         case "consola":
             $scope.estilo = "./templates/configuracion/estilos/consola.html";
             break;
+        /* KIOSCOS */
         case "kioscos_generales":
-            $scope.img_estilos_kioscos = './static/img/img_generales.png';
-            $scope.estilos_kiosco = './templates/configuracion/estilos/kioscos/generales.html';
+            $scope.img_estilos_kioscos  = './static/img/img_generales.png';
+            $scope.estilos_kiosco       = './templates/configuracion/estilos/kioscos/generales.html';
             break;
         case "kioscos_textos":
-            $scope.img_estilos_kioscos = './static/img/img_generales.png';
-            $scope.estilos_kiosco = './templates/configuracion/estilos/kioscos/textos.html';
+            $scope.img_estilos_kioscos  = './static/img/img_generales.png';
+            $scope.estilos_kiosco       = './templates/configuracion/estilos/kioscos/textos.html';
             break;
         case "kioscos_botones":
-            $scope.img_estilos_kioscos = './static/img/img_generales.png';
-            $scope.estilos_kiosco = './templates/configuracion/estilos/kioscos/botones.html';
+            $scope.img_estilos_kioscos  = './static/img/img_generales.png';
+            $scope.estilos_kiosco       = './templates/configuracion/estilos/kioscos/botones.html';
             break;
         case "kioscos_menu":
-            $scope.img_estilos_kioscos = './static/img/img_kiosco.png';
-            $scope.estilos_kiosco = './templates/configuracion/estilos/kioscos/menu.html';
+            $scope.img_estilos_kioscos  = './static/img/img_kiosco.png';
+            $scope.estilos_kiosco       = './templates/configuracion/estilos/kioscos/menu.html';
+            break;
+        /* VIDEOS */
+        case "videos_generales":
+            $scope.img_estilos_kioscos  = './static/img/img_presentacion.png';
+            $scope.estilos_video       = './templates/configuracion/estilos/videos/generales.html';
+            break;
+        case "videos_colores":
+            $scope.img_estilos_kioscos  = './static/img/img_presentacion.png';
+            $scope.estilos_video       = './templates/configuracion/estilos/videos/colores.html';
+            break;
+        /* MOVILES */
+        case "moviles":
+            $scope.estilo = "./templates/configuracion/estilos/moviles.html";
             break;
     }
 

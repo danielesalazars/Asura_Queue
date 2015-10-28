@@ -86,6 +86,9 @@ a{
 .w_160{
 	width: 160px;
 }
+.w_180{
+	width: 180px;
+}
 .w_225{
 	width: 225px;
 }
@@ -985,6 +988,20 @@ table tbody tr:last-child td{
 .tabs li a{
 	display: block;
 	padding: 10px;
+}
+/* configuracion -> videos */
+.texto_slogan{
+	position: absolute;
+    margin-top: -12px;
+}
+.tabla_videos th,
+.tabla_videos td{
+	border: 0
+}
+/* configuracion -> movil */
+.ico_movil{
+	border: 1px solid #e3e6eb;
+	padding: 2px;
 }
 /*
 .circle-search a{
