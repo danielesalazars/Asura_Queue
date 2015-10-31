@@ -136,8 +136,14 @@ a{
 .color_verde{
 	color: #8CC63E;
 }
+.color_687a8b{
+	color: #687a8b !important;
+}
 .color_gris_oscuro{
 	color: #586979;
+}
+.color_a4afb9{
+	color: #a4afb9;
 }
 .color_gris_claro{
 	color: #a6b0ba;
@@ -150,6 +156,9 @@ a{
 }
 .color_celeste{
 	color: #7dcfda !important;
+}
+.color_7fd0d9{
+	color: #7fd0d9 !important;
 }
 .color_morado{
 	color: #8f68d3;
@@ -376,8 +385,14 @@ a{
 .f_23{
 	font-size: 23px !important;
 }
+.f_29{
+	font-size: 29px !important;
+}
 .f_32{
 	font-size: 32px !important;
+}
+.f_33{
+	font-size: 33px !important;
 }
 .f_40{
 	font-size: 40px;
@@ -411,6 +426,9 @@ a{
 }
 .f_5em{
 	font-size: 5em;
+}
+.lh_30{
+line-height: 30px;
 }
 /* circle */
 .circle{
