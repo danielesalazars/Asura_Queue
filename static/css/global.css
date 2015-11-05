@@ -15,7 +15,8 @@ td{
 	color: #687a8b;
 }
 th{
-	font-family: 'HelveticaNeue_Condensed';
+	font-family: 'HelveticaNeue_57_Condensed';
+	font-weight: 100;
 }
 a{
 	outline: none !important;
@@ -100,13 +101,19 @@ a{
 	font-family: 'HelveticaNeue_47_LightCondensed';
 }
 .h_Cond{
-	font-family: 'HelveticaNeue_Condensed' !important;
+	font-family: 'HelveticaNeue_57_Condensed' !important;
 }
 .h_Thin{
 	font-family: 'HelveticaNeue_Thin';
 }
+.h_Roman{
+	font-family: 'HelveticaNeue_Roman';
+}
 .cursiva{
 	font-style: italic;
+}
+.f_weight100 {
+	font-weight: 100;
 }
 /* fondos y colores */
 .ffffff{
@@ -297,6 +304,9 @@ a{
 .pt_4em{
 	padding-top: 4em;
 }
+.pb_10{
+	padding-bottom: 10px;
+}
 .pb_03em{
 	padding-bottom: 0.3em;
 }
@@ -317,6 +327,9 @@ a{
 }
 .ml_0{
 	margin-left: 0;
+}
+.ml_-6{
+	margin-left: -6px;
 }
 .ml_10{
 	margin-left: 10px;
@@ -430,6 +443,9 @@ a{
 .lh_30{
 line-height: 30px;
 }
+.line_height25 td{
+line-height: 25px !important;
+}
 /* circle */
 .circle{
 	border-radius: 50%;
@@ -496,7 +512,7 @@ line-height: 30px;
 	color: #596a7a;
 	display: block;
   	float: right;
-	font-size: 1.5em;
+	font-size: 21px;
   	padding-left: 10px;
   	padding-top: 3px;
 }
@@ -506,7 +522,7 @@ line-height: 30px;
 .usuario{
 	background-color: transparent;
 	color: #3fb8c6 !important;
-	font-size: 1em;
+	font-size: 15px;
 }
 .usuario:hover{
 	color: #40B8C8;
@@ -753,7 +769,7 @@ table tbody tr:last-child td{
 }
 .formato_cabecera span {
 	color: #ed7d7b;
-	font-family: 'HelveticaNeue_Condensed';
+	font-family: 'HelveticaNeue_57_Condensed';
 	display: block;
 	line-height: 16px;
 	padding-top: 3px;
@@ -819,7 +835,7 @@ table tbody tr:last-child td{
 /*Pestañas*/
 .contenedor_pestana{
     background: #fff;
-	font-family: "HelveticaNeue_Condensed";
+	font-family: "HelveticaNeue_57_Condensed";
 	float: top;
     font-size: 16px;
 }
