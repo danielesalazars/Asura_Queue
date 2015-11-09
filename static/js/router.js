@@ -1,14 +1,12 @@
-angular.module('Sistema',['ngRoute'])
+angular.module('AsuraQueue',['ngRoute','ngResource'])
 
-.config(function($routeProvider){
+.config(["$routeProvider",function($routeProvider){
 	$routeProvider
 		.when("/",{
-			controller:		"homeController",
 			templateUrl:	"./templates/home.html"
 		})
 		/* Configuración */
 		.when("/configurar",{
-			controller:		"configurarController",
 			templateUrl:	"./templates/configuracion/index.html"
 		})
 		.when("/configurar/roles",{
@@ -47,7 +45,6 @@ angular.module('Sistema',['ngRoute'])
 		})
 		/* Planificación */
 		.when("/planificacion",{
-			controller:		"planificacionController",
 			templateUrl:	"./templates/planificacion/index.html"
 		})
 		.when("/planificacion/locales",{
@@ -73,7 +70,6 @@ angular.module('Sistema',['ngRoute'])
 		})
 		/* Video */
 		.when("/video",{
-			controller:		"videoController",
 			templateUrl:	"./templates/video/index.html"
 		})
 		.when("/video/playlist",{
@@ -82,7 +78,6 @@ angular.module('Sistema',['ngRoute'])
 		})
 		/* Atención */
 		.when("/atencion",{
-			controller:		"atencionController",
 			templateUrl:	"./templates/atencion/index.html"
 		})
 		.when("/atencion/mod_atencion2",{
@@ -103,11 +98,10 @@ angular.module('Sistema',['ngRoute'])
 		})
 		/* Reportes */
 		.when("/reportes",{
-			controller:		"reportesController",
 			templateUrl:	"./templates/reportes/index.html"
 		})
 		.when("/reportes/clt_atendidos",{
 			controller:		"clt_atendidosController",
 			templateUrl:	"./templates/reportes/clt_atendidos.html"
 		});
-});
+}]);

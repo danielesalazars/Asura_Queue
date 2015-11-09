@@ -1,0 +1,56 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/bin/npm', 'install', 'angular-ui-bootstrap' ]
+2 info using npm@3.3.0
+3 info using node@v0.10.36
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData angular-ui-bootstrap
+8 silly fetchNamedPackageData angular-ui-bootstrap
+9 silly mapToRegistry name angular-ui-bootstrap
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/angular-ui-bootstrap
+13 verbose request uri https://registry.npmjs.org/angular-ui-bootstrap
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 15:27:00
+16 verbose request id e03c9a857febb4ab
+17 http request GET https://registry.npmjs.org/angular-ui-bootstrap
+18 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
+19 info attempt registry request try #2 at 15:27:10
+20 http request GET https://registry.npmjs.org/angular-ui-bootstrap
+21 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
+22 info attempt registry request try #3 at 15:28:10
+23 http request GET https://registry.npmjs.org/angular-ui-bootstrap
+24 silly fetchPackageMetaData Error: tunneling socket could not be established, cause=Parse Error
+24 silly fetchPackageMetaData     at ClientRequest.onError (/usr/lib/node_modules/npm/node_modules/tunnel-agent/index.js:174:17)
+24 silly fetchPackageMetaData     at ClientRequest.g (events.js:180:16)
+24 silly fetchPackageMetaData     at ClientRequest.emit (events.js:95:17)
+24 silly fetchPackageMetaData     at Socket.socketOnData (http.js:1593:9)
+24 silly fetchPackageMetaData     at TCP.onread (net.js:528:27)
+24 silly fetchPackageMetaData  error for angular-ui-bootstrap { [Error: tunneling socket could not be established, cause=Parse Error] code: 'ECONNRESET' }
+25 silly rollbackFailedOptional Starting
+26 silly rollbackFailedOptional Finishing
+27 silly runTopLevelLifecycles Starting
+28 silly runTopLevelLifecycles Finishing
+29 silly install printInstalled
+30 verbose stack Error: tunneling socket could not be established, cause=Parse Error
+30 verbose stack     at ClientRequest.onError (/usr/lib/node_modules/npm/node_modules/tunnel-agent/index.js:174:17)
+30 verbose stack     at ClientRequest.g (events.js:180:16)
+30 verbose stack     at ClientRequest.emit (events.js:95:17)
+30 verbose stack     at Socket.socketOnData (http.js:1593:9)
+30 verbose stack     at TCP.onread (net.js:528:27)
+31 verbose cwd /var/www/html/proyecto/Asura_Queue
+32 error Linux 3.10.0-229.14.1.el7.x86_64
+33 error argv "node" "/usr/bin/npm" "install" "angular-ui-bootstrap"
+34 error node v0.10.36
+35 error npm  v3.3.0
+36 error code ECONNRESET
+37 error network tunneling socket could not be established, cause=Parse Error
+37 error network This is most likely not a problem with npm itself
+37 error network and is related to network connectivity.
+37 error network In most cases you are behind a proxy or have bad network settings.
+37 error network
+37 error network If you are behind a proxy, please make sure that the
+37 error network 'proxy' config is set properly.  See: 'npm help config'
+38 verbose exit [ 1, true ]
