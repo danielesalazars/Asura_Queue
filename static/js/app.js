@@ -1,12 +1,12 @@
 angular.module('AsuraQueue')
 
 .controller('AsuraController',['$scope','$resource',function($s, $r){
-    //Get = $r('http://api.asura.piensamasalla.com/roles/cuenta/1');
-    //Get.query();
+    Get_roles = $r('http://api.asura.piensamasalla.com/roles/cuenta/1');
+    $s.roles = Get_roles.query();
 }])
 /* Configuración */
 .controller("rolesController",['$scope','$resource',function($s, $r){
-    console.log($s.$parent);
+    console.log($s.$parent.roles);
 }])
 .controller("usuariosController",function($scope, $http, $routeParams){
 })
