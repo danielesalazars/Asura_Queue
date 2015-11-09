@@ -22,6 +22,10 @@ a{
 	outline: none !important;
 	text-decoration: none !important;
 }
+.nav>li>a:focus, 
+.nav>li>a:hover{
+	background-color: transparent;
+}
 .pointer{
 	cursor: pointer;
 }
@@ -540,13 +544,11 @@ line-height: 25px !important;
 	padding: 8px !important;
 }
 .sidebar ul li a:hover,
-.sidebar ul li a:focus,
 .sidebar ul li a.active,
 .sidebar ul li a.active2{
 	background-color: #596A7A;
 }
 .sidebar ul li a:hover i,
-.sidebar ul li a:focus i,
 .sidebar ul li a.active i,
 .sidebar ul li a.active2 i{
 	color: #fff;

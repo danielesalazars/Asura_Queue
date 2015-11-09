@@ -25,6 +25,7 @@ $(document).ready(function(){
 
 	$("#logo a").click(function(){
 		$(".contenedor_sidebar").removeClass('block_imp');
+		$("#sidebar_left a").removeClass('active2');
 		$("a").removeClass("active");
 		activa_home();
 	});
@@ -43,12 +44,15 @@ function activa_home(){
 function activar_sub_menu(item_nav,sub_item_nav){
 
 	$(item_nav).on("mouseover",function(){
-		$("#sidebar_left ul a").removeClass("active");
+		//$("#sidebar_left ul a").removeClass("active");
 		$(".sub_sidebar ul").removeClass("block_imp");
-		$(this).addClass("active");
+		//$(this).addClass("active");
 		$(sub_item_nav).addClass("block_imp");
 	});
-
+	$(item_nav).on("click",function(){
+		$("#sidebar_left a").removeClass("active2");
+		$(item_nav).addClass("active2");
+	});
 	$(sub_item_nav+" a").on("click",function(){
 		$(".sub_sidebar ul,.sub_sidebar a").removeClass("active");
 		$("#sidebar_left a").removeClass("active2");
