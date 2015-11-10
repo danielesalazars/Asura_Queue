@@ -3,6 +3,7 @@ angular.module('AsuraQueue',['ngRoute','ngResource'])
 .config(["$routeProvider",function($routeProvider){
 	$routeProvider
 		.when("/",{
+			controller:		"homeController",
 			templateUrl:	"./templates/home.html"
 		})
 		/* Configuración */
@@ -103,5 +104,6 @@ angular.module('AsuraQueue',['ngRoute','ngResource'])
 		.when("/reportes/clt_atendidos",{
 			controller:		"clt_atendidosController",
 			templateUrl:	"./templates/reportes/clt_atendidos.html"
-		});
+		})
+		.otherwise({redirectTo: '/'});
 }]);

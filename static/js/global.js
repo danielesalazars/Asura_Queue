@@ -50,8 +50,11 @@ function activar_sub_menu(item_nav,sub_item_nav){
 		$(sub_item_nav).addClass("block_imp");
 	});
 	$(item_nav).on("click",function(){
-		$("#sidebar_left a").removeClass("active2");
+		$("#sidebar_left a").removeClass("active2 active");
+		$(".sub_sidebar ul").removeClass('active');
 		$(item_nav).addClass("active2");
+		$(".sub_sidebar a[href='" + $(item_nav).attr('href')+ "']").addClass('active');
+		$(".sub_sidebar a[href='" + $(item_nav).attr('href')+ "']").parents('ul').addClass('active');
 	});
 	$(sub_item_nav+" a").on("click",function(){
 		$(".sub_sidebar ul,.sub_sidebar a").removeClass("active");
@@ -94,7 +97,7 @@ function activar_menu_selected(){
 			var longitud = $(".sub_sidebar ul");
 			if($(".sub_sidebar a.active").length){
 				$(".sub_sidebar ul").removeClass('block_imp');
-				$("#sidebar_left a.active").removeClass("active");
+				//$("#sidebar_left a.active").removeClass("active");
 			}
 			$(".sub_sidebar ul.active").addClass('block_imp');
 		}
