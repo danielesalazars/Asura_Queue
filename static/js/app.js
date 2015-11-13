@@ -16,7 +16,7 @@ angular.module('AsuraQueue')
         elem_cuerpo.removeClass("col-lg-12 col-md-12");
         elem_cuerpo_pagina.removeClass('col-lg-7 col-md-9 col-lg-offset-3 col-md-offset-3 col-md-offset-2');
         elem_sidebar_left.find('a').removeClass('active2');
-        elem_sidebar.find('a').removeClass('active');        
+        elem_sidebar.find('a').removeClass('active');
         elem_sidebar.find('ul').removeClass('active block_imp');
 
         elem_conte.addClass("block_imp");
@@ -31,7 +31,19 @@ angular.module('AsuraQueue')
 
 /* Configuración */
 .controller("rolesController",['$scope','$resource',function($s, $r){
-    console.log($s.$parent.roles);
+    //console.log($s.$parent.roles);
+
+    /* ANIMACION ADD
+    add_mostrar         = angular.element(".mostrar_flotante");
+    slide_flotante      = angular.element(".slide_flotante");
+    close               = angular.element(".close");
+    add_mostrar.click(function(e){
+        slide_flotante.removeClass('none');
+    });
+    close.click(function(e){
+        slide_flotante.addClass('none');
+    }); */
+
 }])
 .controller("usuariosController",function($scope, $http, $routeParams){
 })
@@ -42,52 +54,52 @@ angular.module('AsuraQueue')
         $routeParams.estilo == "kioscos_textos"     ||
         $routeParams.estilo == "kioscos_botones"    ||
         $routeParams.estilo == "kioscos_menu"        ){
-               
+
         $scope.estilo = "./templates/configuracion/estilos/kioscos.html";
 
-    }
-    if( $routeParams.estilo == "videos_generales"   ||
-        $routeParams.estilo == "videos_colores"     ){
-               
-        $scope.estilo = "./templates/configuracion/estilos/videos.html";
+}
+if( $routeParams.estilo == "videos_generales"   ||
+    $routeParams.estilo == "videos_colores"     ){
 
-    }
+    $scope.estilo = "./templates/configuracion/estilos/videos.html";
 
-    switch($routeParams.estilo){
-        case "consola":
-            $scope.estilo = "./templates/configuracion/estilos/consola.html";
-            break;
-        /* KIOSCOS */
-        case "kioscos_generales":
-            $scope.img_estilos_kioscos  = './static/img/img_generales.png';
-            $scope.estilos_kiosco       = './templates/configuracion/estilos/kioscos/generales.html';
-            break;
-        case "kioscos_textos":
-            $scope.img_estilos_kioscos  = './static/img/img_generales.png';
-            $scope.estilos_kiosco       = './templates/configuracion/estilos/kioscos/textos.html';
-            break;
-        case "kioscos_botones":
-            $scope.img_estilos_kioscos  = './static/img/img_generales.png';
-            $scope.estilos_kiosco       = './templates/configuracion/estilos/kioscos/botones.html';
-            break;
-        case "kioscos_menu":
-            $scope.img_estilos_kioscos  = './static/img/img_kiosco.png';
-            $scope.estilos_kiosco       = './templates/configuracion/estilos/kioscos/menu.html';
-            break;
-        /* VIDEOS */
-        case "videos_generales":
-            $scope.img_estilos_kioscos  = './static/img/img_presentacion.png';
-            $scope.estilos_video       = './templates/configuracion/estilos/videos/generales.html';
-            break;
-        case "videos_colores":
-            $scope.img_estilos_kioscos  = './static/img/img_presentacion.png';
-            $scope.estilos_video       = './templates/configuracion/estilos/videos/colores.html';
-            break;
-        /* MOVILES */
-        case "moviles":
-            $scope.estilo = "./templates/configuracion/estilos/moviles.html";
-            break;
-    }
+}
+
+switch($routeParams.estilo){
+    case "consola":
+    $scope.estilo = "./templates/configuracion/estilos/consola.html";
+    break;
+    /* KIOSCOS */
+    case "kioscos_generales":
+    $scope.img_estilos_kioscos  = './static/img/img_generales.png';
+    $scope.estilos_kiosco       = './templates/configuracion/estilos/kioscos/generales.html';
+    break;
+    case "kioscos_textos":
+    $scope.img_estilos_kioscos  = './static/img/img_generales.png';
+    $scope.estilos_kiosco       = './templates/configuracion/estilos/kioscos/textos.html';
+    break;
+    case "kioscos_botones":
+    $scope.img_estilos_kioscos  = './static/img/img_generales.png';
+    $scope.estilos_kiosco       = './templates/configuracion/estilos/kioscos/botones.html';
+    break;
+    case "kioscos_menu":
+    $scope.img_estilos_kioscos  = './static/img/img_kiosco.png';
+    $scope.estilos_kiosco       = './templates/configuracion/estilos/kioscos/menu.html';
+    break;
+    /* VIDEOS */
+    case "videos_generales":
+    $scope.img_estilos_kioscos  = './static/img/img_presentacion.png';
+    $scope.estilos_video       = './templates/configuracion/estilos/videos/generales.html';
+    break;
+    case "videos_colores":
+    $scope.img_estilos_kioscos  = './static/img/img_presentacion.png';
+    $scope.estilos_video       = './templates/configuracion/estilos/videos/colores.html';
+    break;
+    /* MOVILES */
+    case "moviles":
+    $scope.estilo = "./templates/configuracion/estilos/moviles.html";
+    break;
+}
 })
 .controller("seguridadController",function($scope, $http, $routeParams){
 })
@@ -102,11 +114,11 @@ angular.module('AsuraQueue')
     
     switch($routeParams.jerarquia){
         case "jerarquias":
-            $scope.planificacion_jerarquia ='./templates/planificacion/jerarquias/jerarquias.html';
-            break;
+        $scope.planificacion_jerarquia ='./templates/planificacion/jerarquias/jerarquias.html';
+        break;
         case "importar":
-            $scope.planificacion_jerarquia ='./templates/planificacion/jerarquias/importar.html';
-            break;
+        $scope.planificacion_jerarquia ='./templates/planificacion/jerarquias/importar.html';
+        break;
     }
     console.log($routeParams);
 })

@@ -29,7 +29,6 @@ $(document).ready(function(){
 		$("a").removeClass("active");
 		activa_home();
 	});
-	
 });
 
 function activa_home(){
