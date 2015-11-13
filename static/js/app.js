@@ -32,8 +32,6 @@ angular.module('AsuraQueue')
 /* Configuración */
 .controller("rolesController",['$scope','$resource',function($s, $r){
     //console.log($s.$parent.roles);
-
-    /* ANIMACION ADD
     add_mostrar         = angular.element(".mostrar_flotante");
     slide_flotante      = angular.element(".slide_flotante");
     close               = angular.element(".close");
@@ -42,7 +40,7 @@ angular.module('AsuraQueue')
     });
     close.click(function(e){
         slide_flotante.addClass('none');
-    }); */
+    });
 
 }])
 .controller("usuariosController",function($scope, $http, $routeParams){
