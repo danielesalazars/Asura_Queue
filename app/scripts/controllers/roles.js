@@ -17,7 +17,7 @@
 		var Rol = $rootScope.main.rol;
 
 		$scope.id_rol = 0;
-	    $scope.show_crear = function(){
+	    $scope.showCrear = function(){
 			//asignar titulo cabecera al slide
 			$scope.act_btn_crear 	= true;
 			$scope.act_btn_up 		= !$scope.act_btn_crear;
@@ -26,13 +26,13 @@
 	    	$scope.rol.nombre = '';
 	    	//agregamos y limpiamos los check
 	    	for (var i = 0; i < $scope.modulos.length; i++) {
-	    		$scope.modulos[i]['check'] = 'color_rojo fa fa-square-o';
+	    		$scope.modulos[i]['check'] = false;
 	    	};
 	    	//mostramos el slide
 	    	$scope.estado = true;
     	}
 
-		$scope.show_editar = function(_id){
+		$scope.showEditar = function(_id){
 			//resasignamos la variable rol
 			$scope.id_rol = _id;
 			Rol.get({id: _id}, function(data){
@@ -65,10 +65,10 @@
 					//si la funcion retorna verdadero
     				if(permiso_id){
     					//asigno clase
-    					$scope.modulos[i]['check'] = 'fa fa-check-square-o';
+    					$scope.modulos[i]['check'] = true;
     				}else{
     					//asigno clase
-    					$scope.modulos[i]['check'] = 'color_rojo fa fa-square-o';
+    					$scope.modulos[i]['check'] = false;
     				}
 				}
 				//activar slide derecho
@@ -77,12 +77,22 @@
 		}
 
     	$scope.crear = function(){
-    		var data =[ {
-				'nombre': $scope.rol.nombre,
-				'cuenta_id': $rootScope.id_cuenta,
-				'modulo': []
-			}];
-			Rol.post(null, data, function(){
+    		var modulos = [];
+    		for (var i = 0; i < $scope.modulos.length; i++) {
+    			if($scope.modulos[i]['check']){
+    				modulos.push({
+    					id : $scope.modulos[i]['id']
+    				});
+    			}
+    		};
+    		var data = [
+				    {
+				        "nombre": $scope.rol.nombre,
+				        "cuenta_id": $rootScope.id_cuenta,
+				        "modulos": modulos
+				    }
+				];
+			Rol.post(data, function(){
 				$rootScope.main.roles.query({id: $rootScope.id_cuenta}, function(data){
 					$scope.roles = data;
 					$scope.estado = !$scope.estado;
@@ -91,11 +101,19 @@
     	}
 
     	$scope.actualizar = function(){
+    		var modulos = [];
+    		for (var i = 0; i < $scope.modulos.length; i++) {
+    			if($scope.modulos[i]['check']){
+    				modulos.push({
+    					id : $scope.modulos[i]['id']
+    				});
+    			}
+    		};
     		var data = [
 				    {
 				        "nombre": $scope.rol.nombre,
 				        "cuenta_id": $rootScope.id_cuenta,
-				        "modulos":[]
+				        "modulos": modulos
 				    }
 				];
 			Rol.update({id: $scope.id_rol}, data,function(){
@@ -116,6 +134,10 @@
 
 	    $scope.close = function(){
 	    	$scope.estado = !$scope.estado;
+    	}
+
+    	$scope.checked = function(_id, indice){
+    		$scope.modulos[indice]['check'] = !$scope.modulos[indice]['check'];
     	}
 
 	}]);
