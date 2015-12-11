@@ -32,6 +32,13 @@
 	    	$scope.estado = true;
     	}
 
+    	$scope.crear = function(){
+    		var data = recover_data_modulos();
+			Rol.post(data, function(){
+				refresh_roles();
+			});
+    	}
+
 		$scope.showEditar = function(_id){
 			//resasignamos la variable rol
 			$scope.id_rol = _id;
@@ -76,51 +83,10 @@
 			});
 		}
 
-    	$scope.crear = function(){
-    		var modulos = [];
-    		for (var i = 0; i < $scope.modulos.length; i++) {
-    			if($scope.modulos[i]['check']){
-    				modulos.push({
-    					id : $scope.modulos[i]['id']
-    				});
-    			}
-    		};
-    		var data = [
-				    {
-				        "nombre": $scope.rol.nombre,
-				        "cuenta_id": $rootScope.id_cuenta,
-				        "modulos": modulos
-				    }
-				];
-			Rol.post(data, function(){
-				$rootScope.main.roles.query({id: $rootScope.id_cuenta}, function(data){
-					$scope.roles = data;
-					$scope.estado = !$scope.estado;
-				});
-			});
-    	}
-
     	$scope.actualizar = function(){
-    		var modulos = [];
-    		for (var i = 0; i < $scope.modulos.length; i++) {
-    			if($scope.modulos[i]['check']){
-    				modulos.push({
-    					id : $scope.modulos[i]['id']
-    				});
-    			}
-    		};
-    		var data = [
-				    {
-				        "nombre": $scope.rol.nombre,
-				        "cuenta_id": $rootScope.id_cuenta,
-				        "modulos": modulos
-				    }
-				];
+    		var data = recover_data_modulos();
 			Rol.update({id: $scope.id_rol}, data,function(){
-				$rootScope.main.roles.query({id: $rootScope.id_cuenta}, function(data){
-					$scope.roles = data;
-					$scope.estado = !$scope.estado;
-				});
+				refresh_roles();
 			});
     	}
 
@@ -138,6 +104,32 @@
 
     	$scope.checked = function(_id, indice){
     		$scope.modulos[indice]['check'] = !$scope.modulos[indice]['check'];
+    	}
+
+    	function refresh_roles(){
+    		$rootScope.main.roles.query({id: $rootScope.id_cuenta}, function(data){
+				$scope.roles = data;
+				$scope.estado = !$scope.estado;
+			});
+    	}
+
+    	function recover_data_modulos(){
+    		var modulos = [];
+    		for (var i = 0; i < $scope.modulos.length; i++) {
+    			if($scope.modulos[i]['check']){
+    				modulos.push({
+    					id : $scope.modulos[i]['id']
+    				});
+    			}
+    		};
+    		var data = [
+			    {
+			        "nombre": 		$scope.rol.nombre,
+			        "cuenta_id": 	$rootScope.id_cuenta,
+			        "modulos": 		modulos
+			    }
+			];
+			return data;
     	}
 
 	}]);

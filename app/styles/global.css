@@ -1225,7 +1225,7 @@ table tbody tr:last-child td{
 	width: 115px;
 }
 .slide_flotante .table_roles tbody {
-  height: 60vh;
+  height: 50vh;
   min-height: 200px;
   overflow-y: scroll;
 }
