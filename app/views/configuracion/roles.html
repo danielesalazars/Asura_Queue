@@ -1,0 +1,74 @@
+<div class="row">
+	<div class="col-lg-5 col-md-7 pt_1-5em">
+		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">¿Qué <span class="color_verde h_47_LightC">Roles</span> tiene tu organización?</h1>
+		<div class="ffffff border_tabla ml_17">
+			<div class="col-lg-12 col-md-12 text-right mt_10 pb_1em">
+				<a class="right pointer mostrar_flotante" ng-click="showCrear()">
+					<span class="h_47_LightC color_gris_oscuro left pr_5 pt_4">Agregar rol </span>
+					<i class="f_23 color_verde fa fa-plus-circle left"></i>
+				</a>
+			</div>
+			<table class="table tabla_roles">
+				<thead>
+					<tr>
+						<th class="w_5_por borde_azul">&nbsp;</th>
+						<th class="w_40_por borde_azul pl_0 f_weight100">Nombre del rol</th>
+						<th class="w_45_por">&nbsp;</th>
+						<th class="w_10_por">&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="rol in roles">
+						<td class="bb_0">&nbsp;</td>
+						<td class="pl_0" ng-click="showEditar(rol.id)" ng-bind="rol.nombre"></td>
+						<!-- ELEMENTOS BLOQUEADOS -->
+						<td class="text-right f_13 a4afb9" ng-if="rol.id <= 6">htpGO</td>
+						<td class="text-center bb_0" ng-if="rol.id <= 6"><i class="fa fa-lock c596B79"></i></td>	
+						<!-- ELEMENTOS ACTIVOS -->					
+						<td class="text-right f_13 a4afb9" ng-if="rol.id >6">&nbsp;</td>
+						<td class="text-center bb_0" ng-if="rol.id >6"><i class="color_rojo fa fa-times" ng-click="eliminar(rol.id)"></i></td>
+					</tr>
+				</tbody>
+			</table>			
+		</div>
+	</div>
+	<div class="slide_flotante w_290" ng-show="estado">
+		<div class="ffffff border_tabla ml_17 pt_10 pb_1em">
+			<div class="plr_15 text-right">
+				<i class="fa fa-times pointer" ng-click="close()"></i>
+			</div>
+			<div class="plr_15 h_Cond color_7fd0d9 bb_1 pb_10 mt_-10 f_16" ng-bind="title_slide"></div>
+			<div class="plr_15 pt_1">
+				<label for="" class="h_47_LightC mb_0 color_687a8b f_weight100">Nombre del rol</label><br>
+				<input id="rol_nombre" class="h_47_LightC w_100_por input_for" type="text" placeholder="Supervisor" ng-model="rol.nombre">
+			</div>
+			<div class="col-lg-12 col-md-12">
+				<table class="table tabla_usuarios table_slide table_roles mt_10">
+					<thead>
+						<tr>
+							<th class="pl_0 h_47_LightC f_16 f_weight100">Permisos</th>
+							<th colspan="2" class="text-right h_47_LightC pr_0 pointer color_687a8b f_15 f_weight100">Restablecer <i class="fa fa-undo pointer"></i></th>
+						</tr>
+					</thead>
+					<tbody class="line_height25">
+						<tr ng-repeat="modulo in modulos">
+							<td class="pl_0" colspan="2" ng-bind="modulo.nombre" ng-click="checked(modulo.id, $index)"></td>
+							<td class="text-center" ng-click="checked(modulo.id, $index)">
+								<div ng-if="!modulo.check">
+									<i class="color_rojo fa fa-square-o"></i>
+								</div>
+								<div ng-if="modulo.check">
+									<i class="fa fa-check-square-o"></i>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="text-center boton_guardar">
+				<i ng-show="act_btn_crear" class="dbe4e9 f_90 fa fa-check-circle pointer" ng-click="crear()"></i>
+				<i ng-show="act_btn_up" class="dbe4e9 f_90 fa fa-check-circle pointer" ng-click="actualizar()"></i>
+			</div>
+		</div>
+	</div>
+</div>
