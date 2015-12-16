@@ -31,6 +31,10 @@ angular.module('Asura')
 		return {
 			roles: 		recoverDataGet('roles/cuenta/:id'),
 			rol: 		recoverDataCrud('roles/:id'),
+			locales: 	recoverDataGet('locales/cuenta/:id'),
+			local: 		recoverDataCrud('locales/:id'),
+			grupoatenciones: 	recoverDataGet('grupoatencion/cuenta/:id'),
+			grupoatencion: 		recoverDataCrud('grupoatencion/:id'),
 			modulos: 	recoverDataGet('modulos/:id'),
 			usuarios: 	recoverDataGet('usuarios/:id'),
 		};

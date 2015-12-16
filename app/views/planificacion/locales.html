@@ -4,7 +4,7 @@
 		<div class="col-lg-8 col-md-8">
 			<div class="ffffff border_tabla">
 				<div class="col-lg-12 col-md-12 text-right mt_10 pb_2em">
-					<a class="right" href="#">
+					<a class="right pointer" ng-click="show_crear()">
 						<span class="h_47_LightC color_gris_oscuro left pr_5 pt_4">Agregar local </span>
 						<i class="f_23 color_verde fa fa-plus-circle left"></i>
 					</a>
@@ -20,14 +20,15 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+						<tr ng-repeat="local in locales">
 							<td class="bb_0">&nbsp;</td>
-							<td class="pl_0">Benavides</td>
-							<td class="text-center">BEN0001</td>
+							<td class="pl_0" ng-bind="local.nombre" ng-click="show_editar(local.id)"></td>
+							<td class="text-center" ng-bind="local.kiosco_codigo"></td>
 							<td class="text-center"><i class="color_rojo fa fa-map-marker"></i></td>
+							<!--ng-bind="local.ubicacion"-->
 							<td class="bb_0 text-center">&nbsp;</td>
 						</tr>
-						<tr>
+						<!--<tr>
 							<td class="bb_0">&nbsp;</td>
 							<td class="pl_0">Angamos</td>
 							<td class="text-center">ANG0002</td>
@@ -82,40 +83,41 @@
 							<td class="text-center">28D0009</td>
 							<td class="text-center"><i class="fa fa-map-marker"></i></td>
 							<td class="bb_0 text-center">&nbsp;</td>
-						</tr>
+						</tr>-->
 					</tbody>
 				</table>
 			</div>
 		</div>
 	</div>
 
-	<div class="slide_flotante slide_usuarios ">
+	<div class="slide_flotante slide_usuarios" ng-show="estado">
 		<div class="ffffff border_tabla ml_17 pt_10 pb_1em">
 			<div class="plr_15 text-right">
-				<i class="fa fa-times pointer"></i>
+				<i class="fa fa-times pointer" ng-click="close()"></i>
 			</div>
-			<div class="plr_15 h_Cond color_7fd0d9 bb_1 pb_10 mt_-10 f_16">Editar local</div>
+			<div class="plr_15 h_Cond color_7fd0d9 bb_1 pb_10 mt_-10 f_16" ng-bind="title_slide"></div>
 			<div class="plr_15 pt_1 pr_2em">
-				<label for="" class="h_47_LightC mb_0 color_687a8b f_weight100">Nombre del local</label><br>
-				<input class="h_47_LightC w_100_por input_for" type="text" placeholder="Javier Prado">
+				<label for="" class="h_47_LightC mb_0 color_687a8b">Nombre del Local</label><br>
+				<input ng-model="local.nombre" class="h_47_LightC w_100_por input_for" type="text" placeholder="Javier Prado">
 			</div>
 			<div class="plr_15 pt_1 pr_2em">	
-				<label for="" class="h_47_LightC mb_0 color_687a8b f_weight100">Ventanillas o puestos (Ej: 1,2,3,A,B,C)</label><br>
-				<input class="h_47_LightC w_100_por input_for" type="text" placeholder="1,2,3,4,5,6,7,8,9,10,11,12,A,B,C">
+				<label for="" class="h_47_LightC mb_0 color_687a8b">Ventanillas o puestos (Ej: 1,2,3,A,B,C)</label><br>
+				<input ng-model="local.ventanillas" class="h_47_LightC w_100_por input_for" type="text" placeholder="1,2,3,4,5,6,7,8,9,10,11,12,A,B,C">
 			</div>
 			<div class="plr_15 pt_1 pr_2em">	
-				<label for="" class="h_47_LightC mb_0 color_687a8b f_weight100">Código de kiosco</label><br>
-				<input class="h_47_LightC w_100_por input_for" type="text" placeholder="JAV0003">
+				<label for="" class="h_47_LightC mb_0 color_687a8b">Código de kiosco</label><br>
+				<input ng-model="local.kiosco_codigo" class="h_47_LightC w_100_por input_for" type="text" placeholder="JAV0003">
 			</div>
 			<div class="plr_15 pt_1 pr_2em">	
-				<label for="" class="h_47_LightC mb_0 color_687a8b f_weight100">Ubicación</label><br>
-				<input class="h_47_LightC w_100_por input_for" type="text">
+				<label for="" class="h_47_LightC mb_0 color_687a8b">Ubicación</label><br>
+				<input ng-model="local.ubicacion" class="h_47_LightC w_100_por input_for" type="text">
 				<i class="fa fa-expand zoom_mapa pointer"></i>
 				
 			</div>
-			<img  class="mt_10 plr_15" src="images/ubicacion.png" alt="">
+			<img  class="mt_10 ml_15" src="./static/img/ubicacion.png" alt="">
 			<div class="text-center boton_guardar pt_1">
-				<i class="dbe4e9 f_90 fa fa-check-circle pointer"></i>
+				<i ng-show="act_btn_crear" class="dbe4e9 f_90 fa fa-check-circle pointer" ng-click="crear()"></i>
+				<i ng-show="act_btn_up" class="dbe4e9 f_90 fa fa-check-circle pointer" ng-click="actualizar()"></i>
 			</div>
 		</div>
 	</div>
