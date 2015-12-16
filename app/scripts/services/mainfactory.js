@@ -27,7 +27,7 @@ angular.module('Asura')
 					'delete': { method: 'DELETE'}
 				});
 		}
-
+	
 		return {
 			roles: 		recoverDataGet('roles/cuenta/:id'),
 			rol: 		recoverDataCrud('roles/:id'),
