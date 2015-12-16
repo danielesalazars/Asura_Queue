@@ -68,7 +68,7 @@
       $scope.actualizar = function(){
         var data = [
             {
-                'nombre': $scope.local.nombre,
+            'nombre': $scope.local.nombre,
             'ventanillas': $scope.local.ventanillas,
             'kiosco_codigo': $scope.local.kiosco_codigo,
             'ubicacion': $scope.local.ubicacion,
