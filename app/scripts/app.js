@@ -18,7 +18,8 @@
   'ngRoute',
   'ngSanitize',
   'ngTouch',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'color.picker'
   ])
  .constant('URL',{ 
   'path' : 'http://api.asura.piensamasalla.com/' 

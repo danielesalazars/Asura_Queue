@@ -14,4 +14,6 @@ angular.module('Asura')
   	$rootScope.id_cuenta= 1;
     $scope.roles        = $rootScope.main.roles.query({id: $rootScope.id_cuenta});
     $scope.modulos      = $rootScope.main.modulos.query();
+    $scope.usuarios     = $rootScope.main.usuarios.query({id: $rootScope.id_cuenta});
+    $scope.locales     	= $rootScope.main.locales.query({id: $rootScope.id_cuenta});
   }]);

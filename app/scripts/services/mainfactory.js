@@ -32,6 +32,9 @@ angular.module('Asura')
 			roles: 		recoverDataGet('roles/cuenta/:id'),
 			rol: 		recoverDataCrud('roles/:id'),
 			modulos: 	recoverDataGet('modulos/:id'),
-			usuarios: 	recoverDataGet('usuarios/:id'),
+			usuarios: 	recoverDataGet('usuarios/cuenta/:id'),
+			usuario: 	recoverDataCrud('usuarios/:id'),
+			locales: 	recoverDataGet('locales/cuenta/:id'),
+			local: 		recoverDataCrud('locales/:id'),
 		};
 	}]);

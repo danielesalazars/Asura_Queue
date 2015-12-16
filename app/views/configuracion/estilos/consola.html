@@ -41,8 +41,17 @@
 			<label for="" class="h_Cond mb_0 color_687a8b">Colores principales (#000000)</label><br>
 			<div class="relative pt_5">					
 				<label for="" class="w_45 h_47_LightC mb_0 color_687a8b ">Fondo </label>
-				<input class="h_47_LightC w_225 input_for" type="text">
-				<div class="cuadro_color cuadro_color_r_38 8dc63f"></div>
+				<color-picker
+				    ng-model="myColor"
+				    color-picker-format="'hex'"
+				    color-picker-alpha="false"
+				    color-picker-swatch="true"
+				    color-picker-swatch-pos="'right'"
+				    color-picker-swatch-bootstrap="false"
+				    color-picker-swatch-only="false"
+				    color-picker-pos="'top right'"
+				    color-picker-case="'upper'"
+				></color-picker>
 			</div>
 			<div class="relative pt_5">					
 				<label for="" class="w_45 h_47_LightC mb_0 color_687a8b">Textos </label>

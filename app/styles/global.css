@@ -1332,3 +1332,16 @@ table tbody tr:last-child td{
 	float: left;
 	padding-bottom: 50px;
 }*/
+color-picker{
+	display: inline-flex;
+}
+color-picker .color-picker-wrapper{
+	width: 225px;
+}
+color-picker input{
+	height: 25px !important;
+}
+color-picker span{
+	width: 25px !important;
+	height: 19px !important;
+}
