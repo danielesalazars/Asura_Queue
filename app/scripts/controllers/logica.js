@@ -70,13 +70,13 @@
       });
       }
 
-      /*$scope.eliminar = function(_id){
+      $scope.eliminar = function(_id){
         Logica.delete({id: _id},function(){
         $rootScope.main.logicas.query({id: $rootScope.id_cuenta}, function(data){
           $scope.logicas = data;
         });
         })
-      }*/
+      }
 
       $scope.close = function(){
         $scope.estado = !$scope.estado;
