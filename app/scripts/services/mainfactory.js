@@ -35,6 +35,8 @@ angular.module('Asura')
 			local: 		recoverDataCrud('locales/:id'),
 			grupoatenciones: 	recoverDataGet('grupoatencion/cuenta/:id'),
 			grupoatencion: 		recoverDataCrud('grupoatencion/:id'),
+			logicas: 	recoverDataGet('locales/cuenta/:id'),
+			logica: 	recoverDataCrud('locales/:id'),
 			modulos: 	recoverDataGet('modulos/:id'),
 			usuarios: 	recoverDataGet('usuarios/:id'),
 		};
