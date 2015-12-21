@@ -11,10 +11,22 @@
 			<img src="{{img_estilos_kioscos}}" alt="">				
 			<div class="tabs overflow">
 				<ul class="p_0 m_0">
-					<li class="ffffff pointer color_azul h_47_LightC"><a href="#/configurar/estilos/kioscos_generales">Generales</a></li>
-					<li class="ffffff pointer color_azul h_47_LightC"><a href="#/configurar/estilos/kioscos_textos">Textos</a></li>
-					<li class="ffffff pointer color_azul h_47_LightC"><a href="#/configurar/estilos/kioscos_botones">Botones</a></li>
-					<li class="ffffff pointer color_azul h_47_LightC"><a href="#/configurar/estilos/kioscos_menu">Menú</a></li>
+					<li ng-class="(tab_url =='kioscos_generales') ? 'ffffff' : '' " 
+					class="pointer color_azul h_47_LightC">
+						<a href="#/configurar/estilos/kioscos_generales">Generales</a>
+					</li>
+					<li ng-class="(tab_url =='kioscos_textos') ? 'ffffff' : '' " 
+					class="pointer color_azul h_47_LightC">
+						<a href="#/configurar/estilos/kioscos_textos">Textos</a>
+					</li>
+					<li ng-class="(tab_url =='kioscos_botones') ? 'ffffff' : '' " 
+					class="pointer color_azul h_47_LightC">
+						<a href="#/configurar/estilos/kioscos_botones">Botones</a>
+					</li>
+					<li ng-class="(tab_url =='kioscos_menu') ? 'ffffff' : '' " 
+					class="pointer color_azul h_47_LightC">
+						<a href="#/configurar/estilos/kioscos_menu">Menú</a>
+					</li>
 				</ul>
 			</div>
 		</div>

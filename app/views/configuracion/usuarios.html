@@ -24,6 +24,7 @@
 						<th class="w_25_por">Rol asignado</th>
 						<th class="w_40_por">Locales</th>
 						<th class="w_5_por">&nbsp;</th>
+						<th class="w_5_por">&nbsp;</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -35,6 +36,10 @@
 						<td>&nbsp;</td>
 						<td ng-bind="usuario.rol.nombre"></td>
 						<td class="text-left" ng-bind="usuario.locales"></td>
+						<!-- ELEMENTOS BLOQUEADOS -->
+						<td class="text-center bb_0" ng-if="usuario.id <= 3"><i class="fa fa-lock c596B79"></i></td>	
+						<!-- ELEMENTOS ACTIVOS -->					
+						<td class="text-center bb_0" ng-if="usuario.id >3"><i class="color_rojo fa fa-times" ng-click="eliminar(usuario.id)"></i></td>
 						<td class="bb_0">&nbsp;</td>
 					</tr>
 				</tbody>
@@ -53,19 +58,41 @@
 			</div>
 			<div class="plr_15 pt_1">	
 				<label for="" class="h_47_LightC mb_0 color_687a8b">Correo electrónico</label><br>
-				<input class="h_47_LightC w_100_por input_for" type="text" placeholder="enrique.casas@email.com" ng-model="usuario.email_trabajo">
+				<input class="h_47_LightC w_100_por input_for" type="text" placeholder="enrique.casas@email.com" ng-model="usuario.email_trabajo" >
 			</div>
 			<div class="plr_15 pt_1">	
 				<label for="" class="h_47_LightC mb_0 color_687a8b">Rol asignado</label><br>
-				<select name="" id="" class="h_47_LightC w_100_por input_for">
+				<select name="" id="" class="h_47_LightC w_100_por input_for" ng-model="usuario.rol_id" ng-disabled="usuario.disabled">
 				  	<option ng-repeat="rol in roles" value="{{rol.id}}">{{rol.nombre}}</option>
 				</select>
 			</div>
-			<div class="plr_15 pt_1">	
+			<!--<div class="plr_15 pt_1">	
 				<label for="" class="h_47_LightC mb_0 color_687a8">Locales <span class="f_13 color_a4afb9 f_weight100">Limita los accesos a locales señalados</span></label><br>
 				<select name="" id="" class="h_47_LightC w_100_por input_for">
 					<option>3 Seleccionados</option>
 				</select>
+			</div>-->
+			<div class="plr_15">
+				<table class="table tabla_usuarios table_slide mt_10 scroll_usuario">
+					<thead>
+						<tr>
+							<th class="pl_0 h_47_LightC f_16" colspan="2">Locales</th>
+						</tr>
+					</thead>
+					<tbody class="line_height25">
+						<tr ng-repeat="local in locales">
+							<td width="200" class="pl_0" ng-bind="local.nombre" ng-click="checked(local.id, $index)"></td>
+							<td width="20" class="text-center" ng-click="checked(local.id, $index)">
+								<div ng-if="!local.check">
+									<i class="color_rojo fa fa-square-o"></i>
+								</div>
+								<div ng-if="local.check">
+									<i class="fa fa-check-square-o"></i>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<div class="text-center boton_guardar pt_1">
 				<i ng-show="act_btn_crear" class="dbe4e9 f_90 fa fa-check-circle pointer" ng-click="crear()"></i>

@@ -42,6 +42,7 @@
 		$scope.showEditar = function(_id){
 			//resasignamos la variable rol
 			$scope.id_rol = _id;
+
 			Rol.get({id: _id}, function(data){
 				//asignar titulo cabecera al slide
 				$scope.act_btn_crear 	= false;
@@ -84,6 +85,8 @@
 		}
 
     	$scope.actualizar = function(){
+    		//activando Loader
+			$scope.$parent.cargando		= true;
     		var data = recover_data_modulos();
 			Rol.update({id: $scope.id_rol}, data,function(){
 				refresh_roles();
@@ -110,6 +113,8 @@
     		$rootScope.main.roles.query({id: $rootScope.id_cuenta}, function(data){
 				$scope.roles = data;
 				$scope.estado = !$scope.estado;
+				//Desactivando Loader
+				$scope.$parent.cargando		= false;
 			});
     	}
 

@@ -44,12 +44,18 @@ label {
 .absolute{
 	position: absolute;
 }
+input[type="file"]{
+	display: inline-block !important;
+}
 /* float */
 .left{
 	float: left;
 }
 .right{
 	float: right;
+}
+.inline_block{
+	display: inline-block;
 }
 /* width */
 .w_3_por{
@@ -1177,7 +1183,6 @@ table tbody tr:last-child td{
 .slide_flotante .border_tabla{
 	height: 100%;
 }
-.slide_usuarios,
 .slide_seguridad{
 	top: 15%;
 }
@@ -1200,6 +1205,7 @@ table tbody tr:last-child td{
 	right: 0;
 	top: 14%;
 }
+.scroll_usuario tbody,
 .slide_flotante .table_roles thead,
 .slide_flotante .table_roles thead tr,
 .slide_flotante .table_roles tbody{
@@ -1231,6 +1237,12 @@ table tbody tr:last-child td{
 }
 .slide_flotante .table_roles tbody td i{
 	padding-left: 15px;
+}
+
+.scroll_usuario tbody {
+  height: 10vh;
+  min-height: 200px;
+  overflow-y: scroll;
 }
 /* formularios flotantes */
 .input_for{
@@ -1332,16 +1344,43 @@ table tbody tr:last-child td{
 	float: left;
 	padding-bottom: 50px;
 }*/
-color-picker{
-	display: inline-flex;
+/* minicolor */
+.minicolor_generales{
+	display: inline-block;
+    width: 225px;
 }
-color-picker .color-picker-wrapper{
-	width: 225px;
+.mini_kiosko_texto{
+	width: auto;
 }
-color-picker input{
-	height: 25px !important;
+.mini_kiosko_texto .minicolors{
+	width: 25px;
+	height: 21px;
+	margin-left: -32px;
 }
-color-picker span{
+.mini_kiosko_texto .minicolors-swatch{
 	width: 25px !important;
-	height: 19px !important;
+	height: 17px !important;
+}
+.mini_kiosko_texto .minicolors-swatch-color{
+	margin-top: 4px;
+}
+/* cargador loader */
+.loader{
+    background: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 99999;
+    opacity: 0.5;
+}
+.loader h1{
+	position: absolute;
+	top: 35%;
+	width: 10%;
+	height: 10%;
+	line-height: 10%;
+	left: 40%;
 }

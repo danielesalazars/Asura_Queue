@@ -19,7 +19,8 @@
   'ngSanitize',
   'ngTouch',
   'ui.bootstrap',
-  'color.picker'
+  'minicolors',
+  'ngFileUpload'
   ])
  .constant('URL',{ 
   'path' : 'http://api.asura.piensamasalla.com/' 

@@ -1,33 +1,53 @@
 <div class="plr_15 pt_1">				
-	<div class="overflow pt_5 plr_15">
+	<div class="inline_block pt_5 plr_15">
 		<label for="" class="left w_55 h_47_LightC mb_0 color_687a8b">Linea 1</label>
 		<div class="relative left">			
-			<input class="h_47_LightC w_150 input_for" type="text" placeholder="BIENVENIDO">
-			<div class="cuadro_color cuadro_color_r_3"></div>
+			<input class="h_47_LightC w_150 input_for" type="text" placeholder="BIENVENIDO" value="{{configuraciones[0]['estilo_kiosco_linea1_texto']}}">
+			<div class="minicolor_generales mini_kiosko_texto">
+				<input 
+				    minicolors="mini_generales"
+				    class="form-control"
+				    type="hidden"
+				    ng-model="configuraciones[0]['estilo_kiosco_linea1_color']">
+			</div>
 		</div>
 		<i class="color_gris_oscuro left pl_10 fa fa-eye pointer"></i>
 		<div class="left h_47_LightC text-right w_140">			
 			<span class="mr_10 color_687a8b">Origen X </span>
-			<input class=" w_45 input_for" type="text" placeholder="400">
+			<input class=" w_45 input_for" type="text" placeholder="400"
+				    ng-model="configuraciones[0]['estilo_kiosco_origen_x']">
 		</div>
 	</div>							
 	<div class="overflow pt_5 plr_15">
 		<label for="" class="left w_55 h_47_LightC mb_0 color_687a8b">Linea 2</label>
 		<div class="relative left">			
-			<input class="h_47_LightC w_150 input_for" type="text" placeholder="PARA INGRESAR">
-			<div class="cuadro_color cuadro_color_r_3"></div>
+			<input class="h_47_LightC w_150 input_for" type="text" placeholder="PARA INGRESAR" value="{{configuraciones[0]['estilo_kiosco_linea2_texto']}}">
+			<div class="minicolor_generales mini_kiosko_texto">
+				<input 
+				    minicolors="mini_generales"
+				    class="form-control"
+				    type="hidden"
+				    ng-model="configuraciones[0]['estilo_kiosco_linea2_color']">
+			</div>
 		</div>
 		<i class="color_gris_oscuro left pl_10 fa fa-eye pointer"></i>
 		<div class="left h_47_LightC text-right w_140">			
 			<span class="mr_10 color_687a8b">Origen Y </span>
-			<input class="w_45 input_for" type="text" placeholder="160">
+			<input class="w_45 input_for" type="text" placeholder="160" 
+				    ng-model="configuraciones[0]['estilo_kiosco_origen_y']">
 		</div>
 	</div>								
 	<div class="overflow pt_5 plr_15">
 		<label for="" class="left w_55 h_47_LightC mb_0 color_687a8b">Linea 3</label>
 		<div class="relative left">			
-			<input class="h_47_LightC w_150 input_for" type="text" placeholder="PASA TU">
-			<div class="cuadro_color cuadro_color_r_3"></div>
+			<input class="h_47_LightC w_150 input_for" type="text" placeholder="PASA TU" value="{{configuraciones[0]['estilo_kiosco_linea3_texto']}}">
+			<div class="minicolor_generales mini_kiosko_texto">
+				<input 
+				    minicolors="mini_generales"
+				    class="form-control"
+				    type="hidden"
+				    ng-model="configuraciones[0]['estilo_kiosco_linea3_color']">
+			</div>
 		</div>
 		<i class="color_gris_oscuro left pl_10 fa fa-eye pointer"></i>	
 		<div class="left h_47_LightC text-right w_140">			
@@ -37,16 +57,28 @@
 	<div class="overflow pt_5 plr_15">
 		<label for="" class="left w_55 h_47_LightC mb_0 color_687a8b">Linea 4</label>
 		<div class="relative left">			
-			<input class="h_47_LightC w_150 input_for" type="text" placeholder="TARJETA">
-			<div class="cuadro_color cuadro_color_r_3"></div>
+			<input class="h_47_LightC w_150 input_for" type="text" placeholder="TARJETA" value="{{configuraciones[0]['estilo_kiosco_linea4_texto']}}">
+			<div class="minicolor_generales mini_kiosko_texto">
+				<input 
+				    minicolors="mini_generales"
+				    class="form-control"
+				    type="hidden"
+				    ng-model="configuraciones[0]['estilo_kiosco_linea4_color']">
+			</div>
 		</div>
 		<i class="color_gris_oscuro left pl_10 fa fa-eye pointer"></i>
 	</div>								
 	<div class="overflow pt_5 plr_15">
 		<label for="" class="left w_55 h_47_LightC mb_0 color_687a8b">Linea 5</label>
 		<div class="relative left">			
-			<input class="h_47_LightC w_150 input_for" type="text">
-			<div class="cuadro_color cuadro_color_r_3"></div>
+			<input class="h_47_LightC w_150 input_for" type="text" value="{{configuraciones[0]['estilo_kiosco_linea5_texto']}}">
+			<div class="minicolor_generales mini_kiosko_texto">
+				<input 
+				    minicolors="mini_generales"
+				    class="form-control"
+				    type="hidden"
+				    ng-model="configuraciones[0]['estilo_kiosco_linea5_color']">
+			</div>
 		</div>
 		<i class="color_rojo left pl_10 fa fa-eye-slash pointer"></i>	
 		<div class="left h_47_LightC text-right w_140">			

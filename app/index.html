@@ -10,7 +10,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
-    <link rel="stylesheet" href="bower_components/angular-color-picker/angularjs-color-picker.css" />
+    <link rel="stylesheet" href="bower_components/jquery-minicolors/jquery.minicolors.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -21,6 +21,9 @@
   </head>
   <body ng-controller="MainCtrl">
     <!-- CABECERA -->
+    <div class="loader" ng-show="cargando">
+        <h1><img src="images/loader.gif" alt="" width="100%"></h1>
+    </div>
     <div class="menu_superior">
         <nav class="navbar navbar-default">
             <div class="container-fluid ffffff pl_lg_0">
@@ -181,8 +184,10 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="bower_components/tinycolor/tinycolor.js"></script>
-    <script src="bower_components/angular-color-picker/angularjs-color-picker.js"></script>
+    <script src="bower_components/jquery-minicolors/jquery.minicolors.js"></script>
+    <script src="bower_components/angular-minicolors/angular-minicolors.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+    <script src="bower_components/ng-file-upload-shim/ng-file-upload-shim.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -192,7 +197,6 @@
         <script src="scripts/services/mainfactory.js"></script>
         <script src="scripts/controllers/home.js"></script>
         <script src="scripts/controllers/roles.js"></script>
-        <script src="scripts/js/global.js"></script>
         <script src="scripts/controllers/usuarios.js"></script>
         <script src="scripts/controllers/logicakioscos.js"></script>
         <script src="scripts/controllers/estilos.js"></script>
@@ -208,6 +212,8 @@
         <script src="scripts/controllers/crit_atencion.js"></script>
         <script src="scripts/controllers/msj_alerta.js"></script>
         <script src="scripts/controllers/clt_atendidos.js"></script>
+        <script src="scripts/js/global.js"></script>
+        <script src="scripts/controllers/file.js"></script>
         <!-- endbuild -->
 </body>
 </html>

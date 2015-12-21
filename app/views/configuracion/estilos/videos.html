@@ -11,8 +11,14 @@
 			<img src="{{img_estilos_kioscos}}" alt="">				
 			<div class="tabs overflow">
 				<ul class="p_0 m_0">
-					<li class="ffffff pointer color_azul h_47_LightC"><a href="#/configurar/estilos/videos_generales">Generales</a></li>
-					<li class="ffffff pointer color_azul h_47_LightC"><a href="#/configurar/estilos/videos_colores">Colores</a></li>
+					<li ng-class="(tab_url =='videos_generales') ? 'ffffff' : '' " 
+					class="pointer color_azul h_47_LightC">
+						<a href="#/configurar/estilos/videos_generales">Generales</a>
+					</li>
+					<li ng-class="(tab_url =='videos_colores') ? 'ffffff' : '' " 
+					class="pointer color_azul h_47_LightC">
+						<a href="#/configurar/estilos/videos_colores">Colores</a>
+					</li>
 				</ul>
 			</div>
 		</div>
