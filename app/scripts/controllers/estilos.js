@@ -89,7 +89,6 @@
  				configuracion : $scope.configuraciones
  			}
  		];
- 		//console.log($scope.demo);
  		Configuracion.post(data,function(data){
  			console.log(data);
  		});

@@ -39,5 +39,7 @@ angular.module('Asura')
 			configuraciones: 	recoverDataGet('configuracion/cuenta/:id'),
 			configuracion: 		recoverDataCrud('configuracion/:id'),
 			archivos: 			recoverDataCrud('archivos/:id'),
+			grupoatenciones: 	recoverDataGet('grupoatencion/cuenta/:id'),
+			grupoatencion: 		recoverDataCrud('grupoatencion/:id'),
 		};
 	}]);
