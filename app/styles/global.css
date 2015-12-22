@@ -464,6 +464,12 @@ input[type="file"]{
 .ml_25{
 	margin-left: 25px;
 }
+.ml_30{
+	margin-left: 30px;
+}
+.ml_40{
+	margin-left: 40px;
+}
 .ml_44{
 	margin-left: 44px;
 }
@@ -1345,6 +1351,7 @@ table tbody tr:last-child td{
 	padding-bottom: 50px;
 }*/
 /* minicolor */
+
 .minicolor_generales{
 	display: inline-block;
     width: 225px;

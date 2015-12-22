@@ -93,5 +93,12 @@
  			console.log(data);
  		});
  	}
+ 	
+ 	
+ 	/*$scope.checked = function(modelo){
+		$scope.configuracion[0][modelo] = !$scope.configuracion[0][modelo];
+	}
+ 	*/
+ 	
 	//console.log($scope.$parent.configuraciones);
 }]);

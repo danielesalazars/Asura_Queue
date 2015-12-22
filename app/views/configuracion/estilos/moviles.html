@@ -1,8 +1,8 @@
 <div class="ffffff border_tabla ml_17 pt_10 pb_1em">
 	<div class="plr_15 text-right">
-		<i class="fa fa-times pointer"></i>
+		<i class="fa fa-times pointer" ng-click="close()"></i>
 	</div>
-	<div class="plr_15 h_Cond color_azul bb_1 pb_03em mt_-10">Editar estilos para las aplicaciones moviles</div>
+	<div class="plr_15 h_Cond color_7fd0d9 bb_1 pb_03em mt_-10 f_weight100">Editar estilos para las aplicaciones moviles</div>
 	<div class="overflow pt_1 plr_15">				
 		<div class="text-right">
 			<a class="pointer h_47_LightC color_687a8b">Restablecer <i class="fa fa-undo pointer"></i></a>
@@ -25,21 +25,30 @@
 				<i class="fa fa-search color_gris_oscuro"></i>
 			</div>
 		</div>
-		<div class="pt_5 plr_15 h_47_LightC overflow">		
+		<div class="pt_5 plr_15 h_47_LightC">		
 			<label class="left w_180 color_687a8b">Color institucional (Fondo)</label>
-			<div class="relative left">			
-				<input class="w_32 input_for" type="text"> 
-				<div class="cuadro_color cuadro_color_r_3"></div>
+			<div class="minicolor_generales mini_kiosko_texto ml_40">
+				<input 
+				    minicolors="mini_generales"
+				    class="form-control"
+				    type="hidden"
+				    ng-model="configuraciones[0]['estilo_movil_fondo_color']">
 			</div>
 		</div>
 		<div class="pt_1 plr_15">			
 			<div class="pt_5 h_47_LightC overflow">		
 				<label class=" w_180 color_687a8b">Nombre empresa (Línea 1)</label>
-				<input class="W_160 input_for" type="text" placeholder="CENTRO MEDICO"> 
+				<input 	class="W_160 input_for" 
+						type="text" 
+						placeholder="CENTRO MEDICO" 
+						ng-model="configuraciones[0]['estilo_movil_linea1_texto']">
 			</div>
 			<div class="pt_5 h_47_LightC overflow">		
 				<label class="w_180 color_687a8b">Nombre empresa (Línea 2)</label>
-				<input class="W_160 input_for" type="text" placeholder="ROGER SULLIVAN"> 
+				<input 	class="W_160 input_for" 
+						type="text" 
+						placeholder="ROGER SULLIVAN"
+						ng-model="configuraciones[0]['estilo_movil_linea2_texto']"> 
 			</div>
 		</div>
 		<div class="text-center boton_guardar pt_2">

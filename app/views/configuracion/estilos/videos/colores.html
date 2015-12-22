@@ -2,28 +2,37 @@
 	<div class="overflow pt_5 plr_15 h_47_LightC color_7fd0d9">
 		Configuración de colores (#000000)</i>
 	</div>				
-	<div class="pt_5 plr_15 h_47_LightC overflow">		
+	<div class="pt_5 plr_15 h_47_LightC">		
 		<label class="left w_180 color_687a8b">Color de barra de fondo</label>
-		<div class="relative left">			
-			<input class="w_32 input_for" type="text"> 
-			<div class="cuadro_color cuadro_color_r_3"></div>
+		<div class="minicolor_generales mini_kiosko_texto ml_30">
+			<input 
+			    minicolors="mini_generales"
+			    class="form-control"
+			    type="hidden"
+			    ng-model="configuraciones[0]['estilo_video_fondo_color']">
 		</div>
 	</div>				
-	<div class="pt_5 plr_15 h_47_LightC overflow">		
+	<div class="pt_5 plr_15 h_47_LightC">		
 		<label class="left w_180 color_687a8b">Color de turnos <span class="color_8293a3">(Iniciales)</span></label>
-		<div class="relative left">			
-			<input class="w_32 input_for" type="text"> 
-			<div class="cuadro_color cuadro_color_r_3"></div>
+		<div class="minicolor_generales mini_kiosko_texto ml_30">
+			<input 
+			    minicolors="mini_generales"
+			    class="form-control"
+			    type="hidden"
+			    ng-model="configuraciones[0]['estilo_video_turno_color']">
 		</div>
 	</div>				
-	<div class="pt_5 plr_15 h_47_LightC overflow">		
+	<div class="pt_5 plr_15 h_47_LightC">		
 		<label class="left w_180 color_687a8b">Color de lugares de atención</label>
-		<div class="relative left">			
-			<input class="w_32 input_for" type="text"> 
-			<div class="cuadro_color cuadro_color_r_3"></div>
+		<div class="minicolor_generales mini_kiosko_texto ml_30">
+			<input 
+			    minicolors="mini_generales"
+			    class="form-control"
+			    type="hidden"
+			    ng-model="configuraciones[0]['estilo_video_lugar_color']">
 		</div>
 	</div>	
-	<div class="pt_5 plr_15 h_47_LightC overflow">		
+	<div class="pt_10 plr_15 h_47_LightC">		
 		<span class="left f_13 w_180 color_gris_claro texto_slogan">(Textos sobre las flechas de colores)</span>
 	</div>		
 	<div class="text-center boton_guardar pt_2">
