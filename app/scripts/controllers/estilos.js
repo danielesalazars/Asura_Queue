@@ -94,11 +94,15 @@
  		});
  	}
  	
- 	
- 	/*$scope.checked = function(modelo){
-		$scope.configuracion[0][modelo] = !$scope.configuracion[0][modelo];
+ 	$scope.checked = function(modelo){
+ 		//console.log(modelo);
+ 		if($scope.configuraciones[0][modelo] == 0){
+			$scope.configuraciones[0][modelo] = 1;
+ 		}else{
+			$scope.configuraciones[0][modelo] = 0;
+ 		}
 	}
- 	*/
+ 	
  	
 	//console.log($scope.$parent.configuraciones);
 }]);

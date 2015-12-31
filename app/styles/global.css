@@ -57,6 +57,12 @@ input[type="file"]{
 .inline_block{
 	display: inline-block;
 }
+.block{
+	display: block;
+}
+.h_24{
+	height: 24px;
+}
 /* width */
 .w_3_por{
 	width: 3%;
@@ -383,7 +389,7 @@ input[type="file"]{
 .pl_87{
 	padding-left: 87px;
 }
-.pt_2{
+.pt_2px{
 	padding-top: 2px;
 }
 .pt_4{
@@ -1368,8 +1374,14 @@ table tbody tr:last-child td{
 	width: 25px !important;
 	height: 17px !important;
 }
+.mini_kiosko_texto_menu .minicolors-swatch{
+	height: 13px !important;
+}
 .mini_kiosko_texto .minicolors-swatch-color{
 	margin-top: 4px;
+}
+.check{
+	width: 14px;
 }
 /* cargador loader */
 .loader{
