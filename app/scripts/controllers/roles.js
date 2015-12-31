@@ -34,9 +34,10 @@
 
     	$scope.crear = function(){
     		var data = recover_data_modulos();
-			Rol.post(data, function(){
-				refresh_roles();
-			});
+    		console.log(data);
+			// Rol.post(data, function(){
+			// 	refresh_roles();
+			// });
     	}
 
 		$scope.showEditar = function(_id){
@@ -52,6 +53,11 @@
 				$scope.rol.nombre = data[0]['nombre'];
 				//recuperar permisos de rol
 				var permisos = data[0]['ownModulo_rol'];
+				//activar o desactivar input
+				$scope.disabled = false;
+				if( _id < 6 ){
+					$scope.disabled = true;
+				}
 				//@param id : recibe el id de lalista de roles
     			function rol_permiso(_id){
     				//la lista de permisos esta vacia

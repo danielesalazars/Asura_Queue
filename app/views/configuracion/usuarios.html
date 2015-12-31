@@ -28,10 +28,11 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="usuario in usuarios">
+					<tr ng-repeat="usuario in usuarios" 
+					ng-class="(usuario.id > 3 ) ? 'activar' : 'desactivar' ">
 						<td class="bb_0">&nbsp;</td>
 						<td class="pl_0" ng-click="show_editar(usuario.id)">{{usuario.nombre}} 
-							<span ng-if="usuario.rol.id < 7" class="f_13 a4afb9">htpGO</span>
+							<span ng-if="usuario.rol.id == 2" class="f_13 a4afb9">htpGO</span>
 						</td>
 						<td>&nbsp;</td>
 						<td ng-bind="usuario.rol.nombre"></td>
@@ -39,7 +40,7 @@
 						<!-- ELEMENTOS BLOQUEADOS -->
 						<td class="text-center bb_0" ng-if="usuario.id <= 3"><i class="fa fa-lock c596B79"></i></td>	
 						<!-- ELEMENTOS ACTIVOS -->					
-						<td class="text-center bb_0" ng-if="usuario.id >3"><i class="color_rojo fa fa-times" ng-click="eliminar(usuario.id)"></i></td>
+						<td class="text-center bb_0" ng-if="usuario.id >3"><i class="eliminar color_rojo fa fa-times" ng-click="eliminar(usuario.id)"></i></td>
 						<td class="bb_0">&nbsp;</td>
 					</tr>
 				</tbody>

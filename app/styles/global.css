@@ -910,6 +910,20 @@ table tbody tr:last-child td{
 .table_slide tr:first-child td{
 	padding-top: 4px !important;
 }
+
+tr.activar .eliminar{
+	display: none;
+}
+tr.activar:hover a{
+	color: #7fd0d9 !important;
+}
+tr.desactivar:hover,
+tr.activar:hover{
+	background-color: #e5edf0; 
+}
+tr.activar:hover .eliminar{
+	display: block;
+}
 /*TextBox supervision.html*/
 .rango_calendar{
 	position: relative;
@@ -1402,4 +1416,16 @@ table tbody tr:last-child td{
 	height: 10%;
 	line-height: 10%;
 	left: 40%;
+}
+/* UPLOAD */
+.fileupload{
+	position: relative;
+    overflow: hidden;
+    display: inline-block;
+    cursor:  pointer !important;
+}
+.fileupload input{
+    cursor: pointer !important;
+    opacity: 0;
+    filter: alpha(opacity=0);
 }

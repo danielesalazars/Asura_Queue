@@ -102,7 +102,7 @@ angular.module('Asura')
     	$scope.eliminar = function(_id){
     		Usuario.delete({id: _id},function(){
 				$rootScope.main.usuarios.query({id: $rootScope.id_cuenta}, function(data){
-					$scope.roles = data;
+					$scope.usuarios = data;
 				});
     		})
     	}

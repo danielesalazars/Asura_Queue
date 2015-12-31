@@ -18,7 +18,9 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="rol in roles">
+					<tr ng-repeat="rol in roles"
+					ng-class="(rol.id > 6) ? 'activar' : 'desactivar' "
+					>
 						<td class="bb_0">&nbsp;</td>
 						<td class="pl_0" ng-click="showEditar(rol.id)" ng-bind="rol.nombre"></td>
 						<!-- ELEMENTOS BLOQUEADOS -->
@@ -26,7 +28,8 @@
 						<td class="text-center bb_0" ng-if="rol.id <= 6"><i class="fa fa-lock c596B79"></i></td>	
 						<!-- ELEMENTOS ACTIVOS -->					
 						<td class="text-right f_13 a4afb9" ng-if="rol.id >6">&nbsp;</td>
-						<td class="text-center bb_0" ng-if="rol.id >6"><i class="color_rojo fa fa-times" ng-click="eliminar(rol.id)"></i></td>
+						<td class="text-center bb_0" ng-if="rol.id > 6"><i class="eliminar color_rojo fa fa-times" 
+						ng-click="eliminar(rol.id)"></i></td>
 					</tr>
 				</tbody>
 			</table>			
@@ -40,14 +43,19 @@
 			<div class="plr_15 h_Cond color_7fd0d9 bb_1 pb_10 mt_-10 f_16" ng-bind="title_slide"></div>
 			<div class="plr_15 pt_1">
 				<label for="" class="h_47_LightC mb_0 color_687a8b f_weight100">Nombre del rol</label><br>
-				<input id="rol_nombre" class="h_47_LightC w_100_por input_for" type="text" placeholder="Supervisor" ng-model="rol.nombre">
+				<input id="rol_nombre" class="h_47_LightC w_100_por input_for" type="text" 
+				ng-model="rol.nombre" ng-disabled="disabled">
 			</div>
 			<div class="col-lg-12 col-md-12">
 				<table class="table tabla_usuarios table_slide table_roles mt_10">
 					<thead>
 						<tr>
 							<th class="pl_0 h_47_LightC f_16 f_weight100">Permisos</th>
-							<th colspan="2" class="text-right h_47_LightC pr_0 pointer color_687a8b f_15 f_weight100">Restablecer <i class="fa fa-undo pointer"></i></th>
+							<th colspan="2" class="text-right h_47_LightC pr_0 pointer color_687a8b f_15 f_weight100">
+								<div ng-if="(id_rol < 7)">
+								Restablecer <i class="fa fa-undo pointer"></i>
+								</div>
+							</th>
 						</tr>
 					</thead>
 					<tbody class="line_height25">
