@@ -22,9 +22,15 @@
   'minicolors',
   'ngFileUpload'
   ])
+ 
  .constant('URL',{ 
   'path' : 'http://api.asura.piensamasalla.com/' 
 })
+ /* 
+.constant('URL',{ 
+  'path' : 'http://localhost/asura-api/' 
+})
+  */
  .config(function ($routeProvider) {
   $routeProvider
   .when('/', {

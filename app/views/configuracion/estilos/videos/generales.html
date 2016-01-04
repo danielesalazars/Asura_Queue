@@ -8,12 +8,38 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td class="pl_0  "><i class="color_rojo  fa fa-circle-o"></i></td>
+				<td class="pl_0">
+					<div class="left" ng-if="(configuraciones[0]['estilo_video_formato'] == 1)">
+						<i class="fa fa-dot-circle-o" ng-model="configuraciones[0]['estilo_video_formato']"
+						ng-click="checked('estilo_video_formato')"></i>
+					</div>
+					<div class="left" ng-if="(configuraciones[0]['estilo_video_formato'] == 0)">
+						<i class="color_rojo fa fa-circle-o" ng-model="configuraciones[0]['estilo_video_formato']"
+						ng-click="checked('estilo_video_formato')"></i>
+					</div>
+				</td>
 				<td>3 Turnos (Horizontal con iniciales)</td>
-				<td class="h_47_LightC text-right pointer">Activar <i class="fa fa-check-square-o"></i></td>
+				<td class="h_47_LightC text-right pointer">
+					Activar 
+					<i class="fa check" 
+					ng-class="(configuraciones[0]['estilo_video_sonido'] == 1) ?
+					'fa-check-square-o' :
+					'fa-square-o color_rojo' "
+					ng-click="checked('estilo_video_sonido')"
+					ng-model="configuraciones[0]['estilo_video_sonido']"></i>
+				</td>
 			</tr>
 			<tr>
-				<td class="pl_0  "><i class="color_rojo  fa fa-dot-circle-o"></i></td>
+				<td class="pl_0">
+					<div class="left" ng-if="(configuraciones[0]['estilo_video_formato'] == 1)">
+						<i class="fa fa-dot-circle-o" ng-model="configuraciones[0]['estilo_video_formato']"
+						ng-click="checked('estilo_video_formato')"></i>
+					</div>
+					<div class="left" ng-if="(configuraciones[0]['estilo_video_formato'] == 0)">
+						<i class="color_rojo fa fa-circle-o" ng-model="configuraciones[0]['estilo_video_formato']"
+						ng-click="checked('estilo_video_formato')"></i>
+					</div>
+				</td>
 				<td class="">4 Turnos (Horizontal con iniciales)</td>
 				<td class="bb_0 h_47_LightC text-right pointer">&nbsp;</td>
 			</tr>
