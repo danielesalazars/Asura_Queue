@@ -21,12 +21,16 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr ng-repeat="grupoatencion in grupoatenciones">
+						<tr ng-repeat="grupoatencion in grupoatenciones" 
+						ng-class="(grupoatencion.id > 0 ) ? 'activar' : 'desactivar'">
 							<td class="bb_0">&nbsp;</td>
 							<td class="pl_0" ng-click="show_editar(grupoatencion.id)" ng-bind="grupoatencion.nombre" ></td>
 							<td class="text-center" ng-bind="grupoatencion.inicial"></td>
 							<td class="text-center"><i class="color_amarillo fa fa-circle"></i></td>
-							<td class="text-right bb_0">&nbsp;</td>
+							<td class="text-right bb_0" ng-if="grupoatencion.id > 0">
+								<i 	class="eliminar color_rojo fa fa-times" 
+									ng-click="eliminar(grupoatencion.id)"></i>
+							</td>
 							<td class="bb_0">&nbsp;</td>
 						</tr>
 						<!--<tr>						
@@ -98,12 +102,12 @@
 			<div class="plr_15 h_Cond color_7fd0d9 bb_1 pb_10 mt_-10 f_16" ng-bind="title_slide"></div>
 			<div class="plr_15 pt_1">
 				<label for="" class="h_47_LightC mb_0 color_687a8b">Grupo de atención</label><br>
-				<input ng-model="grupoatencion.nombre" class="h_47_LightC w_100_por input_for" type="text" placeholder="Cobranza">
+				<input ng-model="grupoatencion.nombre" class="h_47_LightC w_100_por input_for" type="text">
 			</div>
 			<div class="plr_15 pt_1 overflow">
 				<div class="left pr_1em">
 					<label for="" class="h_47_LightC mb_0 color_687a8b">Inicial</label><br>
-					<input ng-model="grupoatencion.inicial" class="h_47_LightC w_75 input_for" type="text" placeholder="C">
+					<input ng-model="grupoatencion.inicial" class="h_47_LightC w_75 input_for" type="text">
 				</div>
 				<div class="left">					
 					<label for="" class="h_47_LightC mb_0 color_687a8b">Color (#000000)</label><br>

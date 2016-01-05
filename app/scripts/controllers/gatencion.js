@@ -39,6 +39,11 @@
 				$scope.grupoatencion.inicial = data[0]["inicial"];
 				$scope.grupoatencion.color_ = data[0]["color_"];
 				$scope.estado = true;
+				 //activar o desactivar ITEM
+		        $scope.local.disabled     = false;
+		        if(data[0]['id'] < 4){
+		          $scope.local.disabled   = true;
+		        }
 				//console.log(data); //muestra el detalle del parametro
 			})
 			
