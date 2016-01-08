@@ -24,7 +24,10 @@
 							<td class="bb_0">&nbsp;</td>
 							<td class="pl_0" ng-bind="local.nombre" ng-click="show_editar(local.id)"></td>
 							<td class="text-center" ng-bind="local.kiosco_codigo"></td>
-							<td class="text-center"><i class="color_rojo fa fa-map-marker"></i></td>
+							<td class="text-center">
+								<i class="fa fa-map-marker mapa"
+								ng-class="(local.ubicacion != '') ? 'color_negro' : 'color_rojo'"></i>
+							</td>
 							<td class="bb_0 text-center" ng-if="local.id > 0">
 								<i 	class="eliminar color_rojo fa fa-times" 
 									ng-click="eliminar(local.id)"></i>

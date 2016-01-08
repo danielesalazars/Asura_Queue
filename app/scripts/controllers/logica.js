@@ -31,8 +31,13 @@
     $scope.show_editar = function(_id){
       $scope.id_logica = _id;
       Logica.get({id: _id}, function(data){ //si es ok entra recien a la funcion
+        $scope.ventanillas = data[0]['ownVentanilla'];
+        $scope.sharedJerarquia = data[0]['sharedJerarquia'];
+        //for(var i = 0; i < data[0]['ownVentanilla'].length; i++){
+          //console.log(data[0]['ownVentanilla'][i]['id']);
+        //} 
         $scope.act_btn_up     = !$scope.act_btn_crear;
-        $scope.title_slide = 'Editar lógica';
+        $scope.title_slide = 'Editar lógica:';
         $scope.logica.nombre = data[0]["nombre"]; //siempre 0
         $scope.estado = true;
          //activar o desactivar ITEM

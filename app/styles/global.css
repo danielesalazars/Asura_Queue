@@ -372,7 +372,7 @@ input[type="file"]{
 	padding-left: 4.5em;
 }
 .pl_5{
-	padding-left: 10px;
+	padding-left: 5px;
 }
 .pl_10{
 	padding-left: 10px;
@@ -917,7 +917,8 @@ table tbody tr:last-child td{
 tr.activar .eliminar{
 	display: none;
 }
-tr.activar:hover a{
+tr.activar:hover a,
+tr.activar:hover .mapa{
 	color: #7fd0d9 !important;
 }
 tr.desactivar:hover,

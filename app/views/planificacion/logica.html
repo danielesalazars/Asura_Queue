@@ -18,13 +18,7 @@
 							<td class="bb_0">&nbsp;</td>
 							<td class="pl_0" ng-bind="logica.nombre" ng-click="show_editar(logica.id)"></td>
 							<td class="text-center">
-								<i class="fa fa-check-square-o"></i>
-								<!--	<i class="fa check" 
-								ng-class="(planificacion[0]['es_publicado'] == 1) ?
-								'fa-check-square-o' :
-								'fa-square-o color_rojo' "
-								ng-click="checked('es_publicado')"
-								ng-model="planificacion[0]['es_publicado']"></i>-->
+								<i class="fa fa-check-square-o mapa"></i>
 							</td>
 							<td class="bb_0">&nbsp;</td>
 						</tr>
@@ -38,24 +32,20 @@
 			<div class="plr_15 text-right">
 				<i class="fa fa-times pointer" ng-click="close()"></i>
 			</div>
-			<div class="plr_15 h_Cond color_7fd0d9 bb_1 pb_10 mt_-10 f_16" ng-bind="title_slide">
-				<span class="color_687a8b" ng-bind="logica.nombre"></span>
-				<!--ng-model="logica.nombre"--> 
+			<div class="plr_15 h_Cond bb_1 pb_10 mt_-10 f_16">
+				<div class="left color_7fd0d9" ng-bind="title_slide"> 
+				</div>
+				<span class="pl_5 color_687a8b" ng-bind="logica.nombre"></span>
 			</div>
 			<div class="overflow plr_15">
 				<table class="table tabla_usuarios mt_10 color_7fd0d9">
 					<thead>
 						<tr>
 							<th width="150" class="pl_0 pr_0 h_47_LightC" colspan="4">Grupos de atención</th>
-							<th width="20" class="text-center h_47_LightC color_gris_oscuro">1</th>
-							<th width="20" class="text-center h_47_LightC color_gris_oscuro">2</th>
-							<th width="20" class="text-center h_47_LightC color_gris_oscuro">3</th>
-							<th width="20" class="text-center h_47_LightC color_gris_oscuro">4</th>
-							<th width="20" class="text-center h_47_LightC color_gris_oscuro">5</th>
-							<th width="20" class="text-center h_47_LightC color_gris_oscuro">6</th>
-							<th width="20" class="text-center h_47_LightC color_gris_oscuro">7</th>
-							<th width="20" class="text-center h_47_LightC color_gris_oscuro">A</th>
-							<th width="20" class="text-center h_47_LightC color_gris_oscuro">B</th>
+							<th width="20" class="text-center h_47_LightC color_gris_oscuro" 
+								ng-repeat="ventanilla in ventanillas">
+								{{ventanilla['nombre']}}
+							</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -151,15 +141,11 @@
 					<thead>
 						<tr>
 							<th colspan="4" width="150" class="pl_0 pr_0 h_47_LightC">Jerarquías</th>
-							<th width="20" class="text-center h_47_LightC color_gris_oscuro">1</th>
-							<th width="20" class="text-center h_47_LightC color_gris_oscuro">2</th>
-							<th width="20" class="text-center h_47_LightC color_gris_oscuro">3</th>
-							<th width="20" class="text-center h_47_LightC color_gris_oscuro">4</th>
-							<th width="20" class="text-center h_47_LightC color_gris_oscuro">5</th>
-							<th width="20" class="text-center h_47_LightC color_gris_oscuro">6</th>
-							<th width="20" class="text-center h_47_LightC color_gris_oscuro">7</th>
-							<th width="20" class="text-center h_47_LightC color_gris_oscuro">A</th>
-							<th width="20" class="text-center h_47_LightC color_gris_oscuro">B</th>
+							<th width="20" class="text-center h_47_LightC color_gris_oscuro" 
+								ng-repeat="ventanilla in ventanillas">
+								{{ventanilla['nombre']}}
+							</th>
+							
 						</tr>
 					</thead>
 					<tbody>
