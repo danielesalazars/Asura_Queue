@@ -1417,7 +1417,7 @@ tr.activar:hover .eliminar{
 	line-height: 10%;
 	left: 40%;
 }
-/* UPLOAD */
+/* UPLOAD 
 .fileupload{
 	position: relative;
     overflow: hidden;
@@ -1428,4 +1428,4 @@ tr.activar:hover .eliminar{
     cursor: pointer !important;
     opacity: 0;
     filter: alpha(opacity=0);
-}
+}*/

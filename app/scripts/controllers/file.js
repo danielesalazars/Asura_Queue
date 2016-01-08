@@ -8,29 +8,17 @@
  * Controller of the demoApp
  */
 angular.module('Asura')
-  .controller('FileCtrl', ['$scope','$rootScope','Upload', function ($scope, $rootScope, Upload) {
+  .controller('FileCtrl', ['$scope','$rootScope', function ($scope, $rootScope) {
     var Archivos = $rootScope.main.archivos;
-     $scope.submit = function() {
-      if ($scope.form.file.$valid && $scope.file) {
-        $scope.upload($scope.file);
-      }
+     $scope.actualizar = function() {
+      console.log("dato");
+      /*if ($scope.form.logo1.$valid && $scope.logo1) {
+        console.log($scope.logo1);
+      }*/
     };
 
     // upload on file select or drop
-    $scope.upload = function (file) {
-        /*
-        Archivos.post(file,function(data){
-          console.log(data);
-        })*/
-        /*$http.post('http://api.asura.piensamasalla.com/archivos', file,
-        {
-          headers:{
-            'Content-Type':'undefined'}
-        })
-        .success(function(data){
-          console.log(data)
-        })
-        */
+    /*$scope.upload = function (file) {
         Upload.upload({
             url: 'http://api.asura.piensamasalla.com/archivos',
             file: file
@@ -42,5 +30,5 @@ angular.module('Asura')
             var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
             console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
         });
-    };
+    };*/
   }]);

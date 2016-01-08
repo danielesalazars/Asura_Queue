@@ -24,11 +24,12 @@
 			</div>
 		</div>
 	</div>
-	<div class="plr_15 pt_1">				
+	<form class="plr_15 pt_1" ng-controller="FileCtrl" name="form">				
 		<div class="pt_5 plr_3em">
 			<label for="" class="w_45 h_47_LightC mb_0 color_687a8b ">Logo 1</label>
-			<div class="w_160 fileupload pointer input_for">
-				<input class="h_47_LightC" type="file" accept="images/*">
+			<div class="w_160 fileupload pointer input_for" id="logo1">
+				<input class="h_47_LightC" type="file" accept="images/*" 
+				ng-model="logo1">
 			</div>
 			<i class="fa fa-search color_gris_oscuro"></i>
 			<span class="color_gris_claro a4afb9 h_47_LightC">*.PNG 50x50</span>
@@ -36,7 +37,8 @@
 		<div class="pt_5 plr_3em">
 			<label for="" class="w_45 h_47_LightC mb_0 color_687a8b">Logo 2</label>
 			<div class="w_160 fileupload pointer input_for">
-				<input class="h_47_LightC" type="file" accept="images/*">
+				<input class="h_47_LightC" type="file" accept="images/*"
+				ng-model="logo2">
 			</div>
 			<i class="fa fa-search color_gris_oscuro"></i>
 			<span class="color_gris_claro a4afb9 h_47_LightC">*.PNG 330x50</span>
@@ -94,5 +96,12 @@
 		<div class="text-center boton_guardar pt_1">
 			<i class="dbe4e9 f_90 fa fa-check-circle pointer" ng-click="actualizar()"></i>
 		</div>
-	</div>
+	</form>
 </div>
+<!--
+Upload on form submit or button click
+<form ng-controller="FileCtrl" name="form">
+  <div class="button" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
+    ngf-accept="'image/*'" ngf-max-size="20MB" >Select</div>
+  <button type="submit" ng-click="submit()">submit</button>
+</form>-->

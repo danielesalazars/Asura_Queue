@@ -9,12 +9,13 @@
  */
  angular.module('Asura')
  .controller('EstilosCtrl',['$scope','$rootScope','$routeParams', function ($scope, $rootScope, $routeParams) {
-	
 	minicolors();
 	estilos_kiosco_html();
 	estilos_video_html();
 	estilos_multi_page_html();
 	estilos_kiosco();
+	//elementos Jquery
+	var logo1 = angular.element('#logo1');
 
 	var Configuracion = $rootScope.main.configuracion;
 
@@ -80,19 +81,6 @@
  	function estilos_kiosco(){
  		$scope.tab_url = $routeParams.estilo;
  	}
-
- 	$scope.actualizar = function(){
- 		var data = 
- 		[
- 			{
- 				cuenta_id: $rootScope.id_cuenta, 
- 				configuracion : $scope.configuraciones
- 			}
- 		];
- 		Configuracion.post(data,function(data){
- 			console.log(data);
- 		});
- 	}
  	
  	$scope.checked = function(modelo){
  		//console.log(modelo);
@@ -103,6 +91,8 @@
  		}
 	}
  	
- 	
-	//console.log($scope.$parent.configuraciones);
+ 	$scope.cambiarImagen = function(){
+ 		console.log('data');
+ 	}
+
 }]);
