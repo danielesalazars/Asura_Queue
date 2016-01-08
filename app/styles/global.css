@@ -395,6 +395,15 @@ input[type="file"]{
 .pt_4{
 	padding-top: 4px;
 }
+.pt_5{
+	padding-top: 5px;
+}
+.pt_7{
+	padding-top: 7px;
+}
+.pt_10{
+	padding-top: 10px;
+}
 .pt_20{
 	padding-top: 20px;
 }
@@ -406,15 +415,6 @@ input[type="file"]{
 }
 .pt_2{
 	padding-top: 2em;
-}
-.pt_5{
-	padding-top: 5px;
-}
-.pt_10{
-	padding-top: 10px;
-}
-.pt_1-5em{
-	padding-top: 1.5em;
 }
 .pt_2-5em{
 	padding-top: 2.5em;
@@ -526,6 +526,9 @@ input[type="file"]{
 }
 .mt_30 {
 	margin-top: 30px;
+}
+.mb_-7{
+	margin-bottom: -7px;
 }
 .mb_0{
 	margin-bottom: 0;
@@ -1344,8 +1347,9 @@ tr.activar:hover .eliminar{
 .tabs li a{
 	display: block;
 	padding: 10px;
+	color : #8293a3;
 }
-/* configuracion -> videos */
+/* configuracion -> videos 7fd0d9 */
 .texto_slogan{
 	position: absolute;
     margin-top: -12px;

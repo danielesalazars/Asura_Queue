@@ -13,10 +13,19 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr ng-repeat="logica in locales">
+						<tr ng-repeat="logica in locales" 
+						ng-class="(logica.id > 3 ) ? 'activar' : 'desactivar'">
 							<td class="bb_0">&nbsp;</td>
 							<td class="pl_0" ng-bind="logica.nombre" ng-click="show_editar(logica.id)"></td>
-							<td class="text-center"><i class="fa fa-check-square-o"></i></td>
+							<td class="text-center">
+								<i class="fa fa-check-square-o"></i>
+								<!--	<i class="fa check" 
+								ng-class="(planificacion[0]['es_publicado'] == 1) ?
+								'fa-check-square-o' :
+								'fa-square-o color_rojo' "
+								ng-click="checked('es_publicado')"
+								ng-model="planificacion[0]['es_publicado']"></i>-->
+							</td>
 							<td class="bb_0">&nbsp;</td>
 						</tr>
 					</tbody>

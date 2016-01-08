@@ -35,7 +35,12 @@
         $scope.title_slide = 'Editar lógica';
         $scope.logica.nombre = data[0]["nombre"]; //siempre 0
         $scope.estado = true;
-        console.log(data); //muestra el detalle del parametro
+         //activar o desactivar ITEM
+        $scope.logica.disabled     = false;
+        if(data[0]['id'] < 4){
+          $scope.logica.disabled   = true;
+        }
+        //console.log(data); //muestra el detalle del parametro
       })
       
 

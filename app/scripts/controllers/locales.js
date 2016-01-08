@@ -8,7 +8,7 @@
  * Controller of the sistemaApp
  */
  angular.module('Asura')
-  .controller('LocalesCtrl',['$scope','$rootScope', function($scope, $rootScope) {
+  .controller('LocalesCtrl',['$scope','$rootScope', function ($scope, $rootScope) {
     //estado de slide derecho
     $scope.estado = false;  
     //creamos un objeto que <conte></conte>ndra los datos del formulario
@@ -40,6 +40,11 @@
         $scope.local.ubicacion = data[0]["ubicacion"];
         $scope.local.es_publicado = data[0]["es_publicado"];
         $scope.estado = true;
+        //activar o desactivar ITEM
+        $scope.local.disabled     = false;
+        if(data[0]['id'] < 4){
+          $scope.local.disabled   = true;
+        }
         //console.log(data); //muestra el detalle del parametro
       })
       

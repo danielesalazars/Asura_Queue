@@ -20,13 +20,15 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr ng-repeat="local in locales">
+						<tr ng-repeat="local in locales" ng-class="(local.id > 0 ) ? 'activar' : 'desactivar'">
 							<td class="bb_0">&nbsp;</td>
 							<td class="pl_0" ng-bind="local.nombre" ng-click="show_editar(local.id)"></td>
 							<td class="text-center" ng-bind="local.kiosco_codigo"></td>
 							<td class="text-center"><i class="color_rojo fa fa-map-marker"></i></td>
-							<!--ng-bind="local.ubicacion"-->
-							<td class="bb_0 text-center">&nbsp;</td>
+							<td class="bb_0 text-center" ng-if="local.id > 0">
+								<i 	class="eliminar color_rojo fa fa-times" 
+									ng-click="eliminar(local.id)"></i>
+							</td>
 						</tr>
 					</tbody>
 				</table>
@@ -42,15 +44,15 @@
 			<div class="plr_15 h_Cond color_7fd0d9 bb_1 pb_10 mt_-10 f_16" ng-bind="title_slide"></div>
 			<div class="plr_15 pt_1 pr_2em">
 				<label for="" class="h_47_LightC mb_0 color_687a8b">Nombre del Local</label><br>
-				<input ng-model="local.nombre" class="h_47_LightC w_100_por input_for" type="text" placeholder="Javier Prado">
+				<input ng-model="local.nombre" class="h_47_LightC w_100_por input_for" type="text">
 			</div>
 			<div class="plr_15 pt_1 pr_2em">	
 				<label for="" class="h_47_LightC mb_0 color_687a8b">Ventanillas o puestos (Ej: 1,2,3,A,B,C)</label><br>
-				<input ng-model="local.ventanillas" class="h_47_LightC w_100_por input_for" type="text" placeholder="1,2,3,4,5,6,7,8,9,10,11,12,A,B,C">
+				<input ng-model="local.ventanillas" class="h_47_LightC w_100_por input_for" type="text">
 			</div>
 			<div class="plr_15 pt_1 pr_2em">	
 				<label for="" class="h_47_LightC mb_0 color_687a8b">Código de kiosco</label><br>
-				<input ng-model="local.kiosco_codigo" class="h_47_LightC w_100_por input_for" type="text" placeholder="JAV0003">
+				<input ng-model="local.kiosco_codigo" class="h_47_LightC w_100_por input_for" type="text">
 			</div>
 			<div class="plr_15 pt_1 pr_2em">	
 				<label for="" class="h_47_LightC mb_0 color_687a8b">Ubicación</label><br>
