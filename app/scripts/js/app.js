@@ -160,3 +160,11 @@ switch($routeParams.estilo){
 /* Reporte */
 .controller("clt_atendidosController",function($scope, $http, $routeParams){
 });
+.controller("clt_salteadosController",function($scope, $http, $routeParams){
+});
+.controller("escaneosQRController",function($scope, $http, $routeParams){
+});
+.controller("saturacionController",function($scope, $http, $routeParams){
+});
+.controller("descarga_datosController",function($scope, $http, $routeParams){
+});
