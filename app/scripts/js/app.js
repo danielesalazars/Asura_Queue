@@ -162,9 +162,13 @@ switch($routeParams.estilo){
 });
 .controller("clt_salteadosController",function($scope, $http, $routeParams){
 });
-.controller("escaneosQRController",function($scope, $http, $routeParams){
+.controller("tkt_impresosController",function($scope, $http, $routeParams){
 });
-.controller("saturacionController",function($scope, $http, $routeParams){
+.controller("movil_escaneosController",function($scope, $http, $routeParams){
+});
+.controller("movil_ticketsController",function($scope, $http, $routeParams){
 });
 .controller("descarga_datosController",function($scope, $http, $routeParams){
+});
+.controller("comparativo_ticketsController",function($scope, $http, $routeParams){
 });

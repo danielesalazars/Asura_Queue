@@ -368,6 +368,9 @@ input[type="file"]{
 .pl_3em{
 	padding-left: 3em;
 }
+.pl_4em{
+	padding-left: 4em;
+}
 .pl_4-5em{
 	padding-left: 4.5em;
 }
@@ -515,6 +518,9 @@ input[type="file"]{
 .mt_0{
 	margin-top: 0;
 }
+.mt_1 {
+	margin-top: 1px;
+}
 .mt_10 {
 	margin-top: 10px;
 }
@@ -585,11 +591,17 @@ input[type="file"]{
 .f_48{
 	font-size: 48px;
 }
+.f_50{
+	font-size: 50px;
+}
 .f_52{
 	font-size: 52px;
 }
 .f_55{
 	font-size: 55px;
+}
+.f_75{
+	font-size: 75px;
 }
 .f_90{
 	font-size: 90px;
@@ -1151,6 +1163,12 @@ tr.activar:hover .eliminar{
 	background-color: #f3f4f8;
 	border-bottom: 1px solid #e3e6eb;
 	width: 231px;
+}
+.circle_datos{
+	padding: 4em 0px 10em 11em;
+	/*padding-bottom: 10em;
+	padding-top: 4em;
+	padding-left: 12em;*/
 }
 .circle-search span, 
 .circle-search i {

@@ -136,6 +136,30 @@
     controller:   "CltAtendidosCtrl",
     templateUrl:  "views/reportes/clt_atendidos.html"
   })
+  .when("/reportes/clt_salteados",{
+    controller:   "CltSalteadosCtrl",
+    templateUrl:  "views/reportes/clt_salteados.html"
+  })
+  .when("/reportes/tkt_impresos",{
+    controller:   "TktImpresosCtrl",
+    templateUrl:  "views/reportes/tkt_impresos.html"
+  })
+  .when("/reportes/movil_escaneos",{
+    controller:   "MovilEscaneosCtrl",
+    templateUrl:  "views/reportes/movil_escaneos.html"
+  })
+  .when("/reportes/movil_tickets",{
+    controller:   "MovilTicketsCtrl",
+    templateUrl:  "views/reportes/movil_tickets.html"
+  })
+  .when("/reportes/descarga_datos",{
+    controller:   "DescargaDatosCtrl",
+    templateUrl:  "views/reportes/descarga_datos.html"
+  })
+  .when("/reportes/comparativo_tickets",{
+    controller:   "ComparativoTicketsCtrl",
+    templateUrl:  "views/reportes/comparativo_tickets.html"
+  })
   .otherwise({
     redirectTo: '/'
   });
