@@ -1,6 +1,7 @@
 <div class="row">
 	<div class="col-lg-8 col-md-12 pt_1-5em">
-		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">¿Qué <span class="color_verde h_47_LightC">Locales</span> contarán con htpGO?</h1>
+		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">¿Qué <span class="h_47_LightC" 
+	style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">Locales</span> contarán con htpGO?</h1>
 		<div class="col-lg-8 col-md-8">
 			<div class="ffffff border_tabla">
 				<div class="col-lg-12 col-md-12 text-right mt_10 pb_2em">
@@ -24,7 +25,10 @@
 							<td class="bb_0">&nbsp;</td>
 							<td class="pl_0" ng-bind="local.nombre" ng-click="show_editar(local.id)"></td>
 							<td class="text-center" ng-bind="local.kiosco_codigo"></td>
-							<td class="text-center"><i class="color_rojo fa fa-map-marker"></i></td>
+							<td class="text-center">
+								<i class="fa fa-map-marker mapa"
+								ng-class="(local.ubicacion != '') ? '' : 'color_rojo' "></i>
+								</td>
 							<td class="bb_0 text-center" ng-if="local.id > 0">
 								<i 	class="eliminar color_rojo fa fa-times" 
 									ng-click="eliminar(local.id)"></i>

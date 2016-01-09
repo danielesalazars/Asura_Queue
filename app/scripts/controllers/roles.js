@@ -34,10 +34,9 @@
 
     	$scope.crear = function(){
     		var data = recover_data_modulos();
-    		console.log(data);
-			// Rol.post(data, function(){
-			// 	refresh_roles();
-			// });
+			Rol.post(data, function(){
+				refresh_roles();
+			});
     	}
 
 		$scope.showEditar = function(_id){

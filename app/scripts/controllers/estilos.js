@@ -14,10 +14,6 @@
 	estilos_video_html();
 	estilos_multi_page_html();
 	estilos_kiosco();
-	//elementos Jquery
-	var logo1 = angular.element('#logo1');
-
-	var Configuracion = $rootScope.main.configuracion;
 
 	function minicolors(){
 		$scope.mini_generales = {position: 'top right',letterCase: 'uppercase'};
@@ -90,9 +86,5 @@
 			$scope.configuraciones[0][modelo] = 0;
  		}
 	}
- 	
- 	$scope.cambiarImagen = function(){
- 		console.log('data');
- 	}
 
 }]);

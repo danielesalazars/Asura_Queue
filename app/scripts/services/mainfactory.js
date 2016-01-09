@@ -22,7 +22,11 @@ angular.module('Asura')
 				{
 					'get'	: { method: 'GET', isArray: true },
 					'update': { method: 'PUT', isArray: true },
-					'post'	: { method: 'POST', isArray: true },
+					'post'	: { method: 'POST', isArray: true , 
+						headers : {
+							cuenta_id : 1
+						} 
+					},
 					'remove': { method: 'DELETE'},
 					'delete': { method: 'DELETE'}
 				});

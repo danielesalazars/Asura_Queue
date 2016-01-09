@@ -19,8 +19,7 @@
   'ngSanitize',
   'ngTouch',
   'ui.bootstrap',
-  'minicolors',
-  'ngFileUpload'
+  'minicolors'
   ])
  
  .constant('URL',{ 

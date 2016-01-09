@@ -1,6 +1,7 @@
 <div class="row">
 	<div class="col-lg-5 col-md-7 pt_1-5em">
-		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">¿Qué <span class="color_verde h_47_LightC">Roles</span> tiene tu organización?</h1>
+		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">¿Qué <span class="h_47_LightC" 
+	style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">Roles</span> tiene tu organización?</h1>
 		<div class="ffffff border_tabla ml_17">
 			<div class="col-lg-12 col-md-12 text-right mt_10 pb_1em">
 				<a class="right pointer mostrar_flotante" ng-click="showCrear()">
@@ -19,10 +20,11 @@
 				</thead>
 				<tbody>
 					<tr ng-repeat="rol in roles"
+					ng-click="showEditar(rol.id)" 
 					ng-class="(rol.id > 6) ? 'activar' : 'desactivar' "
 					>
 						<td class="bb_0">&nbsp;</td>
-						<td class="pl_0" ng-click="showEditar(rol.id)" ng-bind="rol.nombre"></td>
+						<td class="pl_0" ng-bind="rol.nombre"></td>
 						<!-- ELEMENTOS BLOQUEADOS -->
 						<td class="text-right f_13 a4afb9" ng-if="rol.id <= 6">htpGO</td>
 						<td class="text-center bb_0" ng-if="rol.id <= 6"><i class="fa fa-lock c596B79"></i></td>	

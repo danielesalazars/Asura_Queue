@@ -667,7 +667,6 @@ line-height: 25px !important;
 	border-left: 0;
 }
 #logo{
-	background-color: #8dc63f;
 	height: 53px;
 }
 #logo a{
@@ -857,6 +856,9 @@ line-height: 25px !important;
 	}
 }
 /* Tablas */
+tr{
+	outline: none !important;
+}
 th,
 td{
 	background: transparent !important;
@@ -917,7 +919,8 @@ table tbody tr:last-child td{
 tr.activar .eliminar{
 	display: none;
 }
-tr.activar:hover a{
+tr.activar:hover a,
+tr.activar:hover .mapa{
 	color: #7fd0d9 !important;
 }
 tr.desactivar:hover,
@@ -1398,6 +1401,10 @@ tr.activar:hover .eliminar{
 .mini_kiosko_texto .minicolors-swatch-color{
 	margin-top: 4px;
 }
+.mini_videos .minicolors-swatch-color,
+.mini_moviles .minicolors-swatch-color{
+	margin-top: 0;
+}
 .check{
 	width: 14px;
 }
@@ -1421,15 +1428,17 @@ tr.activar:hover .eliminar{
 	line-height: 10%;
 	left: 40%;
 }
-/* UPLOAD 
+/* UPLOAD */
 .fileupload{
 	position: relative;
-    overflow: hidden;
-    display: inline-block;
+    width: 20px;
     cursor:  pointer !important;
 }
 .fileupload input{
     cursor: pointer !important;
+    position: absolute;
+    left: 0;
+    padding: 0 !important;
     opacity: 0;
     filter: alpha(opacity=0);
-}*/
+}
