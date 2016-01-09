@@ -31,14 +31,7 @@ angular.module('Asura')
     });
 
      $scope.actualizar = function() {
-      var archivo = {
-        cuenta_id : 1,
-        data : logo1.val()
-      }
-      Archivos.post(logo,function(data){
-        console.log('exito');
-      });
-      /*var data = [
+      var data = [
         {
           "cuenta_id": $rootScope.id_cuenta,
           "configuracion":
@@ -53,6 +46,6 @@ angular.module('Asura')
       ];
       Configuracion.post(data,function(data){
         console.log(data);
-      })*/
+      })
     };
   }]);
