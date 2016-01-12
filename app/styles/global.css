@@ -1450,6 +1450,7 @@ tr.activar:hover .eliminar{
 .fileupload{
 	position: relative;
     width: 20px;
+    overflow: hidden;
     cursor:  pointer !important;
 }
 .fileupload input{

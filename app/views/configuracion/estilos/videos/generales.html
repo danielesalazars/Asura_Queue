@@ -1,4 +1,4 @@
-<div class="plr_15 pt_1">
+<form class="plr_15 pt_1" ng-controller="FileCtrl" name="form_v_generales">		
 	<table class="table tabla_videos">
 		<thead>
 			<tr>
@@ -9,14 +9,12 @@
 		<tbody>
 			<tr>
 				<td class="pl_0">
-					<div class="left" ng-if="(configuraciones[0]['estilo_video_formato'] == 1)">
-						<i class="fa fa-dot-circle-o" ng-model="configuraciones[0]['estilo_video_formato']"
-						ng-click="checked('estilo_video_formato')"></i>
-					</div>
-					<div class="left" ng-if="(configuraciones[0]['estilo_video_formato'] == 0)">
-						<i class="color_rojo fa fa-circle-o" ng-model="configuraciones[0]['estilo_video_formato']"
-						ng-click="checked('estilo_video_formato')"></i>
-					</div>
+					<i class="fa" 
+					ng-class="(configuraciones[0]['estilo_video_formato'] == 1) ?
+					'fa-dot-circle-o' : 
+					'color_rojo fa-circle-o' "
+					ng-model="configuraciones[0]['estilo_video_formato']"
+					ng-click="radio(1)"></i>
 				</td>
 				<td>3 Turnos (Horizontal con iniciales)</td>
 				<td class="h_47_LightC text-right pointer">
@@ -31,36 +29,55 @@
 			</tr>
 			<tr>
 				<td class="pl_0">
-					<div class="left" ng-if="(configuraciones[0]['estilo_video_formato'] == 1)">
-						<i class="fa fa-dot-circle-o" ng-model="configuraciones[0]['estilo_video_formato']"
-						ng-click="checked('estilo_video_formato')"></i>
-					</div>
-					<div class="left" ng-if="(configuraciones[0]['estilo_video_formato'] == 0)">
-						<i class="color_rojo fa fa-circle-o" ng-model="configuraciones[0]['estilo_video_formato']"
-						ng-click="checked('estilo_video_formato')"></i>
-					</div>
+					<i class="fa" 
+					ng-class="(configuraciones[0]['estilo_video_formato'] == 2) ?
+					'fa-dot-circle-o' : 
+					'color_rojo fa-circle-o' "
+					ng-model="configuraciones[0]['estilo_video_formato']"
+					ng-click="radio(2)"></i>
 				</td>
 				<td class="">4 Turnos (Horizontal con iniciales)</td>
 				<td class="bb_0 h_47_LightC text-right pointer">&nbsp;</td>
 			</tr>
 			<tr>
-				<td class="pl_0 bb_0 "><i class="color_rojo  fa fa-circle-o"></i></td>
+				<td class="pl_0 bb_0 ">
+					<i class="fa" 
+					ng-class="(configuraciones[0]['estilo_video_formato'] == 3) ?
+					'fa-dot-circle-o' : 
+					'color_rojo fa-circle-o' "
+					ng-model="configuraciones[0]['estilo_video_formato']"
+					ng-click="radio(3)"></i>
+				</td>
 				<td>6 Turnos (Horizontal con iniciales)</td>
 				<td class="bb_0 h_47_LightC text-right pointer">&nbsp;</td>
 			</tr>
 			<tr>
-				<td class="pl_0 bb_0 "><i class="color_rojo  fa fa-circle-o"></i></td>
+				<td class="pl_0 bb_0 ">
+					<i class="fa" 
+					ng-class="(configuraciones[0]['estilo_video_formato'] == 4) ?
+					'fa-dot-circle-o' : 
+					'color_rojo fa-circle-o' "
+					ng-model="configuraciones[0]['estilo_video_formato']"
+					ng-click="radio(4)"></i>
+				</td>
 				<td>8 Turnos (Horizontal con iniciales)</td>
 				<td class="bb_0 h_47_LightC text-right pointer">&nbsp;</td>
 			</tr>
 			<tr>
-				<td class="pl_0 bb_0 "><i class="color_rojo  fa fa-circle-o"></i></td>
+				<td class="pl_0 bb_0 ">
+					<i class="fa" 
+					ng-class="(configuraciones[0]['estilo_video_formato'] == 5) ?
+					'fa-dot-circle-o' : 
+					'color_rojo fa-circle-o' "
+					ng-model="configuraciones[0]['estilo_video_formato']"
+					ng-click="radio(5)"></i>
+				</td>
 				<td>10 Turnos (Vertical con palabras)</td>
 				<td class="bb_0 h_47_LightC text-right pointer">&nbsp;</td>
 			</tr>
 		</tbody>
 	</table>	
 	<div class="text-center boton_guardar pt_1">
-		<i class="dbe4e9 f_90 fa fa-check-circle pointer"></i>
+		<i class="dbe4e9 f_90 fa fa-check-circle pointer" ng-click="update_v_generales()"></i>
 	</div>
-</div>
+</form>

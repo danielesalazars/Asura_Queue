@@ -13,7 +13,13 @@ $(document).ready(function(){
 	if(window.location.hash === "#/" || window.location.hash == ""){
 		activa_home();
 	}else{
-		var item_sidebar = $(".sub_sidebar a[href='"+ window.location.hash +"']");
+		var hash = window.location.hash;
+		var hash_sub = hash.substring(0,20);
+		if(hash_sub == '#/configurar/estilos'){
+			hash = hash_sub;
+		}
+
+		var item_sidebar = $(".sub_sidebar a[href='"+ hash +"']");
 
 		$("#"+item_sidebar.attr('class')+" a").addClass('active active2');
 		item_sidebar.parents("ul").addClass('block_imp active');

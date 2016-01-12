@@ -1,4 +1,4 @@
-<div class="plr_15 pt_1">				
+<form class="plr_15 pt_1" ng-controller="FileCtrl" name="form_general">				
 	<div class="pt_7">
 		<label for="" class="w_55 h_47_LightC mb_0 color_687a8b">Logotipo</label>
 		<div class="inline_block">
@@ -9,7 +9,12 @@
 				<input type="file" accept="images/*" id="logotipo">
 			</div>
 			<span class="color_gris_claro a4afb9 h_47_LightC">*.PNG 800x480 </span>
-			<i class="color_rojo fa fa-eye-slash pointer"></i>
+			<i class="fa pointer"
+				ng-class="(configuraciones[0]['estilo_kiosco_logo_visible'] == 1) ?
+				'fa-eye' :
+				'fa-eye-slash color_rojo' "
+				ng-click="checked('estilo_kiosco_logo_visible')"
+				ng-model="configuraciones[0]['estilo_kiosco_logo_visible']"></i>
 			<span class="pl_2em h_47_LightC pointer color_687a8b">
 				Animar
 				<i class="fa check" 
@@ -31,7 +36,12 @@
 				<input type="file" accept="images/*" id="logotipo">
 			</div>
 			<span class="color_gris_claro a4afb9 h_47_LightC">*.PNG 800x480 </span>
-			<i class="color_gris_oscuro fa fa-eye pointer"></i>
+			<i class="fa pointer"
+				ng-class="(configuraciones[0]['estilo_kiosco_kiosco_visible'] == 1) ?
+				'fa-eye' :
+				'fa-eye-slash color_rojo' "
+				ng-click="checked('estilo_kiosco_kiosco_visible')"
+				ng-model="configuraciones[0]['estilo_kiosco_kiosco_visible']"></i>
 			<span class="pl_2em h_47_LightC pointer color_687a8b" >
 				Animar	
 				<i class="fa check" 
@@ -53,7 +63,12 @@
 				<input type="file" accept="images/*" id="logotipo">
 			</div>
 			<span class="color_gris_claro a4afb9 h_47_LightC">*.PNG 800x480 </span>
-			<i class="color_gris_oscuro fa fa-eye pointer"></i>
+			<i class="fa pointer"
+				ng-class="(configuraciones[0]['estilo_kiosco_flecha_visible'] == 1) ?
+				'fa-eye' :
+				'fa-eye-slash color_rojo' "
+				ng-click="checked('estilo_kiosco_flecha_visible')"
+				ng-model="configuraciones[0]['estilo_kiosco_flecha_visible']"></i>
 			<span class="pl_2em h_47_LightC pointer color_687a8b">
 				Animar		
 				<i class="fa check" 
@@ -75,10 +90,15 @@
 				<input type="file" accept="images/*" id="logotipo">
 			</div>
 			<span class="color_gris_claro a4afb9 h_47_LightC">*.PNG 800x480 </span>
-			<i class="color_gris_oscuro fa fa-eye pointer"></i>
+			<i class="fa pointer"
+				ng-class="(configuraciones[0]['estilo_kiosco_fondo_visible'] == 1) ?
+				'fa-eye' :
+				'fa-eye-slash color_rojo' "
+				ng-click="checked('estilo_kiosco_fondo_visible')"
+				ng-model="configuraciones[0]['estilo_kiosco_fondo_visible']"></i>
 		</div>
 	</div>
 	<div class="text-center boton_guardar pt_1">
-		<i class="dbe4e9 f_90 fa fa-check-circle pointer"></i>
+		<i class="dbe4e9 f_90 fa fa-check-circle pointer" ng-click="update_k_general()"></i>
 	</div>
-</div>
+</form>

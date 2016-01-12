@@ -1,4 +1,4 @@
-<div class="plr_15 pt_1">				
+<form class="plr_15 pt_1" ng-controller="FileCtrl" name="form_textos">				
 	<div class="inline_block pt_5 plr_15">
 		<label for="" class="left w_55 h_47_LightC mb_0 color_687a8b">Linea 1</label>
 		<div class="relative left">			
@@ -11,7 +11,12 @@
 				    ng-model="configuraciones[0]['estilo_kiosco_linea1_color']">
 			</div>
 		</div>
-		<i class="color_gris_oscuro left pl_10 fa fa-eye pointer"></i>
+		<i class=" left pl_10 fa pointer"
+			ng-class="(configuraciones[0]['estilo_kiosco_linea1_visible'] == 1) ?
+			'fa-eye color_gris_oscuro' :
+			'fa-eye-slash color_rojo' "
+			ng-click="checked('estilo_kiosco_linea1_visible')"
+			ng-model="configuraciones[0]['estilo_kiosco_linea1_visible']"></i>
 		<div class="left h_47_LightC text-right w_140">			
 			<span class="mr_10 color_687a8b">Origen X </span>
 			<input class=" w_45 input_for" type="text" ng-model="configuraciones[0]['estilo_kiosco_origen_x']">
@@ -29,7 +34,12 @@
 				    ng-model="configuraciones[0]['estilo_kiosco_linea2_color']">
 			</div>
 		</div>
-		<i class="color_gris_oscuro left pl_10 fa fa-eye pointer"></i>
+		<i class=" left pl_10 fa pointer"
+			ng-class="(configuraciones[0]['estilo_kiosco_linea2_visible'] == 1) ?
+			'fa-eye color_gris_oscuro' :
+			'fa-eye-slash color_rojo' "
+			ng-click="checked('estilo_kiosco_linea2_visible')"
+			ng-model="configuraciones[0]['estilo_kiosco_linea2_visible']"></i>
 		<div class="left h_47_LightC text-right w_140">			
 			<span class="mr_10 color_687a8b">Origen Y </span>
 			<input class="w_45 input_for" type="text" ng-model="configuraciones[0]['estilo_kiosco_origen_y']">
@@ -47,7 +57,12 @@
 				    ng-model="configuraciones[0]['estilo_kiosco_linea3_color']">
 			</div>
 		</div>
-		<i class="color_gris_oscuro left pl_10 fa fa-eye pointer"></i>	
+		<i class=" left pl_10 fa pointer"
+			ng-class="(configuraciones[0]['estilo_kiosco_linea3_visible'] == 1) ?
+			'fa-eye color_gris_oscuro' :
+			'fa-eye-slash color_rojo' "
+			ng-click="checked('estilo_kiosco_linea3_visible')"
+			ng-model="configuraciones[0]['estilo_kiosco_linea3_visible']"></i>	
 		<div class="left h_47_LightC text-right w_140">			
 			<span class="pointer color_687a8b">Mostrar guión 
 				<i class="fa check" 
@@ -71,7 +86,12 @@
 				    ng-model="configuraciones[0]['estilo_kiosco_linea4_color']">
 			</div>
 		</div>
-		<i class="color_gris_oscuro left pl_10 fa fa-eye pointer"></i>
+		<i class=" left pl_10 fa pointer"
+			ng-class="(configuraciones[0]['estilo_kiosco_linea4_visible'] == 1) ?
+			'fa-eye color_gris_oscuro' :
+			'fa-eye-slash color_rojo' "
+			ng-click="checked('estilo_kiosco_linea4_visible')"
+			ng-model="configuraciones[0]['estilo_kiosco_linea4_visible']"></i>
 	</div>								
 	<div class="left pt_5 plr_15">
 		<label for="" class="left w_55 h_47_LightC mb_0 color_687a8b">Linea 5</label>
@@ -85,7 +105,12 @@
 				    ng-model="configuraciones[0]['estilo_kiosco_linea5_color']">
 			</div>
 		</div>
-		<i class="color_rojo left pl_10 fa fa-eye-slash pointer"></i>	
+		<i class=" left pl_10 fa pointer"
+			ng-class="(configuraciones[0]['estilo_kiosco_linea5_visible'] == 1) ?
+			'fa-eye color_gris_oscuro' :
+			'fa-eye-slash color_rojo' "
+			ng-click="checked('estilo_kiosco_linea5_visible')"
+			ng-model="configuraciones[0]['estilo_kiosco_linea5_visible']"></i>	
 		<div class="left h_47_LightC text-right w_140">			
 			<span class="pointer color_687a8b">Animar 
 				<i class="fa check" 
@@ -98,6 +123,6 @@
 		</div>	
 	</div>		
 	<div class="text-center boton_guardar pt_4em">
-		<i class="dbe4e9 f_90 fa fa-check-circle pointer"></i>
+		<i class="dbe4e9 f_90 fa fa-check-circle pointer" ng-click="update_k_textos()"></i>
 	</div>
-</div>
+</form>
