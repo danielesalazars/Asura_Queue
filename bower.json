@@ -22,7 +22,7 @@
     "angular-mocks": "^1.4.0"
   },
   "appPath": "app",
-  "moduleName": "demoApp",
+  "moduleName": "Asura",
   "overrides": {
     "bootstrap": {
       "main": [

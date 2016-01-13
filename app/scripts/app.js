@@ -137,27 +137,27 @@
     templateUrl:  "views/reportes/clt_atendidos.html"
   })
   .when("/reportes/clt_salteados",{
-    controller:   "CltSalteadosCtrl",
+    controller:   "CltsalteadosCtrl",
     templateUrl:  "views/reportes/clt_salteados.html"
   })
   .when("/reportes/tkt_impresos",{
-    controller:   "TktImpresosCtrl",
+    controller:   "TktimpresosCtrl",
     templateUrl:  "views/reportes/tkt_impresos.html"
   })
   .when("/reportes/movil_escaneos",{
-    controller:   "MovilEscaneosCtrl",
+    controller:   "MovilescaneosCtrl",
     templateUrl:  "views/reportes/movil_escaneos.html"
   })
   .when("/reportes/movil_tickets",{
-    controller:   "MovilTicketsCtrl",
+    controller:   "MovilticketsCtrl",
     templateUrl:  "views/reportes/movil_tickets.html"
   })
   .when("/reportes/descarga_datos",{
-    controller:   "DescargaDatosCtrl",
+    controller:   "DescargadatosCtrl",
     templateUrl:  "views/reportes/descarga_datos.html"
   })
   .when("/reportes/comparativo_tickets",{
-    controller:   "ComparativoTicketsCtrl",
+    controller:   "ComparativoticketsCtrl",
     templateUrl:  "views/reportes/comparativo_tickets.html"
   })
   .otherwise({
