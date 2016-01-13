@@ -15,6 +15,8 @@
 	estilos_multi_page_html();
 	estilos_kiosco();
 
+	$scope.estado = true;
+
 	function minicolors(){
 		$scope.mini_generales = {position: 'top right',letterCase: 'uppercase'};
 	}
@@ -74,6 +76,10 @@
 		}
     }
  	
+    $scope.activar_slide = function(){
+		$scope.estado = true;
+    }
+
  	function estilos_kiosco(){
  		$scope.tab_url = $routeParams.estilo;
  	}
@@ -85,6 +91,10 @@
  		}else{
 			$scope.configuraciones[0][modelo] = 0;
  		}
+	}
+    
+    $scope.close = function(){
+    	$scope.estado = !$scope.estado;
 	}
 
 }]);

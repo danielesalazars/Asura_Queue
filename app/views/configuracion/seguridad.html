@@ -2,7 +2,7 @@
 	<div class="col-lg-9 col-md-11 pt_1-5em">
 		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">¿Qué configuración de <span class="h_47_LightC" 
 	style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">Seguridad</span> utilizarás?</h1>
-		<div class="col-lg-7 col-md-8">		
+		<div class="col-lg-7 col-md-9">		
 			<div class="ffffff border_tabla pt_4em">
 				<table class="table tabla_usuarios">
 					<thead>
@@ -14,16 +14,16 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="active">
+						<tr class="activar" ng-click="activar_autenticacion()">
 							<td class="bb_0">&nbsp;</td>
 							<td class="pl_0">Actualización de código de autenticación</td>
-							<td>Una vez al mes</td>
+							<td>{{ valor_autenticacion }}</td>
 							<td class="bb_0">&nbsp;</td>
 						</tr>
-						<tr>
+						<tr class="activar" ng-click="activar_codigo()">
 							<td class="bb_0">&nbsp;</td>
 							<td class="pl_0">Actualización de código en kioscos</td>
-							<td>Nunca actualizar</td>
+							<td>{{ valor_codigo }}</td>
 							<td class="bb_0">&nbsp;</td>
 						</tr>
 					</tbody>
@@ -32,25 +32,124 @@
 		</div>
 	</div>
 
-	<div class="slide_flotante slide_seguridad">
+	<div class="slide_flotante slide_seguridad" ng-show="estado_au">
 		<div class="ffffff border_tabla ml_17 pt_10 pb_1em">
 			<div class="plr_15 text-right">
 				<i class="fa fa-times pointer"></i>
 			</div>
 			<div class="plr_15 h_Cond color_7fd0d9 f_16 bb_1 pb_10 mt_-10">Código de autenticación</div>
 			<div class="plr_15 pt_1 lh_30 color_687a8b">
-				<i class="color_rojo fa fa-circle-o"></i> <span class="h_47_LightC">Nunca actualizar</span><br>
-				<i class="fa fa-dot-circle-o"></i><span class="h_47_LightC"> Actualizar una vez al mes</span><br>
-				<i class="color_rojo fa fa-circle-o"></i> <span class="h_47_LightC">Actualizar una vez a la semana</span><br>
-				<i class="color_rojo fa fa-circle-o"></i> <span class="h_47_LightC">Actualizar una vez al día</span><br>
-				<i class="color_rojo fa fa-circle-o"></i> <span class="h_47_LightC">Actualizar cada <input type="text" class="input_for w_37"> días</span>
+				<i class="fa" 
+					ng-class="(configuraciones[0]['seguridad_codigo_autenticacion_tipo'] == 1) ?
+					'fa-dot-circle-o' : 
+					'color_rojo fa-circle-o' "
+					ng-model="configuraciones[0]['seguridad_codigo_autenticacion_tipo']"
+					ng-click="radio_autenticacion(1)"></i>
+				<span class="h_47_LightC">Nunca actualizar</span><br>
+
+				<i class="fa" 
+					ng-class="(configuraciones[0]['seguridad_codigo_autenticacion_tipo'] == 2) ?
+					'fa-dot-circle-o' : 
+					'color_rojo fa-circle-o' "
+					ng-model="configuraciones[0]['seguridad_codigo_autenticacion_tipo']"
+					ng-click="radio_autenticacion(2)"></i>
+				<span class="h_47_LightC"> Actualizar una vez al mes</span><br>
+
+				<i class="fa" 
+					ng-class="(configuraciones[0]['seguridad_codigo_autenticacion_tipo'] == 3) ?
+					'fa-dot-circle-o' : 
+					'color_rojo fa-circle-o' "
+					ng-model="configuraciones[0]['seguridad_codigo_autenticacion_tipo']"
+					ng-click="radio_autenticacion(3)"></i> 
+				<span class="h_47_LightC">Actualizar una vez a la semana</span><br>
+
+				<i class="fa" 
+					ng-class="(configuraciones[0]['seguridad_codigo_autenticacion_tipo'] == 4) ?
+					'fa-dot-circle-o' : 
+					'color_rojo fa-circle-o' "
+					ng-model="configuraciones[0]['seguridad_codigo_autenticacion_tipo']"
+					ng-click="radio_autenticacion(4)"></i>
+				<span class="h_47_LightC">Actualizar una vez al día</span><br>
+
+				<i class="fa" 
+					ng-class="(configuraciones[0]['seguridad_codigo_autenticacion_tipo'] == 5) ?
+					'fa-dot-circle-o' : 
+					'color_rojo fa-circle-o' "
+					ng-model="configuraciones[0]['seguridad_codigo_autenticacion_tipo']"
+					ng-click="radio_autenticacion(5)"></i>
+				<span class="h_47_LightC">Actualizar cada <input type="text" class="input_for w_37" 
+				ng-model="configuraciones[0]['seguridad_codigo_autenticacion_dias']"> días</span>
 			</div>
 			<div class="plr_15 pt_1 input_calendar ml_20">
 				<label for="" class="h_47_LightC mb_0 color_687a8b f_weight100">Fecha de próxima actualización</label><br>
-				<input class="h_47_LightC w_100_por input_for" type="text"><i class="fa fa-calendar"></i>
+				<input class="h_47_LightC w_100_por input_for datepicker" 
+				type="text" data-date-format="dd/mm/yyyy" 
+				ng-model="configuraciones[0]['seguridad_codigo_autenticacion_fecha']">
+				<i class="fa fa-calendar"></i>
 			</div>
 			<div class="text-center boton_guardar pt_1">
-				<i class="dbe4e9 f_90 fa fa-check-circle"></i>
+				<i class="dbe4e9 f_90 fa fa-check-circle" ng-click="update_autenticacion()"></i>
+			</div>
+		</div>
+	</div>
+
+	<div class="slide_flotante slide_seguridad" ng-show="estado_co">
+		<div class="ffffff border_tabla ml_17 pt_10 pb_1em">
+			<div class="plr_15 text-right">
+				<i class="fa fa-times pointer"></i>
+			</div>
+			<div class="plr_15 h_Cond color_7fd0d9 f_16 bb_1 pb_10 mt_-10">Código de kiosco</div>
+			<div class="plr_15 pt_1 lh_30 color_687a8b">
+				<i class="fa" 
+					ng-class="(configuraciones[0]['seguridad_codigo_kiosco_tipo'] == 1) ?
+					'fa-dot-circle-o' : 
+					'color_rojo fa-circle-o' "
+					ng-model="configuraciones[0]['seguridad_codigo_kiosco_tipo']"
+					ng-click="radio_codigo(1)"></i>
+				<span class="h_47_LightC">Nunca actualizar</span><br>
+
+				<i class="fa" 
+					ng-class="(configuraciones[0]['seguridad_codigo_kiosco_tipo'] == 2) ?
+					'fa-dot-circle-o' : 
+					'color_rojo fa-circle-o' "
+					ng-model="configuraciones[0]['seguridad_codigo_kiosco_tipo']"
+					ng-click="radio_codigo(2)"></i>
+				<span class="h_47_LightC"> Actualizar una vez al mes</span><br>
+
+				<i class="fa" 
+					ng-class="(configuraciones[0]['seguridad_codigo_kiosco_tipo'] == 3) ?
+					'fa-dot-circle-o' : 
+					'color_rojo fa-circle-o' "
+					ng-model="configuraciones[0]['seguridad_codigo_kiosco_tipo']"
+					ng-click="radio_codigo(3)"></i> 
+				<span class="h_47_LightC">Actualizar una vez a la semana</span><br>
+
+				<i class="fa" 
+					ng-class="(configuraciones[0]['seguridad_codigo_kiosco_tipo'] == 4) ?
+					'fa-dot-circle-o' : 
+					'color_rojo fa-circle-o' "
+					ng-model="configuraciones[0]['seguridad_codigo_kiosco_tipo']"
+					ng-click="radio_codigo(4)"></i>
+				<span class="h_47_LightC">Actualizar una vez al día</span><br>
+
+				<i class="fa" 
+					ng-class="(configuraciones[0]['seguridad_codigo_kiosco_tipo'] == 5) ?
+					'fa-dot-circle-o' : 
+					'color_rojo fa-circle-o' "
+					ng-model="configuraciones[0]['seguridad_codigo_kiosco_tipo']"
+					ng-click="radio_codigo(5)"></i>
+				<span class="h_47_LightC">Actualizar cada <input type="text" class="input_for w_37" 
+				ng-model="configuraciones[0]['seguridad_codigo_kiosco_dias']"> días</span>
+			</div>
+			<div class="plr_15 pt_1 input_calendar ml_20">
+				<label for="" class="h_47_LightC mb_0 color_687a8b f_weight100">Fecha de próxima actualización</label><br>
+				<input class="h_47_LightC w_100_por input_for datepicker_codigo" 
+				type="text" data-date-format="dd/mm/yyyy" 
+				ng-model="configuraciones[0]['seguridad_codigo_kiosco_fecha']">
+				<i class="fa fa-calendar"></i>
+			</div>
+			<div class="text-center boton_guardar pt_1">
+				<i class="dbe4e9 f_90 fa fa-check-circle" ng-click="update_codigo()"></i>
 			</div>
 		</div>
 	</div>

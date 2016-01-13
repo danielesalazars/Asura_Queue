@@ -1308,7 +1308,7 @@ tr.activar:hover .eliminar{
 .input_calendar i{
 	position: absolute;
 	right: 20px;
-	margin-top: 5px;
+	margin-top: -20px;
 }
 .boton_guardar{
     bottom: 15px;
