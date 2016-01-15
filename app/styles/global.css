@@ -565,7 +565,7 @@ input[type="file"]{
 	font-size: 19px;
 }
 .f_21{
-	font-size: 21px;
+	font-size: 21px !important;
 }
 .f_23{
 	font-size: 23px !important;
