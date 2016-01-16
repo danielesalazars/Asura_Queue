@@ -9,8 +9,15 @@
  */
 
 angular.module('Asura')
-  .controller('MainCtrl',['$scope', '$rootScope', 'mainFactory', function($scope, $rootScope, mainFactory) {
-  	//activar Loader
+  .controller('MainCtrl',[
+    '$scope', 
+    '$rootScope', 
+    'mainFactory',  
+    function(
+      $scope, 
+      $rootScope, 
+      mainFactory) {
+
   	$scope.cargando		      = true;
   	$rootScope.main 	      = mainFactory;
   	$rootScope.id_cuenta    = 1;
@@ -19,7 +26,8 @@ angular.module('Asura')
     $scope.usuarios         = $rootScope.main.usuarios.query({id: $rootScope.id_cuenta});
     $scope.locales     	    = $rootScope.main.locales.query({id: $rootScope.id_cuenta});
     $scope.grupoatenciones  = $rootScope.main.grupoatenciones.query({id: $scope.id_cuenta});
-    $scope.configuraciones  = $rootScope.main.configuraciones.get({id: $rootScope.id_cuenta},function(data){
+    $scope.configuraciones  = $rootScope.main.configuraciones.get({id: $rootScope.id_cuenta});
+    $scope.jerarquias       = $rootScope.main.jerarquias.get({id: $rootScope.id_cuenta},function(data){
       //Desactvivar Loader
       //console.log(data);
       $scope.cargando   = false;

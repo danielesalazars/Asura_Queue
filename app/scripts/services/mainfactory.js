@@ -41,5 +41,7 @@ angular.module('Asura')
 			archivos: 			recoverDataCrud('archivos/:id'),
 			grupoatenciones: 	recoverDataGet('grupoatencion/cuenta/:id'),
 			grupoatencion: 		recoverDataCrud('grupoatencion/:id'),
+			jerarquias: 		recoverDataGet('jerarquias/cuenta/:id'),
+			jerarquia: 			recoverDataCrud('jerarquias/:id'),
 		};
 	}]);

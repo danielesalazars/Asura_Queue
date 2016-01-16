@@ -27,69 +27,16 @@
 							<td class="bb_0">&nbsp;</td>
 							<td class="pl_0" ng-click="show_editar(grupoatencion.id)" ng-bind="grupoatencion.nombre" ></td>
 							<td class="text-center" ng-bind="grupoatencion.inicial"></td>
-							<td class="text-center"><i class="color_amarillo fa fa-circle mapa"></i></td>
+							<td class="text-center">
+								<i class="fa fa-circle mapa" 
+								style="color: {{ grupoatencion.color }}"></i>
+								</td>
 							<td class="text-right bb_0" ng-if="grupoatencion.id > 0">
 								<i 	class="eliminar color_rojo fa fa-times" 
 									ng-click="eliminar(grupoatencion.id)"></i>
 							</td>
 							<td class="bb_0">&nbsp;</td>
 						</tr>
-						<!--<tr>						
-							<td class="bb_0">&nbsp;</td>
-							<td class="pl_0">Trámites</td>
-							<td class="text-center">T</td>
-							<td class="text-center"><i class="color_amarillo fa fa-circle"></i></td>
-							<td class="text-right bb_0">&nbsp;</td>
-							<td class="bb_0">&nbsp;</td>
-						</tr>
-						<tr class="active">
-							<td class="bb_0">&nbsp;</td>
-							<td class="pl_0">Cobranzas</td>
-							<td class="text-center">T</td>
-							<td class="text-center"><i class="color_rojo fa fa-circle"></i></td>
-							<td class="text-right bb_0"><i class="color_rojo fa fa-times"></i></td>
-							<td class="bb_0">&nbsp;</td>
-						</tr>
-						<tr>
-							<td class="bb_0">&nbsp;</td>
-							<td class="pl_0">Mesa de partes</td>
-							<td class="text-center">M</td>
-							<td class="text-center"><i class="color_amarillo fa fa-circle"></i></td>
-							<td class="text-right bb_0">&nbsp;</td>
-							<td class="bb_0">&nbsp;</td>
-						</tr>
-						<tr>
-							<td class="bb_0">&nbsp;</td>
-							<td class="pl_0">Atención</td>
-							<td class="text-center">A</td>
-							<td class="text-center"><i class="color_amarillo fa fa-circle"></i></td>
-							<td class="text-right bb_0">&nbsp;</td>
-							<td class="bb_0">&nbsp;</td>
-						</tr>
-						<tr>
-							<td class="bb_0">&nbsp;</td>
-							<td class="pl_0">Plataforma preferente</td>
-							<td class="text-center">P</td>
-							<td class="text-center"><i class="color_azul fa fa-circle"></i></td>
-							<td class="text-right bb_0">&nbsp;</td>
-							<td class="bb_0">&nbsp;</td>
-						</tr>
-						<tr>
-							<td class="bb_0">&nbsp;</td>
-							<td class="pl_0">Plataforma regular</td>
-							<td class="text-center">R</td>
-							<td class="text-center"><i class="color_azul fa fa-circle"></i></td>
-							<td class="text-right bb_0">&nbsp;</td>
-							<td class="bb_0">&nbsp;</td>
-						</tr>
-						<tr>
-							<td class="bb_0">&nbsp;</td>
-							<td class="pl_0">Plataforma no cliente</td>
-							<td class="text-center">M</td>
-							<td class="text-center"><i class="color_azul fa fa-circle"></i></td>
-							<td class="text-right bb_0">&nbsp;</td>
-							<td class="bb_0">&nbsp;</td>
-						</tr>-->
 					</tbody>
 				</table>
 			</div>
@@ -101,30 +48,26 @@
 				<i class="fa fa-times pointer" ng-click="close()"></i>
 			</div>
 			<div class="plr_15 h_Cond color_7fd0d9 bb_1 pb_10 mt_-10 f_16" ng-bind="title_slide"></div>
-			<div class="plr_15 pt_1">
+			<div class="plr_15 pt_1 overflow">
 				<label for="" class="h_47_LightC mb_0 color_687a8b">Grupo de atención</label><br>
 				<input ng-model="grupoatencion.nombre" class="h_47_LightC w_100_por input_for" type="text">
 			</div>
-			<div class="plr_15 pt_1 overflow">
+			<div class="plr_15 pt_1">
 				<div class="left pr_1em">
 					<label for="" class="h_47_LightC mb_0 color_687a8b">Inicial</label><br>
 					<input ng-model="grupoatencion.inicial" class="h_47_LightC w_75 input_for" type="text">
 				</div>
 				<div class="left">					
 					<label for="" class="h_47_LightC mb_0 color_687a8b">Color (#000000)</label><br>
-					<input class="h_47_LightC w_150_por input_for" type="text" >
-					<div class="minicolor_generales mini_kiosko_texto">
-						<input 
+					<div class="minicolor_generales mini_kiosko_texto_ga">
+						<input
 						    minicolors="mini_generales"
-						    class="form-control"
-						    type="hidden"
-						    ng-model="Grupoatencion[0]['color']">
+						    id="color-input"
+						    class="h_47_LightC w_150 input_for"
+						    type="text"
+						    ng-model="grupoatencion.color">
 					</div>
 				</div>				
-			</div>
-			<div class="plr_15 pt_1">	
-				<label for="" class="h_47_LightC mb_0 color_687a8b f_weight100">Paleta Recomendada</label><br>
-				<img src="images/colores.jpg" alt="">
 			</div>
 			<div class="text-center boton_guardar pt_1">
 				<i ng-show="act_btn_crear" class="dbe4e9 f_90 fa fa-check-circle pointer" ng-click="crear()"></i>

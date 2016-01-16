@@ -19,17 +19,26 @@
   'ngSanitize',
   'ngTouch',
   'ui.bootstrap',
-  'minicolors'
+  'minicolors',
+  'uiGmapgoogle-maps'
   ])
  
- .constant('URL',{ 
-  'path' : 'http://api.asura.piensamasalla.com/' 
-})
+  .constant('URL',{ 
+    'path' : 'http://api.asura.piensamasalla.com/' 
+  })
  /* 
 .constant('URL',{ 
   'path' : 'http://localhost/asura-api/' 
 })
  */ 
+  .config(function(uiGmapGoogleMapApiProvider) {
+    uiGmapGoogleMapApiProvider.configure({
+        //key: 'AIzaSyCZ3kL3WTQW-LDhnx1zS8eDoTcRP-WW5hM',
+        v: '3.20', //defaults to latest 3.X anyhow
+        libraries: 'weather,geometry,visualization'
+    });
+  })
+
  .config(function ($routeProvider) {
   $routeProvider
   .when('/', {

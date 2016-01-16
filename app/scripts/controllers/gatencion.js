@@ -17,11 +17,18 @@
 		var Grupoatencion = $rootScope.main.grupoatencion;
 
 		$scope.id_grupoatencion = 0;
+
+		minicolors();
+
+		function minicolors(){
+			$scope.mini_generales = {position: 'top right',letterCase: 'uppercase'};
+		}
+
 	    $scope.show_crear = function(){
 			//asignar titulo cabecera al slide
 			$scope.act_btn_crear 	= true;
 			$scope.act_btn_up 		= !$scope.act_btn_crear;
-	    	$scope.title_slide = 'Crear grupo de atención';
+	    	$scope.title_slide 		= 'Crear grupo de atención';
 
 	    	$scope.grupoatencion.nombre = '';
 	    	$scope.estado = true;
@@ -37,17 +44,9 @@
 
 				$scope.grupoatencion.nombre = data[0]["nombre"]; //siempre 0
 				$scope.grupoatencion.inicial = data[0]["inicial"];
-				$scope.grupoatencion.color_ = data[0]["color_"];
+				$scope.grupoatencion.color = data[0]["color"];
 				$scope.estado = true;
-				 //activar o desactivar ITEM
-		        $scope.local.disabled     = false;
-		        if(data[0]['id'] < 4){
-		          $scope.local.disabled   = true;
-		        }
-				//console.log(data); //muestra el detalle del parametro
-			})
-			
-
+			})	
 		}
 
     	$scope.crear = function(){
@@ -55,9 +54,9 @@
 				'nombre': $scope.grupoatencion.nombre,
 				'cuenta_id': $rootScope.id_cuenta,
 				'inicial': $scope.grupoatencion.inicial,
-				'color_': $scope.grupoatencion.color_,
+				'color': $scope.grupoatencion.color,
 			}];
-			Grupoatencion.post(null, data, function(){
+			Grupoatencion.post(data, function(){
 				$rootScope.main.grupoatenciones.query({id: $rootScope.id_cuenta}, function(data){
 					$scope.grupoatenciones = data;
 					$scope.estado = !$scope.estado;
@@ -67,13 +66,13 @@
 
     	$scope.actualizar = function(){
     		var data = [
-				    {
-				        'nombre': $scope.grupoatencion.nombre,
-						'inicial': $scope.grupoatencion.inicial,
-						'color_': $scope.grupoatencion.color_,
-						'cuenta_id': $rootScope.id_cuenta
-				    }
-				];
+			    {
+			        'nombre': 	$scope.grupoatencion.nombre,
+					'inicial': 	$scope.grupoatencion.inicial,
+					'color': 	$scope.grupoatencion.color,
+					'cuenta_id':$rootScope.id_cuenta
+			    }
+			];
 			Grupoatencion.update({id: $scope.id_grupoatencion}, data,function(){
 				$rootScope.main.grupoatenciones.query({id: $rootScope.id_cuenta}, function(data){
 					$scope.grupoatenciones = data;
@@ -93,5 +92,6 @@
 	    $scope.close = function(){
 	    	$scope.estado = !$scope.estado;
     	}
+
 
 	}]);

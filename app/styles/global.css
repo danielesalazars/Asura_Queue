@@ -1,3 +1,4 @@
+/*html, body { height: 100%; margin: 0; padding: 0; }*/
 body{
 	font-size: 15px;
 	background-color: #f3f4f8;
@@ -1401,15 +1402,16 @@ tr.activar:hover .eliminar{
 	display: inline-block;
     width: 225px;
 }
-.mini_kiosko_texto{
+.mini_kiosko_texto,
+.mini_kiosko_texto_ga{
 	width: auto;
 }
 .mini_kiosko_texto .minicolors{
 	width: 25px;
 	height: 21px;
-	margin-left: -32px;
 }
-.mini_kiosko_texto .minicolors-swatch{
+.mini_kiosko_texto .minicolors-swatch,
+.mini_kiosko_texto_ga .minicolors-swatch{
 	width: 25px !important;
 	height: 17px !important;
 }
@@ -1460,4 +1462,9 @@ tr.activar:hover .eliminar{
     padding: 0 !important;
     opacity: 0;
     filter: alpha(opacity=0);
+}
+/* GOOGLE MAPS */
+.angular-google-map-container{ 
+	height: 200px; 
+	width: 100%;
 }

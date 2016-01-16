@@ -8,18 +8,24 @@
 					<thead>
 						<tr>
 							<th class="w_5_por borde_azul">&nbsp;</th>
-							<th class="w_30_por borde_azul pl_0">Nombre del local</th>
+							<th class="w_50_por borde_azul pl_0">Nombre del local</th>
 							<th class="w_15_por text-center">Publicar</th>
-							<th class="w_50_por text-center">&nbsp;</th>
+							<th class="w_30_por text-center">&nbsp;</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr ng-repeat="logica in locales" 
 						ng-class="(logica.id > 3 ) ? 'activar' : 'desactivar'">
 							<td class="bb_0">&nbsp;</td>
-							<td class="pl_0" ng-bind="logica.nombre" ng-click="show_editar(logica.id)"></td>
+							<td class="pl_0" ng-bind="logica.nombre" 
+								ng-click="show_editar(logica.id)"></td>
 							<td class="text-center">
-								<i class="fa fa-check-square-o mapa"></i>
+								<i class="fa "
+								ng-class="(logica.es_publicado == 1) ?
+								'fa-check-square-o' :
+								'color_rojo fa-square-o' "
+								ng-model="logica.es_publicado"
+								ng-click="check_portada($index, logica.es_publicado )"></i>
 							</td>
 							<td class="bb_0">&nbsp;</td>
 						</tr>
@@ -42,7 +48,7 @@
 				<table class="table tabla_usuarios mt_10 color_7fd0d9">
 					<thead>
 						<tr>
-							<th width="150" class="pl_0 pr_0 h_47_LightC" colspan="4">Grupos de atención</th>
+							<th width="200" class="pl_0 pr_0 h_47_LightC" colspan="4">Grupos de atención</th>
 							<th width="20" class="text-center h_47_LightC color_gris_oscuro" 
 								ng-repeat="ventanilla in ventanillas">
 								{{ventanilla['nombre']}}
@@ -50,89 +56,25 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td width="15" class="pl_0 pr_0 text-center"><i class="color_amarillo fa fa-circle"></i></td>
-							<td width="30" class="text-center color_azul">I</td>							
-							<td width="105" class="pl_0" colspan="2">Información</td>							
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-						</tr>
-						<tr>
-							<td width="15" class="pl_0 pr_0 text-center"><i class="color_amarillo fa fa-circle"></i></td>
-							<td width="30" class="text-center color_azul">T</td>							
-							<td width="105" class="pl_0" colspan="2">Trámites</td>							
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-						</tr>
-						<tr>
-							<td width="15" class="pl_0 pr_0 text-center"><i class="color_rojo fa fa-circle"></i></td>			
-							<td width="30" class="text-center color_azul">C</td>							
-							<td width="105" class="pl_0" colspan="2">Cobranzas</td>							
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-						</tr>						
-						<tr>
-							<td width="15" class="pl_0 pr_0 text-center"><i class="color_amarillo fa fa-circle"></i></td>
-							<td width="30" class="text-center color_azul">M</td>							
-							<td width="105" class="pl_0" colspan="2">Mesa de partes</td>							
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-						</tr>
-						<tr>
-							<td width="15" class="pl_0 pr_0 text-center"><i class="color_amarillo fa fa-circle"></i></td>
-							<td width="30" class="text-center color_azul">A</td>							
-							<td width="105" class="pl_0" colspan="2">Atención</td>							
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-						</tr>
-						<tr>
-							<td width="15" class="pl_0 pr_0 text-center"><i class="color_azul fa fa-circle"></i></td>			
-							<td width="30" class="text-center color_azul">P</td>							
-							<td width="105" class="pl_0" colspan="2">Plataforma</td>							
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
+						<tr ng-repeat="grupoatencion in grupoatenciones" 
+						ng-init="id_atencion = $index"
+						class="activar">
+							<td width="30" class="pl_0 pr_0 text-center">
+								<i 	class="fa fa-circle"
+									style="color: {{ grupoatencion.color }}"></i>
+							</td>
+							<td width="30" class="text-center color_azul"
+								ng-bind="grupoatencion.inicial"></td>							
+							<td width="140" class="pl_0" colspan="2"
+								ng-bind="grupoatencion.nombre"></td>							
+							<td width="20" class="text-center h_47_LightC "
+								ng-repeat="ventanilla in ventanillas">
+								<i class="fa"
+									ng-class="( atendiendo($index, id_atencion, grupoatencion.id) ) ? 
+									'fa-check-square-o' :
+									'color_rojo fa-square-o' "
+								></i>
+							</td>
 						</tr>
 					</tbody>
 				</table>
@@ -141,51 +83,22 @@
 				<table class="table tabla_usuarios mt_10">
 					<thead>
 						<tr>
-							<th colspan="4" width="150" class="pl_0 pr_0 h_47_LightC">Jerarquías</th>
+							<th colspan="4" width="200" class="pl_0 pr_0 h_47_LightC">Jerarquías</th>
 							<th width="20" class="text-center h_47_LightC color_gris_oscuro" 
 								ng-repeat="ventanilla in ventanillas">
 								{{ventanilla['nombre']}}
 							</th>
-							
 						</tr>
 					</thead>
 					<tbody>
-						<tr>					
-							<td colspan="4"  width="150" class="pl_0">Clientes preferentes</td>							
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
+						<tr ng-repeat="jerarquia in jerarquias" class="activar">					
+							<td colspan="4"  width="200" class="pl_0"
+								ng-bind="jerarquia.nombre"></td>	
+							<td width="20" class="text-center h_47_LightC"
+								ng-repeat="ventanilla in ventanillas">
+								<i class="fa fa-check-square-o"></i>
+							</td>
 						</tr>
-						<tr>					
-							<td colspan="4"  width="150" class="pl_0">Clientes regulares</td>							
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-						</tr>
-						<tr>						
-							<td colspan="4"  width="150" class="pl_0">No clientes</td>							
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class=" color_rojo fa fa-square-o"></i></td>
-							<td width="20" class="text-center h_47_LightC "><i class="fa fa-check-square-o"></i></td>
-						</tr>	
 					</tbody>
 				</table>
 			</div>

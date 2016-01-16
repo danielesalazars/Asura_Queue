@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc function
- * @name Asura.controller:CltAtendidosCtrl
+ * @name Asura.controller:CltSalteadosCtrl
  * @description
- * # CltAtendidosCtrl
+ * # CltSalteadosCtrl
  * Controller of the Asura
  */
 angular.module('Asura')
