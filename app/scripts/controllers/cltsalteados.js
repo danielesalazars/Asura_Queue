@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name Asura.controller:CltSalteadosCtrl
+ * @name Asura.controller:CltsalteadosCtrl
  * @description
- * # CltSalteadosCtrl
+ * # CltsalteadosCtrl
  * Controller of the Asura
  */
 angular.module('Asura')
-  .controller('CltSalteadosCtrl', function () {
+  .controller('CltsalteadosCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
