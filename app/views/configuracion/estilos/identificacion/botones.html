@@ -1,0 +1,53 @@
+<form class="plr_15 pt_1" ng-controller="FileCtrl" name="form_i_botones">		
+		<div class="overflow pt_5 plr_15 h_Cond color_7fd0d9">
+		No tengo documento
+	</div>		
+	<div class="pt_5 plr_15">
+		<div class="left w_120">			
+			<span class="h_47_LightC color_687a8b">Icono</span>
+			<span class="color_99a7b5 h_47_LightC f_13">*.PNG 80x40</span>
+		</div>
+		<label for="" class="left w_32 h_47_LightC mb_0 color_687a8b">Txt1</label>
+		<input class="mr_10 left h_47_LightC w_80 input_for" type="text" placeholder="DIGITA TU" ng-model="configuraciones[0]['estilo_kiosco_boton_condocumento_texto_linea1']">
+		<div class="minicolor_generales mini_kiosko_texto">
+			<input 
+			    minicolors="mini_generales"
+			    class="form-control"
+			    type="hidden"
+			    ng-model="configuraciones[0]['estilo_kiosco_boton_condocumento_texto_color']">
+		</div>
+		<span class="h_47_LightC color_687a8b">Texto</span>
+		<div class="right h_47_LightC ">
+			<input class="w_35 input_for" type="text" ng-model="configuraciones[0]['estilo_kiosco_origen_y']">
+			<span class="mr_5 color_687a8b">X</span>			
+		</div>
+	</div>
+	<div class="pt_5 plr_15">
+		<div class="left w_120 inline_block">
+			<input class="h_47_LightC w_80 input_for" type="text" id="input_logotipo"
+			ng-model="configuraciones[0]['estilo_consola_logo1_archivo']['url']"
+			ng-disabled="true">
+			<div class="fileupload pointer fa fa-search color_596a7a">
+				<input type="file" accept="images/*" id="logotipo">
+			</div>
+		</div>
+		<label for="" class="left w_32 h_47_LightC mb_0 color_687a8b">Txt2</label>
+		<input class="mr_10 left h_47_LightC w_80 input_for" type="text" placeholder="DOCUMENTO" ng-model="configuraciones[0]['estilo_kiosco_boton_condocumento_texto_linea2']">
+		<div class="minicolor_generales mini_kiosko_texto">
+			<input 
+			    minicolors="mini_generales"
+			    class="form-control"
+			    type="hidden"
+			    ng-model="configuraciones[0]['estilo_kiosco_boton_condocumento_color']">
+		</div>
+		<span class="h_47_LightC color_687a8b">Botón</span>
+		<div class="right h_47_LightC ">
+			<input class="w_35 input_for" type="text" ng-model="configuraciones[0]['estilo_kiosco_origen_y']">
+			<span class="mr_5 color_687a8b">Y</span>			
+		</div>
+	</div>
+
+	<div class="text-center boton_guardar pt_5em">
+		<i class="dbe4e9 f_90 fa fa-check-circle pointer" ng-click="update_k_botones()"></i>
+	</div>
+</form>

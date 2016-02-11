@@ -1,6 +1,6 @@
-<form class="plr_15 pt_1" ng-controller="FileCtrl" name="form_botones">		
+<form class="plr_15 pt_1" ng-controller="FileCtrl" name="form_mensajes">				
 	<div class="overflow pt_5 plr_15 h_Cond color_7fd0d9">
-		Soy Cliente
+		Botón continuar
 	</div>		
 	<div class="pt_5 plr_15">
 		<div class="left w_120">			
@@ -47,55 +47,68 @@
 		</div>
 	</div>
 
-			
-	<div class="pt_5 plr_15">
-		<div class="overflow pt_10 pb_5 h_Cond color_7fd0d9">
-			No soy Cliente
-		</div>
-		<div class="left w_120">			
-			<span class="h_47_LightC color_687a8b">Icono</span>
-			<span class="color_99a7b5 h_47_LightC f_13">*.PNG 80x40</span>
-		</div>
-		<label for="" class="left w_32 h_47_LightC mb_0 color_687a8b">Txt1</label>
-		<input class="mr_10 left h_47_LightC w_80 input_for" type="text" placeholder="DIGITA TU" ng-model="configuraciones[0]['estilo_kiosco_boton_condocumento_texto_linea1']">
-		<div class="minicolor_generales mini_kiosko_texto">
-			<input 
-			    minicolors="mini_generales"
-			    class="form-control"
-			    type="hidden"
-			    ng-model="configuraciones[0]['estilo_kiosco_boton_condocumento_texto_color']">
-		</div>
-		<span class="h_47_LightC color_687a8b">Texto</span>
-		<div class="right h_47_LightC ">
-			<input class="w_35 input_for" type="text" ng-model="configuraciones[0]['estilo_kiosco_origen_y']">
-			<span class="mr_5 color_687a8b">X</span>			
-		</div>
-	</div>
-	<div class="pt_5 plr_15">
-		<div class="left w_120 inline_block">
-			<input class="h_47_LightC w_80 input_for" type="text" id="input_logotipo"
-			ng-model="configuraciones[0]['estilo_consola_logo1_archivo']['url']"
-			ng-disabled="true">
-			<div class="fileupload pointer fa fa-search color_596a7a">
-				<input type="file" accept="images/*" id="logotipo">
+	<div class="col-lg-12 col-md-12 pb_2em pt_1">
+		<div class="col-lg-7 col-md-7 p_0">
+			<div class="row">
+				<div class="pt_5 plr_15">
+				<div class="overflow pt_5 h_Cond color_7fd0d9">
+					Fondo
+				</div>
+				<div class="left w_120">			
+					<span class="h_47_LightC color_687a8b">Activar transparencia</span>
+				</div>
+				<input class="mr_10 left h_47_LightC w_30 input_for" type="text">
+				<span for="" class="left w_30 h_47_LightC color_687a8b">%</span>
+				<div class="left h_47_LightC">
+					<i class="fa check" 
+						ng-class="(configuraciones[0]['estilo_kiosco_animar'] == 1) ?
+						'fa-check-square-o' :
+						'fa-square-o color_rojo' "
+						ng-click="checked('estilo_kiosco_animar')"
+						ng-model="configuraciones[0]['estilo_kiosco_animar']">
+					</i>
+				</div><br>
+				<span class="h_47_LightC color_687a8b left">Color fondo
+				<div class="minicolor_generales mini_kiosko_texto">
+					<input 
+					    minicolors="mini_generales"
+					    class="form-control"
+					    type="hidden"
+					    ng-model="configuraciones[0]['estilo_kiosco_boton_condocumento_texto_color']">
+				</div>
+				</span>
+			</div>
 			</div>
 		</div>
-		<label for="" class="left w_32 h_47_LightC mb_0 color_687a8b">Txt2</label>
-		<input class="mr_10 left h_47_LightC w_80 input_for" type="text" placeholder="DOCUMENTO" ng-model="configuraciones[0]['estilo_kiosco_boton_condocumento_texto_linea2']">
-		<div class="minicolor_generales mini_kiosko_texto">
-			<input 
-			    minicolors="mini_generales"
-			    class="form-control"
-			    type="hidden"
-			    ng-model="configuraciones[0]['estilo_kiosco_boton_condocumento_color']">
-		</div>
-		<span class="h_47_LightC color_687a8b">Botón</span>
-		<div class="right h_47_LightC ">
-			<input class="w_35 input_for" type="text" ng-model="configuraciones[0]['estilo_kiosco_origen_y']">
-			<span class="mr_5 color_687a8b">Y</span>			
+		<div class="col-lg-5 col-md-5 p_0 pl_27">
+			<div class="row">
+				<div class="pt_5 plr_15">
+				<div class="overflow pt_5 h_Cond color_7fd0d9">
+					Mensajes
+				</div>
+				<div class="minicolor_generales mini_kiosko_texto">
+					<input 
+					    minicolors="mini_generales"
+					    class="form-control"
+					    type="hidden"
+					    ng-model="configuraciones[0]['estilo_kiosco_boton_condocumento_texto_color']">
+				</div>
+				<span class="h_47_LightC color_687a8b">Color texto</span><br>
+				<div class="minicolor_generales mini_kiosko_texto">
+					<input 
+					    minicolors="mini_generales"
+					    class="form-control"
+					    type="hidden"
+					    ng-model="configuraciones[0]['estilo_kiosco_boton_condocumento_texto_color']">
+				</div>
+				<span class="h_47_LightC color_687a8b">Color fondo</span>
+				
+			</div>
+			</div>
 		</div>
 	</div>
-	<div class="text-center boton_guardar pt_1">
+
+	<div class="text-center boton_guardar pt_5em">
 		<i class="dbe4e9 f_90 fa fa-check-circle pointer" ng-click="update_k_botones()"></i>
 	</div>
 </form>

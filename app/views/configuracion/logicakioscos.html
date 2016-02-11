@@ -1,37 +1,29 @@
-<div class="row">
-	<div class="col-lg-10 col-md-12 pt_1-5em ml_17">
+	<div class="row">
+	<div class="col-lg-11 col-md-12 pt_1-5em ml_17">
 		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">¿Cómo funcionarán tus <span class=" h_47_LightC" 
 	style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">Kioscos</span>?</h1>
-		<div class="col-lg-10 col-md-12">
+		<div class="col-lg-11 col-md-12">
 			<div class="ffffff border_tabla color_gris_oscuro ">
 				<div class="col-lg-5 col-md-5 ">
 					<div class="mt_30 formato_logicak ml_10">
 						<span class="h_Cond color_celeste">Mecanismos de lectura:</span><br>
-							<i class="f_32 fa fa-credit-card"></i>
-							<span class="formato_l_h">
+							<i class="f_32 fa fa-credit-card pt_7"></i>
+							<span class="formato_l_h pt_7">
 								<i class="fa check" 
 								ng-class="(configuraciones[0]['kiosco_leer_barra'] == 0) ? 
 								'color_rojo fa-square-o' : 'fa-check-square-o' "
 								ng-model="configuraciones[0]['kiosco_leer_barra']"
 								ng-click="checked('kiosco_leer_barra')"></i>Código de barras
 							</span>
-							<span class="formato_l_h">
+							<span class="formato_l_h pb_1em">
 								<i class="fa check" 
 								ng-class="(configuraciones[0]['kiosco_leer_banda'] == 0) ? 
 								'color_rojo fa-square-o' : 'fa-check-square-o' "
 								ng-model="configuraciones[0]['kiosco_leer_banda']"
-								ng-click="checked('kiosco_leer_banda')"></i>Código de banda magnetica
+								ng-click="checked('kiosco_leer_banda')"></i>Código de banda magnética
 							</span>
-							<span class="formato_l_h ml_44 pb_1em">
-								<i class="fa check" 
-								ng-class="(configuraciones[0]['kiosco_leer_teclado'] == 0) ? 
-								'color_rojo fa-square-o' : 'fa-check-square-o' "
-								ng-model="configuraciones[0]['kiosco_leer_teclado']"
-								ng-click="checked('kiosco_leer_teclado')"></i>Digitación de código con teclado
-							</span>
-
-						<span class="h_Cond color_celeste f_14">Mecanismos de identificación alterna:</span><br>
-							<span><i class="f_32 fa fa-user"></i></span>
+						<span class="h_Cond color_celeste f_15 pb_5">Mecanismos de identificación alterna:</span><br>
+							<span><i class="f_35 fa fa-user"></i></span>
 							<span class="formato_l_h">
 								<div class="left" ng-if="(configuraciones[0]['kiosco_debe_identificarse'] == 1)">
 									<i class="fa fa-dot-circle-o" ng-model="configuraciones[0]['kiosco_debe_identificarse']"
@@ -51,27 +43,50 @@
 									<i class="color_rojo fa fa-circle-o" ng-model="configuraciones[0]['kiosco_debe_identificarse']"
 									ng-click="checked('kiosco_debe_identificarse')"></i>
 								</div>No necesitas identificarte
-							</span>
-							
-						<div class="overflow w_100_por">
-							<span class="h_Cond color_celeste f_14">Tiempo de espera para reiniciar el kiosco:</span><br>
-							<i class="f_32 fa fa-undo"></i>
-							<span><input type="text" class="input_for"
+							</span>	
+						<div class="overflow w_100_por pb_1em">
+							<span class="h_Cond color_celeste f_15 pb_5">Tiempo de espera para reiniciar el kiosco:</span><br>
+							<i class="f_35 fa fa-history"></i>
+							<span class="pt_7"><input type="text" class="input_for"
 							ng-model="configuraciones[0]['kiosco_espera']">Segundos</span>
-						</div>
-						<div class="overflow w_100_por">
-							<span class="h_Cond color_celeste f_14">Tolerancia kiosco:</span><br>
-							<i class="f_32 fa fa-undo"></i>
-							<span><input type="text" class="input_for"
-							ng-model="configuraciones[0]['kiosco_tolerancia']">Segundos</span>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-7 col-md-7">
-					<img class="mr_15 mt_30 w_100_por" src="images/kiosco.png" alt="">
+					<img class="mr_15 mt_30 w_100_por" src="images/qmatiq_identificacion-imagenes.png" alt="">
 				</div>
-				<div class="pb_1-5em col-lg-12 col-md-12 text-center">
-					<i class="dbe4e9 f_90 fa fa-check-circle" ng-click="update()"></i>
+				<div class="col-lg-12 col-md-12 pb_1-5em">
+					<div class="col-lg-4 col-md-4 formato_logicak">
+						<div class="overflow w_100_por left p_0">
+							<span class="h_Cond color_celeste f_15 pb_5">Tolerancia durante a espera:</span><br>
+							<i class="f_35 left fa fa-clock-o"></i>
+							<span>Anunciar automáticamente </span>
+							<span>al visitante si se adelanta</span>
+							<span class="pl_2-5em pt_10">Hasta<input type="text" class="input_for"
+							ng-model="configuraciones[0]['kiosco_tolerancia']">minutos</span>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 mt_25 p_0 formato_logicak">
+						<div class="overflow w_100_por left p_0">
+							<span>Pedir al visitante que</span>
+							<span>regrese si se adelanta</span>
+							<span class="pt_10">Más de<input type="text" class="input_for"
+							ng-model="configuraciones[0]['kiosco_tolerancia']">minutos</span>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 mt_25 p_0 formato_logicak">
+						<div class="overflow w_100_por left p_0">
+							<span>Cancelar el ticket si el</span>
+							<span>visitante se retrasa</span>
+							<span class="pt_10">Más de<input type="text" class="input_for"
+							ng-model="configuraciones[0]['kiosco_tolerancia']">minutos</span>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-2 p_0">
+						<div class="pb_1-5em col-lg-12 col-md-12 text-center">
+							<i class="dbe4e9 f_90 fa fa-check-circle" ng-click="update()"></i>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

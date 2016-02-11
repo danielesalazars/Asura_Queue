@@ -1,10 +1,18 @@
 <form class="plr_15 pt_1" ng-controller="FileCtrl" name="form_colores">		
-	<div class="overflow pt_5 plr_15 h_47_LightC color_7fd0d9">
+	<div class="overflow pt_5 plr_15 h_Cond color_7fd0d9">
 		Configuración de colores (#000000)</i>
 	</div>				
 	<div class="pt_5 plr_15 h_47_LightC">		
 		<label class="left w_180 color_687a8b">Color de barra de fondo</label>
-		<div class="minicolor_generales mini_kiosko_texto ml_30 mini_videos">
+		<div class="minicolor_generales mini_kiosko_texto mini_videos">
+			<input 
+			    minicolors="mini_generales"
+			    class="form-control"
+			    type="hidden"
+			    ng-model="configuraciones[0]['estilo_video_fondo_color']">
+		</div>
+		<label class="w_140 color_687a8b pl_2-5em">Texto de mensajes</label>
+		<div class="minicolor_generales mini_kiosko_texto mini_videos">
 			<input 
 			    minicolors="mini_generales"
 			    class="form-control"
@@ -14,17 +22,25 @@
 	</div>				
 	<div class="pt_5 plr_15 h_47_LightC">		
 		<label class="left w_180 color_687a8b">Color de turnos <span class="color_8293a3">(Iniciales)</span></label>
-		<div class="minicolor_generales mini_kiosko_texto ml_30 mini_videos">
+		<div class="minicolor_generales mini_kiosko_texto mini_videos">
 			<input 
 			    minicolors="mini_generales"
 			    class="form-control"
 			    type="hidden"
 			    ng-model="configuraciones[0]['estilo_video_turno_color']">
 		</div>
+		<label class="w_140 color_687a8b pl_2-5em">Icono de mensajes</label>
+		<div class="minicolor_generales mini_kiosko_texto mini_videos">
+			<input 
+			    minicolors="mini_generales"
+			    class="form-control"
+			    type="hidden"
+			    ng-model="configuraciones[0]['estilo_video_fondo_color']">
+		</div>
 	</div>				
 	<div class="pt_5 plr_15 h_47_LightC">		
 		<label class="left w_180 color_687a8b">Color de lugares de atención</label>
-		<div class="minicolor_generales mini_kiosko_texto ml_30 mini_videos">
+		<div class="minicolor_generales mini_kiosko_texto mini_videos">
 			<input 
 			    minicolors="mini_generales"
 			    class="form-control"
@@ -33,9 +49,9 @@
 		</div>
 	</div>	
 	<div class="pt_10 plr_15 h_47_LightC">		
-		<span class="left f_13 w_180 color_gris_claro texto_slogan">(Textos sobre las flechas de colores)</span>
+		<span class="left f_13 w_180 color_acb7c2 texto_slogan">(Textos sobre las flechas de colores)</span>
 	</div>		
-	<div class="text-center boton_guardar pt_2">
+	<div class="text-center boton_guardar pt_4em">
 		<i class="dbe4e9 f_90 fa fa-check-circle pointer" ng-click="update_v_colores()"></i>
 	</div>
 </form>

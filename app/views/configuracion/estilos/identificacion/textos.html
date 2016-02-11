@@ -1,5 +1,5 @@
-<form class="plr_7 pt_1" ng-controller="FileCtrl" name="form_textos">				
-	<div class="inline_block pt_5 plr_15 ">
+<form class="plr_15 pt_1" ng-controller="FileCtrl" name="form_i_textos">				
+	<div class="inline_block pt_5 plr_15">
 		<label for="" class="left w_55 h_47_LightC mb_0 color_687a8b">Linea 1</label>
 		<div class="relative left">			
 			<input class="h_47_LightC w_150 input_for" type="text" value="{{configuraciones[0]['estilo_kiosco_linea1_texto']}}">
@@ -12,11 +12,11 @@
 			</div>
 		</div>
 		<div class="left h_47_LightC text-right w_140">			
-			<span class="mr_5 color_687a8b">Origen X </span>
+			<span class="mr_10 color_687a8b">Origen X </span>
 			<input class=" w_45 input_for" type="text" ng-model="configuraciones[0]['estilo_kiosco_origen_x']">
 		</div>
 	</div>							
-	<div class="h_24 plr_15 pb_7em">
+	<div class="h_24 plr_15">
 		<label for="" class="left w_55 h_47_LightC mb_0 color_687a8b">Linea 2</label>
 		<div class="relative left">			
 			<input class="h_47_LightC w_150 input_for" type="text" value="{{configuraciones[0]['estilo_kiosco_linea2_texto']}}">
@@ -29,11 +29,37 @@
 			</div>
 		</div>
 		<div class="left h_47_LightC text-right w_140">			
-			<span class="mr_5 color_687a8b">Origen Y </span>
+			<span class="mr_10 color_687a8b">Origen Y </span>
 			<input class="w_45 input_for" type="text" ng-model="configuraciones[0]['estilo_kiosco_origen_y']">
 		</div>
-	</div>									
-	<div class="text-center boton_guardar">
+	</div>								
+	<div class="h_24 pt_5 plr_15">
+		<label for="" class="left w_55 h_47_LightC mb_0 color_687a8b">Linea 3</label>
+		<div class="relative left">			
+			<input class="h_47_LightC w_150 input_for" type="text" value="{{configuraciones[0]['estilo_kiosco_linea3_texto']}}">
+			<div class="minicolor_generales mini_kiosko_texto">
+				<input 
+				    minicolors="mini_generales"
+				    class="form-control"
+				    type="hidden"
+				    ng-model="configuraciones[0]['estilo_kiosco_linea3_color']">
+			</div>
+		</div>		
+	</div>								
+	<div class="h_24 pt_10 plr_15">
+		<label for="" class="left w_55 h_47_LightC mb_0 color_687a8b">Linea 4</label>
+		<div class="relative left">			
+			<input class="h_47_LightC w_150 input_for" type="text" value="{{configuraciones[0]['estilo_kiosco_linea4_texto']}}">
+			<div class="minicolor_generales mini_kiosko_texto">
+				<input 
+				    minicolors="mini_generales"
+				    class="form-control"
+				    type="hidden"
+				    ng-model="configuraciones[0]['estilo_kiosco_linea4_color']">
+			</div>
+		</div>
+	</div>	
+	<div class="text-center boton_guardar pt_2">
 		<i class="dbe4e9 f_90 fa fa-check-circle pointer" ng-click="update_k_textos()"></i>
 	</div>
 </form>

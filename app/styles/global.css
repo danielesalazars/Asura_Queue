@@ -5,7 +5,7 @@ body{
 }
 i{
 	font-size: 1.5em;
-	color: #8293a3;
+	color: #596a7a;
 }
 h1{
 	padding-bottom: 0.5em;
@@ -134,14 +134,23 @@ input[type="file"]{
 .w_65_por{
 	width: 65%;
 }
+.w_80_por{	
+	width: 80%;		
+}
 .w_90_por{	
 	width: 90%;		
 }
 .w_100_por{	
 	width: 100%;		
 }
+.w_30{
+	width: 30px;
+}
 .w_32{
 	width: 32px;
+}
+.w_35{
+	width: 35px;
 }
 .w_37{
 	width: 37px;
@@ -253,14 +262,8 @@ input[type="file"]{
 .color_gris_oscuro{
 	color: #586979;
 }
-.color_a4afb9{
-	color: #a4afb9;
-}
 .color_gris_claro{
 	color: #a6b0ba;
-}
-.color_8293a3{
-	color: #8293a3;
 }
 .color_amarillo{
 	color: #ede664;
@@ -298,6 +301,18 @@ input[type="file"]{
 .c596B79{
 	color: #596B79;
 }
+.color_8293a3{
+	color: #8293a3;
+}
+.color_596a7a{
+	color: #596a7a;
+}
+.color_99a7b5{
+	color:#99a7b5;
+}
+.color_acb7c2{
+	color:#acb7c2;
+}
 .fondo_rojo{
 	font-size: 45px;
 	background-color: #ed7d7d;
@@ -327,11 +342,17 @@ input[type="file"]{
 .p_0{
 	padding: 0;
 }
+.p_0i{
+	padding: 0 !important;
+}
 .p_10{
 	padding: 10px;
 }
 .padding_center{
 	padding-top: 55px;
+}
+.plr_7{
+	padding: 0 7px;
 }
 .plr_15{
 	padding: 0 15px;
@@ -366,6 +387,9 @@ input[type="file"]{
 .pl_2em{
 	padding-left: 2em;
 }
+.pl_2-5em{
+	padding-left: 2.5em;
+}
 .pl_3em{
 	padding-left: 3em;
 }
@@ -375,6 +399,9 @@ input[type="file"]{
 .pl_4-5em{
 	padding-left: 4.5em;
 }
+.pl_9em{
+	padding-left: 9em;
+}
 .pl_5{
 	padding-left: 5px;
 }
@@ -383,6 +410,15 @@ input[type="file"]{
 }
 .pl_12{
 	padding-left: 12px !important;
+}
+.pl_20{
+	padding-left: 20px !important;
+}
+.pl_27{
+	padding-left: 27px !important;
+}
+.pl_30{
+	padding-left: 30px !important;
 }
 .pl_50{
 	padding-left: 50px;
@@ -429,6 +465,12 @@ input[type="file"]{
 .pt_5em{
 	padding-top: 5em;
 }
+.pb_5{
+	padding-bottom: 5px;
+}
+.pb_7{
+	padding-bottom: 7px;
+}
 .pb_10{
 	padding-bottom: 10px;
 }
@@ -453,11 +495,17 @@ input[type="file"]{
 .pb_7em{
 	padding-bottom: 7em;
 }
+.pb_9em{
+	padding-bottom: 9em;
+}
 .ml_0{
 	margin-left: 0;
 }
 .ml_-6{
 	margin-left: -6px;
+}
+.ml_5{
+	margin-left: 5px;
 }
 .ml_10{
 	margin-left: 10px;
@@ -583,6 +631,9 @@ input[type="file"]{
 .f_33{
 	font-size: 33px !important;
 }
+.f_35{
+	font-size: 35px !important;
+}
 .f_40{
 	font-size: 40px;
 }
@@ -597,6 +648,9 @@ input[type="file"]{
 }
 .f_52{
 	font-size: 52px;
+}
+.f_53{
+	font-size: 53px !important;
 }
 .f_55{
 	font-size: 55px;

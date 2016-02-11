@@ -2,7 +2,7 @@
 	<div class="plr_15 text-right">
 		<i class="fa fa-times pointer" ng-click="close()"></i>
 	</div>
-	<div class="plr_15 h_Cond color_7fd0d9 bb_1 pb_03em mt_-10 f_weight100">Editar estilos para la presentación de videos</div>
+	<div class="plr_15 h_Cond color_7fd0d9 bb_1 pb_03em mt_-10 f_weight100">Editar estilos para los kioscos</div>
 	<div class="overflow pt_1 plr_15">				
 		<div class="text-right">
 			<a class="pointer h_47_LightC color_gris_oscuro">Restablecer <i class="fa fa-undo pointer"></i></a>
@@ -11,17 +11,17 @@
 			<img src="{{img_estilos_kioscos}}" alt="">				
 			<div class="tabs overflow">
 				<ul class="p_0 m_0">
-					<li ng-class="(tab_url =='videos_generales') ? 'ffffff' : '' " 
+					<li ng-class="(tab_url =='escaneo_imagenes') ? 'ffffff' : '' " 
 					class="pointer color_7fd0d9 h_Cond">
-						<a href="#/configurar/estilos/videos_generales">Formatos</a>
+						<a href="#/configurar/estilos/escaneo_imagenes">Imágenes</a>
 					</li>
-					<li ng-class="(tab_url =='videos_colores') ? 'ffffff' : '' " 
+					<li ng-class="(tab_url =='escaneo_textos') ? 'ffffff' : '' " 
 					class="pointer color_7fd0d9 h_Cond">
-						<a href="#/configurar/estilos/videos_colores">Colores</a>
+						<a href="#/configurar/estilos/escaneo_textos">Textos</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<div ng-include="estilos_video"></div>
+	<div ng-include="estilos_escaneo"></div>
 </div>

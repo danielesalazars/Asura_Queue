@@ -1,0 +1,39 @@
+<form class="plr_15 pt_1" ng-controller="FileCtrl" name="form_i_imagenes">				
+	<div class="pt_7">
+		<label for="" class="w_55 h_47_LightC mb_0 color_687a8b">Flechas</label>
+		<div class="inline_block">
+			<input class="h_47_LightC w_115 input_for" type="text" id="input_logotipo"
+			ng-model="configuraciones[0]['estilo_consola_logo1_archivo']['url']"
+			ng-disabled="true">
+			<div class="fileupload pointer fa fa-search color_596a7a">
+				<input type="file" accept="images/*" id="logotipo">
+			</div>
+			<span class="color_99a7b5 h_47_LightC f_13">*.PNG 800x480 </span>
+
+			<span class="pl_4em h_47_LightC pointer color_687a8b">
+				Animar
+				<i class="fa check" 
+				ng-class="(configuraciones[0]['estilo_kiosco_logo_animar'] == 1) ?
+				'fa-check-square-o' :
+				'fa-square-o color_rojo' "
+				ng-click="checked('estilo_kiosco_logo_animar')"
+				ng-model="configuraciones[0]['estilo_kiosco_logo_animar']"></i>
+			</span>
+		</div>
+	</div>			
+	<div class="pt_7">
+		<label for="" class="w_55 h_47_LightC mb_0 color_687a8b">Fondo</label>
+		<div class="inline_block">
+			<input class="h_47_LightC w_115 input_for" type="text" id="input_logotipo"
+			ng-model="configuraciones[0]['estilo_consola_logo1_archivo']['url']"
+			ng-disabled="true">
+			<div class="fileupload pointer fa fa-search color_596a7a">
+				<input type="file" accept="images/*" id="logotipo">
+			</div>
+			<span class="color_99a7b5 h_47_LightC f_13">*.PNG 800x480 </span>
+		</div>
+	</div>	
+	<div class="text-center boton_guardar pt_4em">
+		<i class="dbe4e9 f_90 fa fa-check-circle pointer" ng-click="update_k_general()"></i>
+	</div>
+</form>

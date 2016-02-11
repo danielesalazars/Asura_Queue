@@ -1,0 +1,48 @@
+<form class="plr_15 pt_1" ng-controller="FileCtrl" name="form_m_mensajes">		
+	<div class="overflow pt_5 plr_15 h_Cond color_7fd0d9">
+		Impresión de ticket 
+	</div>		
+	<div class="pt_5 plr_15">
+		<div class="left w_120">			
+			<span class="h_47_LightC color_687a8b">Icono</span>
+			<span class="color_99a7b5 h_47_LightC f_13">*.PNG 80x40</span>
+		</div>
+		<label for="" class="left w_45 h_47_LightC mb_0 color_687a8b">Título</label>
+		<input class="mr_10 left h_47_LightC w_80 input_for" type="text" placeholder="DIGITA TU" ng-model="configuraciones[0]['estilo_kiosco_boton_condocumento_texto_linea1']">
+		<div class="minicolor_generales mini_kiosko_texto ml_30">
+			<input 
+			    minicolors="mini_generales"
+			    class="form-control"
+			    type="hidden"
+			    ng-model="configuraciones[0]['estilo_kiosco_boton_condocumento_texto_color']">
+		</div>
+		<span class="pl_5 h_47_LightC color_687a8b">Texto</span>
+	</div>		
+	<div class="pt_5 plr_15">
+		<div class="left w_120 inline_block">
+			<input class="h_47_LightC w_80 input_for" type="text" id="input_logotipo"
+			ng-model="configuraciones[0]['estilo_consola_logo1_archivo']['url']"
+			ng-disabled="true">
+			<div class="fileupload pointer fa fa-search color_687a8b">
+				<input type="file" accept="images/*" id="logotipo">
+			</div>
+		</div>
+		<label for="" class="left w_45 h_47_LightC mb_0 color_687a8b">Línea 1</label>
+		<input class="mr_10 left h_47_LightC w_80 input_for" type="text" placeholder="DOCUMENTO" ng-model="configuraciones[0]['estilo_kiosco_boton_condocumento_texto_linea2']">
+		<div class="minicolor_generales mini_kiosko_texto ml_30">
+			<input 
+			    minicolors="mini_generales"
+			    class="form-control"
+			    type="hidden"
+			    ng-model="configuraciones[0]['estilo_kiosco_boton_condocumento_color']">
+		</div>
+		<span class="pl_5 h_47_LightC color_687a8b">Fondo</span>
+	</div>	
+	<div class="pt_5 plr_15 pl_9em">
+		<label for="" class="left w_45 h_47_LightC mb_0 color_687a8b">Línea 2</label>
+		<input class="mr_10 left h_47_LightC w_80 input_for" type="text" placeholder="DOCUMENTO" ng-model="configuraciones[0]['estilo_kiosco_boton_condocumento_texto_linea2']">
+	</div>
+	<div class="text-center boton_guardar pt_5em">
+		<i class="dbe4e9 f_90 fa fa-check-circle pointer" ng-click="update_k_botones()"></i>
+	</div>
+</form>

@@ -1,14 +1,14 @@
-<form class="plr_15 pt_1" ng-controller="FileCtrl" name="form_general">				
+<form class="plr_15 pt_1 pl_20" ng-controller="FileCtrl" name="form_m_imagenes">				
 	<div class="pt_7">
-		<label for="" class="w_55 h_47_LightC mb_0 color_687a8b">Logotipo</label>
+		<label for="" class="w_55 h_47_LightC mb_0 color_687a8b">Fondo 1</label>
 		<div class="inline_block">
 			<input class="h_47_LightC w_115 input_for" type="text" id="input_logotipo"
 			ng-model="configuraciones[0]['estilo_consola_logo1_archivo']['url']"
 			ng-disabled="true">
-			<div class="fileupload pointer fa fa-search color_gris_oscuro">
+			<div class="fileupload pointer fa fa-search color_687a8b">
 				<input type="file" accept="images/*" id="logotipo">
 			</div>
-			<span class="color_gris_claro a4afb9 h_47_LightC">*.PNG 800x480 </span>
+			<span class="color_99a7b5 h_47_LightC f_13">*.PNG 800x480 </span>
 			<i class="fa pointer"
 				ng-class="(configuraciones[0]['estilo_kiosco_logo_visible'] == 1) ?
 				'fa-eye' :
@@ -27,15 +27,15 @@
 		</div>
 	</div>			
 	<div class="pt_7">
-		<label for="" class="w_55 h_47_LightC mb_0 color_687a8b">Kiosco</label>
+		<label for="" class="w_55 h_47_LightC mb_0 color_687a8b">Fondo 2</label>
 		<div class="inline_block">
 			<input class="h_47_LightC w_115 input_for" type="text" id="input_logotipo"
 			ng-model="configuraciones[0]['estilo_consola_logo1_archivo']['url']"
 			ng-disabled="true">
-			<div class="fileupload pointer fa fa-search color_gris_oscuro">
+			<div class="fileupload pointer fa fa-search color_687a8b">
 				<input type="file" accept="images/*" id="logotipo">
 			</div>
-			<span class="color_gris_claro a4afb9 h_47_LightC">*.PNG 800x480 </span>
+			<span class="color_99a7b5 h_47_LightC f_13">*.PNG 800x480 </span>
 			<i class="fa pointer"
 				ng-class="(configuraciones[0]['estilo_kiosco_kiosco_visible'] == 1) ?
 				'fa-eye' :
@@ -54,15 +54,15 @@
 		</div>
 	</div>	
 	<div class="pt_7">
-		<label for="" class="w_55 h_47_LightC mb_0 color_687a8b">Flechas</label>
+		<label for="" class="w_55 h_47_LightC mb_0 color_687a8b">Fondo 3</label>
 		<div class="inline_block">
 			<input class="h_47_LightC w_115 input_for" type="text" id="input_logotipo"
 			ng-model="configuraciones[0]['estilo_consola_logo1_archivo']['url']"
 			ng-disabled="true">
-			<div class="fileupload pointer fa fa-search color_gris_oscuro">
+			<div class="fileupload pointer fa fa-search color_687a8b">
 				<input type="file" accept="images/*" id="logotipo">
 			</div>
-			<span class="color_gris_claro a4afb9 h_47_LightC">*.PNG 800x480 </span>
+			<span class="color_99a7b5 h_47_LightC f_13">*.PNG 800x480 </span>
 			<i class="fa pointer"
 				ng-class="(configuraciones[0]['estilo_kiosco_flecha_visible'] == 1) ?
 				'fa-eye' :
@@ -81,21 +81,30 @@
 		</div>
 	</div>	
 	<div class="pt_7">
-		<label for="" class="w_55 h_47_LightC mb_0 color_687a8b">Fondo</label>
+		<label for="" class="w_55 h_47_LightC mb_0 color_687a8b">Fondo 4</label>
 		<div class="inline_block">
 			<input class="h_47_LightC w_115 input_for" type="text" id="input_logotipo"
 			ng-model="configuraciones[0]['estilo_consola_logo1_archivo']['url']"
 			ng-disabled="true">
-			<div class="fileupload pointer fa fa-search color_gris_oscuro">
+			<div class="fileupload pointer fa fa-search color_687a8b">
 				<input type="file" accept="images/*" id="logotipo">
 			</div>
-			<span class="color_gris_claro a4afb9 h_47_LightC">*.PNG 800x480 </span>
+			<span class="color_99a7b5 h_47_LightC f_13">*.PNG 800x480 </span>
 			<i class="fa pointer"
 				ng-class="(configuraciones[0]['estilo_kiosco_fondo_visible'] == 1) ?
 				'fa-eye' :
 				'fa-eye-slash color_rojo' "
 				ng-click="checked('estilo_kiosco_fondo_visible')"
 				ng-model="configuraciones[0]['estilo_kiosco_fondo_visible']"></i>
+			<span class="pl_2em h_47_LightC pointer color_687a8b">
+				Animar		
+				<i class="fa check" 
+				ng-class="(configuraciones[0]['estilo_kiosco_flecha_animar'] == 1) ?
+				'fa-check-square-o' :
+				'fa-square-o color_rojo' "
+				ng-click="checked('estilo_kiosco_flecha_animar')"
+				ng-model="configuraciones[0]['estilo_kiosco_flecha_animar']"></i>
+			</span>
 		</div>
 	</div>
 	<div class="text-center boton_guardar pt_1">

@@ -11,29 +11,25 @@
 			<img src="{{img_estilos_kioscos}}" alt="">				
 			<div class="tabs overflow">
 				<ul class="p_0 m_0">
-					<li ng-class="(tab_url =='bienvenida_imagenes') ? 'ffffff' : '' " 
+					<li ng-class="(tab_url =='menu_imagenes') ? 'ffffff' : '' " 
 					class="pointer color_7fd0d9 h_Cond">
-						<a href="#/configurar/estilos/bienvenida_imagenes">Imágenes</a>
+						<a href="#/configurar/estilos/menu_imagenes">Imágenes</a>
 					</li>
-					<li ng-class="(tab_url =='bienvenida_textos') ? 'ffffff' : '' " 
+					<li ng-class="(tab_url =='menu_botones') ? 'ffffff' : '' " 
 					class="pointer color_7fd0d9 h_Cond">
-						<a href="#/configurar/estilos/bienvenida_textos">Textos</a>
+						<a href="#/configurar/estilos/menu_botones">Botones</a>
 					</li>
-					<li ng-class="(tab_url =='bienvenida_botones') ? 'ffffff' : '' " 
+					<li ng-class="(tab_url =='menu_mensajes') ? 'ffffff' : '' " 
 					class="pointer color_7fd0d9 h_Cond">
-						<a href="#/configurar/estilos/bienvenida_botones">Botones</a>
+						<a href="#/configurar/estilos/menu_mensajes">Mensaje</a>
 					</li>
-					<li ng-class="(tab_url =='bienvenida_boton_ticket') ? 'ffffff' : '' " 
+					<li ng-class="(tab_url =='menu_administracion') ? 'ffffff' : '' " 
 					class="pointer color_7fd0d9 h_Cond">
-						<a href="#/configurar/estilos/bienvenida_boton_ticket">Botón Ticket</a>
-					</li>
-					<li ng-class="(tab_url =='bienvenida_mensajes') ? 'ffffff' : '' " 
-					class="pointer color_7fd0d9 h_Cond">
-						<a href="#/configurar/estilos/bienvenida_mensajes">Mensajes</a>
+						<a href="#/configurar/estilos/menu_administracion">Administración</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<div ng-include="estilos_kiosco"></div>
+	<div ng-include="estilos_menu"></div>
 </div>
