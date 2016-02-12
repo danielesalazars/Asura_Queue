@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col-lg-8 col-md-12 pt_1-5em">
 		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">¿Qué <span class="h_47_LightC" 
-	style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">Playlist</span> deseas reproducir desde Youtube?</h1>
+	style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">Playlist</span> deseas reproducir desde tu servidor?</h1>
 		<div class="col-lg-7 col-md-7">
 			<div class="ffffff border_tabla">
 				<div class="col-lg-12 col-md-12 text-right mt_10 pb_2em">
@@ -100,12 +100,21 @@
 				<label for="" class="h_47_LightC mb_0 color_687a8b f_weight100">Nombre del playlist</label><br>
 				<input class="h_47_LightC w_100_por input_for" type="text" placeholder="Playlist v03">
 			</div>
+			<div class="plr_15 pt_1">
+				<label for="" class="h_47_LightC mb_0 color_687a8b f_weight100">Ruta de la carpeta de videos</label><br>
+				<input class="h_47_LightC w_100_por input_for" type="text" placeholder="www.qmatiq.com/videos/">
+			</div>
 			<div class="plr_15 pt_1">	
-				<label for="" class="h_47_LightC mb_0 color_687a8b f_weight100">Código generado para el embebido</label><br>
-				<textarea class="h_47_LightC w_100_por input_for" name="" id="" cols="30" rows="10" placeholder='<iframe width="560" height="315" src="https://www.youtube.com/embed/ME2Hufquz0k" frameborder="0" allowfullscreen></iframe>'></textarea>
+				<label for="" class="h_47_LightC mb_0 color_687a8b f_weight100">Videos <span class="f_13">(Colocar un video MPEG por línea)</span></label><br>
+				<textarea class="h_47_LightC w_100_por input_for" name="" id="" cols="45" rows="10" placeholder='<iframe width="560" height="315" src="https://www.youtube.com/embed/ME2Hufquz0k" frameborder="0" allowfullscreen></iframe>'></textarea><br>
+				<div class="right">
+					<span class="color_2bb673 h_47_LightC">Verificar rutas 
+						<i class="color_2bb673 fa fa-chain-broken"></i>
+					</span>
+				</div><br>
 			</div>
 			<div class="text-center boton_guardar pt_1">
-				<i class="dbe4e9 f_90 fa fa-play-circle pointer"></i>
+				<i class="dbe4e9 f_90 fa fa-check-circle"></i>
 			</div>
 		</div>
 	</div>

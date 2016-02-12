@@ -113,9 +113,13 @@
   .when("/video",{
     templateUrl:  "views/video/index.html"
   })
-  .when("/video/playlist",{
+  .when("/video/playlist_local",{
     controller:   "PlaylistCtrl",
-    templateUrl:  "views/video/playlist.html"
+    templateUrl:  "views/video/playlist_local.html"
+  })
+  .when("/video/playlist_youtube",{
+    controller:   "PlaylistCtrl",
+    templateUrl:  "views/video/playlist_youtube.html"
   })
   /* Atención */
   .when("/atencion",{
