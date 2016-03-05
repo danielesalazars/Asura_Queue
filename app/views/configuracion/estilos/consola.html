@@ -2,10 +2,15 @@
 	<div class="plr_15 text-right ">
 		<i class="fa fa-times pointer" ng-click="close()"></i>
 	</div>
-	<div class="plr_15 h_Cond color_7fd0d9 bb_1 pb_03em mt_-10 f_weight100 ">Editar estilos para la consola</div>
+	<div class="plr_15 h_Cond color_7fd0d9 bb_1 pb_03em mt_-10 f_weight100 ">
+		<ANY translate="pagina.configuracion.estilos.slide.consola.titulo"></ANY>
+	</div>
 	<div class="overflow pt_1 plr_15">				
 		<div class="text-right">
-			<a class="pointer h_47_LightC color_gris_oscuro">Restablecer <i class="fa fa-undo pointer"></i></a>
+			<a class="pointer h_47_LightC color_gris_oscuro">
+				<ANY translate="pagina.configuracion.estilos.slide.consola.clear"></ANY> 
+				<i class="fa fa-undo pointer"></i>
+			</a>
 		</div>
 		<div class="e5edf0 marco_flotante overflow">
 			<div class="tabla_encabezado ffffff">						
@@ -15,20 +20,28 @@
 							<img src="images/logo_arbol.png" alt=""> 
 						</td>
 						<td><img src="images/logo_HtpGO.png" alt=""></td>
-						<td class="pl_0"><span class="pl_0 title_left title_app h_Thin">Queuing Console</span></td>
+						<td class="pl_0">
+							<span class="pl_0 title_left title_app h_Thin">
+								Queuing Console
+							</span>
+						</td>
 					</tr>
 				</table>
 			</div>					
 			<div class="tabs overflow tabs_sin_a">
 				<ul class="p_0 m_0">
-					<li class="ffffff pointer color_7fd0d9 h_Cond">Generales</li>
+					<li class="ffffff pointer color_7fd0d9 h_Cond">
+						<ANY translate="pagina.configuracion.estilos.slide.consola.tab.item1.titulo"></ANY>
+					</li>
 				</ul>
 			</div>
 		</div>
 	</div>
 	<form class="plr_15 pt_1" ng-controller="FileCtrl" name="form">				
 		<div class="pt_5 plr_3em">
-			<label for="" class="w_45 h_47_LightC mb_0 color_687a8b ">Logo 1</label>
+			<label for="" class="w_45 h_47_LightC mb_0 color_687a8b ">
+				<ANY translate="pagina.configuracion.estilos.slide.consola.tab.item1.form.label1"></ANY>
+			</label>
 			<div class="inline_block">
 				<input class="h_47_LightC w_160 input_for" type="text" id="input_logo1"
 				ng-model="configuraciones[0]['estilo_consola_logo1_archivo']['url']"
@@ -40,7 +53,9 @@
 			</div>
 		</div>
 		<div class="pt_5 plr_3em">
-			<label for="" class="w_45 h_47_LightC mb_0 color_687a8b">Logo 2</label>
+			<label for="" class="w_45 h_47_LightC mb_0 color_687a8b">
+				<ANY translate="pagina.configuracion.estilos.slide.consola.tab.item1.form.label2"></ANY>
+			</label>
 			<div class="inline_block">
 				<input class="h_47_LightC w_160 input_for" type="text" id="input_logo2"
 				ng-model="configuraciones[0]['estilo_consola_logo2_archivo']['url']"
@@ -52,9 +67,13 @@
 			</div>
 		</div>
 		<div class="pt_1 plr_3em">
-			<label for="" class="h_Cond mb_0 color_687a8b">Colores principales (#000000)</label><br>
+			<label for="" class="h_Cond mb_0 color_687a8b">
+				<ANY translate="pagina.configuracion.estilos.slide.consola.tab.item1.form.grupo1.titulo"></ANY>
+			</label><br>
 			<div class="relative pt_5">					
-				<label for="" class="w_45 h_47_LightC mb_0 color_687a8b ">Fondo </label>
+				<label for="" class="w_45 h_47_LightC mb_0 color_687a8b ">
+					<ANY translate="pagina.configuracion.estilos.slide.consola.tab.item1.form.grupo1.label1"></ANY>
+				</label>
 				<div class="minicolor_generales">
 					<input
 					    minicolors="mini_generales"
@@ -65,7 +84,9 @@
 				</div>
 			</div>
 			<div class="relative pt_5">					
-				<label for="" class="w_45 h_47_LightC mb_0 color_687a8b">Textos </label>
+				<label for="" class="w_45 h_47_LightC mb_0 color_687a8b">
+					<ANY translate="pagina.configuracion.estilos.slide.consola.tab.item1.form.grupo1.label2"></ANY>
+				</label>
 				<div class="minicolor_generales">
 					<input
 					    minicolors="mini_generales"
@@ -77,9 +98,13 @@
 			</div>
 		</div>
 		<div class="pt_1 plr_3em">
-			<label for="" class="h_Cond mb_0 color_687a8b">Colores secundarios (#000000)</label><br>
+			<label for="" class="h_Cond mb_0 color_687a8b">
+				<ANY translate="pagina.configuracion.estilos.slide.consola.tab.item1.form.grupo2.titulo"></ANY>
+			</label><br>
 			<div class="relative pt_5">					
-				<label for="" class="w_45 h_47_LightC mb_0 color_687a8b">Fondo </label>
+				<label for="" class="w_45 h_47_LightC mb_0 color_687a8b">
+					<ANY translate="pagina.configuracion.estilos.slide.consola.tab.item1.form.grupo2.label1"></ANY>
+				</label>
 				<div class="minicolor_generales">
 					<input
 					    minicolors="mini_generales"
@@ -90,7 +115,9 @@
 				</div>
 			</div>
 			<div class="relative pt_5">					
-				<label for="" class="w_45 h_47_LightC mb_0 color_687a8b">Textos </label>
+				<label for="" class="w_45 h_47_LightC mb_0 color_687a8b">
+					<ANY translate="pagina.configuracion.estilos.slide.consola.tab.item1.form.grupo2.label2"></ANY>
+				</label>
 				<div class="minicolor_generales">
 					<input
 					    minicolors="mini_generales"

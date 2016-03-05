@@ -1,6 +1,8 @@
 <form class="plr_15 pt_1" ng-controller="FileCtrl" name="form_menu">				
 	<div class="pt_5 plr_15">
-		<label for="" class="w_45 h_47_LightC mb_0 color_687a8b">Fondo</label>
+		<label for="" class="w_45 h_47_LightC mb_0 color_687a8b">
+			<ANY translate="pagina.configuracion.estilos.slide.kioscos.tab.item4.form.label1"></ANY>
+		</label>
 		<div class="inline_block">
 			<input class="h_47_LightC w_120 input_for" type="text" id="input_logotipo"
 			ng-model="configuraciones[0]['estilo_consola_logo1_archivo']['url']"
@@ -24,7 +26,8 @@
 			'fa-check-square-o' :
 			'fa-square-o color_rojo' "
 			ng-click="checked('estilo_kiosco_menu_transparencia_activar')"
-			ng-model="configuraciones[0]['estilo_kiosco_menu_transparencia_activar']"></i> Activar transparencia en botones
+			ng-model="configuraciones[0]['estilo_kiosco_menu_transparencia_activar']"></i> 
+			<ANY translate="pagina.configuracion.estilos.slide.kioscos.tab.item4.form.check.item1"></ANY>
 		</span>
 		<input class="w_37 input_for" type="text" ng-model="configuraciones[0]['estilo_kiosco_menu_transparencia_porcentaje']"> 
 		<span class="color_687a8b"> %</span>
@@ -36,7 +39,8 @@
 			'fa-check-square-o' :
 			'fa-square-o color_rojo' "
 			ng-click="checked('estilo_kiosco_menu_reemplazar_activar')"
-			ng-model="configuraciones[0]['estilo_kiosco_menu_reemplazar_activar']"></i>  Reemplazar color en botones
+			ng-model="configuraciones[0]['estilo_kiosco_menu_reemplazar_activar']"></i>  
+			<ANY translate="pagina.configuracion.estilos.slide.kioscos.tab.item4.form.check.item2"></ANY>
 		</span>
 		<div class="minicolor_generales mini_kiosko_texto mini_kiosko_texto_menu ml_40">
 			<input 
@@ -53,7 +57,8 @@
 			'fa-check-square-o' :
 			'fa-square-o color_rojo' "
 			ng-click="checked('estilo_kiosco_menu_delineado_activar')"
-			ng-model="configuraciones[0]['estilo_kiosco_menu_delineado_activar']"></i>  Activar delineado en botones
+			ng-model="configuraciones[0]['estilo_kiosco_menu_delineado_activar']"></i>  
+			<ANY translate="pagina.configuracion.estilos.slide.kioscos.tab.item4.form.check.item3"></ANY>
 		</span>
 		<div class="minicolor_generales mini_kiosko_texto mini_kiosko_texto_menu ml_40">
 			<input 

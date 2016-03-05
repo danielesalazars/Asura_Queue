@@ -2,10 +2,15 @@
 	<div class="plr_15 text-right">
 		<i class="fa fa-times pointer" ng-click="close()"></i>
 	</div>
-	<div class="plr_15 h_Cond color_7fd0d9 bb_1 pb_03em mt_-10 f_weight100">Editar estilos para la presentación de videos</div>
+	<div class="plr_15 h_Cond color_7fd0d9 bb_1 pb_03em mt_-10 f_weight100">
+		<ANY translate="pagina.configuracion.estilos.slide.videos.titulo"></ANY>
+	</div>
 	<div class="overflow pt_1 plr_15">				
 		<div class="text-right">
-			<a class="pointer h_47_LightC color_gris_oscuro">Restablecer <i class="fa fa-undo pointer"></i></a>
+			<a class="pointer h_47_LightC color_gris_oscuro">
+				<ANY translate="pagina.configuracion.estilos.slide.videos.clear"></ANY> 
+				<i class="fa fa-undo pointer"></i>
+			</a>
 		</div>
 		<div class="e5edf0 marco_flotante overflow">
 			<img src="{{img_estilos_kioscos}}" alt="">				
@@ -13,11 +18,15 @@
 				<ul class="p_0 m_0">
 					<li ng-class="(tab_url =='videos_generales') ? 'ffffff' : '' " 
 					class="pointer color_azul h_47_LightC">
-						<a href="#/configurar/estilos/videos_generales">Generales</a>
+						<a href="#/configurar/estilos/videos_generales">
+							<ANY translate="pagina.configuracion.estilos.slide.videos.tab.item1.titulo"></ANY>
+						</a>
 					</li>
 					<li ng-class="(tab_url =='videos_colores') ? 'ffffff' : '' " 
 					class="pointer color_azul h_47_LightC">
-						<a href="#/configurar/estilos/videos_colores">Colores</a>
+						<a href="#/configurar/estilos/videos_colores">
+							<ANY translate="pagina.configuracion.estilos.slide.videos.tab.item2.titulo"></ANY>
+						</a>
 					</li>
 				</ul>
 			</div>

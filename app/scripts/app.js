@@ -8,6 +8,7 @@
  *
  * Main module of the application.
  */
+
  angular
  .module('Asura', [
   'ngAnimate',
@@ -20,26 +21,30 @@
   'ngTouch',
   'ui.bootstrap',
   'minicolors',
-  'uiGmapgoogle-maps'
+  'uiGmapgoogle-maps',
+  'pascalprecht.translate',
+  'chart.js',
+  'googlechart'
   ])
  
-  .constant('URL',{ 
-    'path' : 'http://api.asura.piensamasalla.com/' 
-  })
+ .constant('URL',{ 
+  'path' : 'http://api.asura.piensamasalla.com/' 
+})
  /* 
 .constant('URL',{ 
   'path' : 'http://localhost/asura-api/' 
 })
- */ 
-  .config(function(uiGmapGoogleMapApiProvider) {
-    uiGmapGoogleMapApiProvider.configure({
+*/ 
+
+.config(function(uiGmapGoogleMapApiProvider) {
+  uiGmapGoogleMapApiProvider.configure({
         //key: 'AIzaSyCZ3kL3WTQW-LDhnx1zS8eDoTcRP-WW5hM',
         v: '3.20', //defaults to latest 3.X anyhow
         libraries: 'weather,geometry,visualization'
-    });
-  })
+      });
+})
 
- .config(function ($routeProvider) {
+.config(function ($routeProvider) {
   $routeProvider
   .when('/', {
     templateUrl: 'views/home.html',
@@ -91,10 +96,6 @@
   .when("/planificacion/locales",{
     controller:   "LocalesCtrl",
     templateUrl:  "views/planificacion/locales.html"
-  })
-  .when("/planificacion/jerarquia",{
-    controller:   "JerarquiaCtrl",
-    templateUrl:  "views/planificacion/jerarquia.html"
   })
   .when("/planificacion/jerarquia/:jerarquia",{
     controller:   "JerarquiaCtrl",

@@ -1,11 +1,21 @@
 <div class="row">
-	<div class="col-lg-5 col-md-7 pt_1-5em">
-		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">¿Qué <span class="h_47_LightC" 
-	style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">Roles</span> tiene tu organización?</h1>
+	<div class="col-lg-12 col-md-12 pt_1-5em">
+		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">
+			<ANY translate="pagina.configuracion.roles.titulo.var1"></ANY> 
+			<span class="h_47_LightC" 
+				style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">
+				<ANY translate="pagina.configuracion.roles.titulo.var2"></ANY> 
+			</span> 
+			<ANY translate="pagina.configuracion.roles.titulo.var3"></ANY> 
+		</h1>
+	</div>
+	<div class="col-lg-5 col-md-7">
 		<div class="ffffff border_tabla ml_17">
 			<div class="col-lg-12 col-md-12 text-right mt_10 pb_1em">
 				<a class="right pointer mostrar_flotante" ng-click="showCrear()">
-					<span class="h_47_LightC color_gris_oscuro left pr_5 pt_4">Agregar rol </span>
+					<span class="h_47_LightC color_gris_oscuro left pr_5 pt_4">
+						<ANY translate="pagina.configuracion.roles.boton"></ANY> 
+					</span>
 					<i class="f_23 fa fa-plus-circle left"
 					style="color:{{configuraciones[0]['estilo_consola_secundario_fondo_color']}}"></i>
 				</a>
@@ -14,7 +24,9 @@
 				<thead>
 					<tr>
 						<th class="w_5_por borde_azul">&nbsp;</th>
-						<th class="w_40_por borde_azul pl_0 f_weight100">Nombre del rol</th>
+						<th class="w_40_por borde_azul pl_0 f_weight100">
+							<ANY translate="pagina.configuracion.roles.tabla.titulo.columna1"></ANY>
+						</th>
 						<th class="w_45_por">&nbsp;</th>
 						<th class="w_10_por">&nbsp;</th>
 					</tr>
@@ -45,7 +57,9 @@
 			</div>
 			<div class="plr_15 h_Cond color_7fd0d9 bb_1 pb_10 mt_-10 f_16" ng-bind="title_slide"></div>
 			<div class="plr_15 pt_1">
-				<label for="" class="h_47_LightC mb_0 color_687a8b f_weight100">Nombre del rol</label><br>
+				<label for="" class="h_47_LightC mb_0 color_687a8b f_weight100">
+					<ANY translate="pagina.configuracion.roles.slide.form.label1"></ANY>
+				</label><br>
 				<input id="rol_nombre" class="h_47_LightC w_100_por input_for" type="text" 
 				ng-model="rol.nombre" ng-disabled="disabled">
 			</div>
@@ -53,10 +67,13 @@
 				<table class="table tabla_usuarios table_slide table_roles mt_10">
 					<thead>
 						<tr>
-							<th class="pl_0 h_47_LightC f_16 f_weight100">Permisos</th>
+							<th class="pl_0 h_47_LightC f_16 f_weight100">
+								<ANY translate="pagina.configuracion.roles.slide.form.tabla.titulo.columna1"></ANY>
+							</th>
 							<th colspan="2" class="text-right h_47_LightC pr_0 pointer color_687a8b f_15 f_weight100">
 								<div ng-if="(id_rol < 7)">
-								Restablecer <i class="fa fa-undo pointer"></i>
+									<ANY translate="pagina.configuracion.roles.slide.form.tabla.titulo.columna2"></ANY>
+									<i class="fa fa-undo pointer"></i>
 								</div>
 							</th>
 						</tr>

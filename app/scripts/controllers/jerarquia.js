@@ -9,8 +9,10 @@
  */
 angular.module('Asura')
   .controller('JerarquiaCtrl',['$scope','$routeParams', function ($scope, $routeParams) {
-    $scope.planificacion_jerarquia ='views/planificacion/jerarquias/clientes.html';
     
+    $scope.planificacion_jerarquia ='views/planificacion/jerarquias/clientes.html';
+    $scope.tab_url = $routeParams.jerarquia;
+    console.log($routeParams.jerarquia);
     switch($routeParams.jerarquia){
         case "jerarquias":
         	$scope.planificacion_jerarquia ='views/planificacion/jerarquias/jerarquias.html';

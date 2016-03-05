@@ -1,19 +1,31 @@
 <div class="row">
 	<div class="col-lg-8 col-md-11 pt_1-5em">
-		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">¿Qué <span class="h_47_LightC" 
-	style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">Usuarios</span> necesita tu organización?</h1>
+		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">
+			<ANY translate="pagina.configuracion.usuarios.titulo.var1"></ANY> 
+			<span class="h_47_LightC" 
+				style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">
+				<ANY translate="pagina.configuracion.usuarios.titulo.var2"></ANY>
+			</span> 
+			<ANY translate="pagina.configuracion.usuarios.titulo.var3"></ANY>
+		</h1>
 		<div class="ffffff border_tabla ml_17">
 			<div class="col-lg-12 col-md-12 text-right mt_10 pb_1em">
 				<a class="right pointer mostrar_flotante" ng-click="show_crear()">
-					<span class="h_47_LightC color_gris_oscuro left pr_5 pt_4">Agregar usuario </span>
+					<span class="h_47_LightC color_gris_oscuro left pr_5 pt_4">
+						<ANY translate="pagina.configuracion.usuarios.boton"></ANY> 
+					</span>
 					<i class="f_23 fa fa-plus-circle left"
 					style="color:{{configuraciones[0]['estilo_consola_secundario_fondo_color']}}"></i>
 				</a>
 			</div>			
 			<div class="h_47_LightC col-lg-11 col-md-11 col-lg-offset-1 col-md-offset-1 pb_1-5em">
-				<span class="color_gris_oscuro left pr_1em pl_1em">Local asignado </span>
+				<span class="color_gris_oscuro left pr_1em pl_1em">
+					<ANY translate="pagina.configuracion.usuarios.label1"></ANY> 
+				</span>
 				<select name="local" class="combx left">
-				  	<option value="0">Todos</option>
+				  	<option value="0">
+				  		{{ 'pagina.configuracion.usuarios.select_option_0' | translate }}
+				  	</option>
 				  	<option ng-repeat="local in locales" value="{{local.id}}">{{local.nombre}}</option>
 				</select> 
 			</div>
@@ -21,10 +33,16 @@
 				<thead>
 					<tr>
 						<th class="w_3_por borde_azul">&nbsp;</th>
-						<th class="w_20_por borde_azul pl_0">Nombre del usuario</th>
+						<th class="w_20_por borde_azul pl_0">
+							<ANY translate="pagina.configuracion.usuarios.tabla.titulo.columna1"></ANY>
+						</th>
 						<th class="w_3_por">&nbsp;</th>
-						<th class="w_25_por">Rol asignado</th>
-						<th class="w_40_por">Locales</th>
+						<th class="w_25_por">
+							<ANY translate="pagina.configuracion.usuarios.tabla.titulo.columna2"></ANY>
+						</th>
+						<th class="w_40_por">
+							<ANY translate="pagina.configuracion.usuarios.tabla.titulo.columna3"></ANY>
+						</th>
 						<th class="w_5_por">&nbsp;</th>
 						<th class="w_5_por">&nbsp;</th>
 					</tr>
@@ -33,7 +51,8 @@
 					<tr ng-repeat="usuario in usuarios" 
 					ng-class="(usuario.id > 3 ) ? 'activar' : 'desactivar' ">
 						<td class="bb_0">&nbsp;</td>
-						<td class="pl_0" ng-click="show_editar(usuario.id)">{{usuario.nombre}} 
+						<td class="pl_0" ng-click="show_editar(usuario.id)">
+							{{usuario.nombre}} 
 							<span ng-if="usuario.rol.id == 2" class="f_13 a4afb9">htpGO</span>
 						</td>
 						<td>&nbsp;</td>
@@ -56,30 +75,32 @@
 			</div>
 			<div class="plr_15 h_Cond bb_1 pb_10 mt_-10 color_7fd0d9 f_16" ng-bind="title_slide"></div>
 			<div class="plr_15 pt_1">
-				<label for="" class="h_47_LightC mb_0 color_687a8b">Nombre del usuario</label><br>
+				<label for="" class="h_47_LightC mb_0 color_687a8b">
+					<ANY translate="pagina.configuracion.usuarios.slide.form.label1"></ANY>
+				</label><br>
 				<input class="h_47_LightC w_100_por input_for" type="text" ng-model="usuario.nombre">
 			</div>
 			<div class="plr_15 pt_1">	
-				<label for="" class="h_47_LightC mb_0 color_687a8b">Correo electrónico</label><br>
+				<label for="" class="h_47_LightC mb_0 color_687a8b">
+					<ANY translate="pagina.configuracion.usuarios.slide.form.label2"></ANY>
+				</label><br>
 				<input class="h_47_LightC w_100_por input_for" type="text" ng-model="usuario.email_trabajo" >
 			</div>
 			<div class="plr_15 pt_1">	
-				<label for="" class="h_47_LightC mb_0 color_687a8b">Rol asignado</label><br>
+				<label for="" class="h_47_LightC mb_0 color_687a8b">
+					<ANY translate="pagina.configuracion.usuarios.slide.form.label3"></ANY>
+				</label><br>
 				<select name="" id="" class="h_47_LightC w_100_por input_for" ng-model="usuario.rol_id" ng-disabled="usuario.disabled">
 				  	<option ng-repeat="rol in roles" value="{{rol.id}}">{{rol.nombre}}</option>
 				</select>
 			</div>
-			<!--<div class="plr_15 pt_1">	
-				<label for="" class="h_47_LightC mb_0 color_687a8">Locales <span class="f_13 color_a4afb9 f_weight100">Limita los accesos a locales señalados</span></label><br>
-				<select name="" id="" class="h_47_LightC w_100_por input_for">
-					<option>3 Seleccionados</option>
-				</select>
-			</div>-->
 			<div class="plr_15">
 				<table class="table tabla_usuarios table_slide mt_10 scroll_usuario">
 					<thead>
 						<tr>
-							<th class="pl_0 h_47_LightC f_16" colspan="2">Locales</th>
+							<th class="pl_0 h_47_LightC f_16" colspan="2">
+								<ANY translate="pagina.configuracion.usuarios.slide.form.tabla.titulo.columna1"></ANY>
+							</th>
 						</tr>
 					</thead>
 					<tbody class="line_height25">
