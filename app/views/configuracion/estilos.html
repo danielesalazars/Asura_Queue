@@ -1,7 +1,13 @@
 <div class="row">
 	<div class="col-lg-12 col-md-12 pt_1-5em">
-		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">¿Qué <span 
-	style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}" class="h_47_LightC">Estilos</span> usas en tus aplicaciones?</h1>
+		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">
+			<ANY translate="pagina.configuracion.estilos.titulo.var1"></ANY> 
+			<span class="h_47_LightC" 
+				style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">
+				<ANY translate="pagina.configuracion.estilos.titulo.var2"></ANY>
+			</span> 
+			<ANY translate="pagina.configuracion.estilos.titulo.var3"></ANY>
+		</h1>
 	</div>
 	<div class="col-lg-5 col-md-8">
 		<div class="col-lg-11 col-md-11">		
@@ -10,29 +16,47 @@
 					<thead>
 						<tr>
 							<th class="w_3_por borde_azul">&nbsp;</th>
-							<th class="w_60_por borde_azul pl_0">Estilos para aplicaciones Qmatiq</th>
+							<th class="w_60_por borde_azul pl_0">
+								<ANY translate="pagina.configuracion.estilos.tabla.titulo.columna1"></ANY>
+							</th>
 							<th class="w_42_por">&nbsp;</th>
 						</tr>
 					</thead>
 					<tbody class="color_687a8b">
 						<tr class="activar">
 							<td class="bb_0">&nbsp;</td>
-							<td class="pl_0"><a href="#/configurar/estilos/consola" class="color_687a8b" ng-click="activar_slide()">Qmatiq Console</a></td>
+							<td class="pl_0">
+								<a href="#/configurar/estilos/consola" class="color_687a8b" ng-click="activar_slide()">
+									<ANY translate="pagina.configuracion.estilos.tabla.cuerpo.fila1"></ANY>
+								</a>
+							</td>
 							<td class="bb_0">&nbsp;</td>
 						</tr>
 						<tr class="activar">
 							<td class="bb_0">&nbsp;</td>
-							<td class="pl_0"><a href="#/configurar/estilos/bienvenida_imagenes" class="color_687a8b" ng-click="activar_slide()">Qmatiq Kiosk - Bienvenida</a></td>
+							<td class="pl_0">
+								<a href="#/configurar/estilos/kioscos_generales" class="color_687a8b" ng-click="activar_slide()">
+									<ANY translate="pagina.configuracion.estilos.tabla.cuerpo.fila2"></ANY>
+								</a>
+							</td>
 							<td class="bb_0">&nbsp;</td>
 						</tr>
 						<tr class="activar">
 							<td class="bb_0">&nbsp;</td>
-							<td class="pl_0"><a href="#/configurar/estilos/identificacion_imagenes" class="color_687a8b" ng-click="activar_slide()">Qmatiq Kiosk - Identificación</a></td>
+							<td class="pl_0">
+								<a href="#/configurar/estilos/videos_generales" class="color_687a8b" ng-click="activar_slide()">
+									<ANY translate="pagina.configuracion.estilos.tabla.cuerpo.fila3"></ANY>
+								</a>
+							</td>
 							<td class="bb_0">&nbsp;</td>
 						</tr>
 						<tr class="activar">
 							<td class="bb_0">&nbsp;</td>
-							<td class="pl_0"><a href="#/configurar/estilos/escaneo_imagenes" class="color_687a8b" ng-click="activar_slide()">Qmatiq Kiosk - Escaneo</a></td>
+							<td class="pl_0">
+								<a href="#/configurar/estilos/moviles" class="color_687a8b" ng-click="activar_slide()">
+									<ANY translate="pagina.configuracion.estilos.tabla.cuerpo.fila4"></ANY>
+								</a>
+							</td>
 							<td class="bb_0">&nbsp;</td>
 						</tr>
 						<tr class="activar">

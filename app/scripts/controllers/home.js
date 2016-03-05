@@ -7,8 +7,8 @@
  * # HomeCtrl
  * Controller of the Asura
  */
-angular.module('Asura')
-  .controller('HomeCtrl', function () {
+ angular.module('Asura')
+ .controller('HomeCtrl',['$scope',function ($scope) {
     var elem_a                  = angular.element(".circle a");
     var elem_conte              = angular.element(".contenedor_sidebar");
     var elem_cuerpo             = angular.element(".cuerpo");
@@ -29,4 +29,6 @@ angular.module('Asura')
         elem_sidebar.find('a[href="'+ $(this).attr('href') +'"]').addClass('active');
         elem_sidebar.find('a[href="'+ $(this).attr('href') +'"]').parents('ul').addClass('active block_imp');
     });
-  });
+
+
+}]);

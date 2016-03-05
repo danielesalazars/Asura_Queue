@@ -1,14 +1,29 @@
 <div class="row">
 	<div class="col-lg-9 col-md-12 pt_1-5em">
-		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">¿Cuáles son tus <span class=" h_47_LightC" 
-	style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">Clientes y Jerarquías</span>?</h1>
+		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">
+			<ANY translate="pagina.planificacion.jerarquia.titulo.var1"></ANY> 
+			<span class=" h_47_LightC" 
+				style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">
+				<ANY translate="pagina.planificacion.jerarquia.titulo.var2"></ANY>
+			</span>
+			?
+		</h1>
 		<div class="col-lg-7 col-md-7">
 			<div class="contenedor_pestana border_tabla">
 				<div class="tabs" id="pestanas">
 					<ul class="m_0 p_0" id="lista">
-						<li id="pestana1"><a href='#/planificacion/jerarquia/clientes'>Clientes</a></li>
-						<li id="pestana2"><a href='#/planificacion/jerarquia/jerarquias'>Jerarquías</a></li>
-						<li id="pestana3"><a href='#/planificacion/jerarquia/importar'>Importar datos</a></li>
+						<li id="pestana1"
+							ng-class="(tab_url =='clientes') ? 'back_blanco_imp' : '' ">
+							<a href='#/planificacion/jerarquia/clientes'>Clientes</a>
+						</li>
+						<li id="pestana2"
+							ng-class="(tab_url =='jerarquias') ? 'back_blanco_imp' : '' ">
+							<a href='#/planificacion/jerarquia/jerarquias'>Jerarquías</a>
+						</li>
+						<li id="pestana3"
+							ng-class="(tab_url =='importar') ? 'back_blanco_imp' : '' ">
+							<a href='#/planificacion/jerarquia/importar'>Importar datos</a>
+						</li>
 					</ul>
 				</div>
 				<div id="contenidopestanas">

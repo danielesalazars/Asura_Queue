@@ -1,12 +1,20 @@
 <div class="row">
 	<div class="col-lg-8 col-md-12 pt_1-5em">
-		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">¿Qué <span class="h_47_LightC" 
-	style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">Locales</span> contarán con Qmatiq?</h1>
+		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">
+			<ANY translate="pagina.planificacion.locales.titulo.var1"></ANY>
+			<span class="h_47_LightC" 
+				style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">
+				<ANY translate="pagina.planificacion.locales.titulo.var2"></ANY>
+			</span> 
+			<ANY translate="pagina.planificacion.locales.titulo.var3"></ANY>
+		</h1>
 		<div class="col-lg-8 col-md-8">
 			<div class="ffffff border_tabla">
 				<div class="col-lg-12 col-md-12 text-right mt_10 pb_2em">
 					<a class="right pointer" ng-click="show_crear()">
-						<span class="h_47_LightC color_gris_oscuro left pr_5 pt_4">Agregar local </span>
+						<span class="h_47_LightC color_gris_oscuro left pr_5 pt_4">
+							<ANY translate="pagina.planificacion.locales.boton"></ANY>
+						</span>
 						<i class="f_23 fa fa-plus-circle left"
 						style="color:{{configuraciones[0]['estilo_consola_secundario_texto_color']}}"></i>
 					</a>
@@ -15,9 +23,15 @@
 					<thead>
 						<tr>
 							<th class="w_5_por borde_azul">&nbsp;</th>
-							<th class="w_25_por borde_azul pl_0">Nombre del local</th>
-							<th class="w_35_por text-center">Código de kiosco</th>
-							<th class="w_20_por text-center">Ubicación</th>
+							<th class="w_25_por borde_azul pl_0">
+								<ANY translate="pagina.planificacion.locales.tabla.titulo.columna1"></ANY>
+							</th>
+							<th class="w_35_por text-center">
+								<ANY translate="pagina.planificacion.locales.tabla.titulo.columna2"></ANY>
+							</th>
+							<th class="w_20_por text-center">
+								<ANY translate="pagina.planificacion.locales.tabla.titulo.columna3"></ANY>
+							</th>
 							<th class="w_15_por">&nbsp;</th>
 						</tr>
 					</thead>
@@ -47,20 +61,28 @@
 				<i class="fa fa-times pointer color_8293a3" ng-click="close()"></i>
 			</div>
 			<div class="plr_15 h_Cond color_7fd0d9 bb_1 pb_10 mt_-10 f_16" ng-bind="title_slide"></div>
-			<div class="plr_15 pt_7 pr_2em">
-				<label for="" class="h_47_LightC mb_0 color_687a8b">Nombre del Local</label><br>
+			<div class="plr_15 pt_1 pr_2em">
+				<label for="" class="h_47_LightC mb_0 color_687a8b">
+					<ANY translate="pagina.planificacion.locales.slide.form.label1"></ANY>
+				</label><br>
 				<input ng-model="local.nombre" class="h_47_LightC w_100_por input_for" type="text">
 			</div>
-			<div class="plr_15 pt_7 pr_2em">	
-				<label for="" class="h_47_LightC mb_0 color_687a8b">Ventanillas o puestos (Ej: 1,2,3,A,B,C)</label><br>
+			<div class="plr_15 pt_1 pr_2em">	
+				<label for="" class="h_47_LightC mb_0 color_687a8b">
+					<ANY translate="pagina.planificacion.locales.slide.form.label2"></ANY>
+				</label><br>
 				<input ng-model="local.ventanillas" class="h_47_LightC w_100_por input_for" type="text">
 			</div>
-			<div class="plr_15 pt_7 pr_2em">	
-				<label for="" class="h_47_LightC mb_0 color_687a8b">Código de kiosco</label><br>
+			<div class="plr_15 pt_1 pr_2em">	
+				<label for="" class="h_47_LightC mb_0 color_687a8b">
+					<ANY translate="pagina.planificacion.locales.slide.form.label3"></ANY>
+				</label><br>
 				<input ng-model="local.kiosco_codigo" class="h_47_LightC w_100_por input_for" type="text">
 			</div>
-			<div class="plr_15 pt_7 pr_2em">	
-				<label for="" class="h_47_LightC mb_0 color_687a8b">Ubicación</label><br>
+			<div class="plr_15 pt_1 pr_2em">	
+				<label for="" class="h_47_LightC mb_0 color_687a8b">
+					<ANY translate="pagina.planificacion.locales.slide.form.label4"></ANY>
+				</label><br>
 				<input ng-model="local.ubicacion" class="h_47_LightC w_100_por input_for" 
 				type="text" ng-disabled="true">
 				<!--<i class="fa fa-expand zoom_mapa pointer"></i>-->

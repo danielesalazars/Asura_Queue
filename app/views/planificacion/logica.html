@@ -1,16 +1,26 @@
 <div class="row">
 	<div class="col-lg-8 col-md-12 pt_1-5em">
-		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">¿Qué <span class="h_47_LightC" 
-	style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">Lógica</span> utilizarás para la atención?</h1>
+		<h1 class="color_gris_oscuro h_37_ThinC pb_03em f_33">
+			<ANY translate="pagina.planificacion.logica.titulo.var1"></ANY> 
+			<span class="h_47_LightC" 
+				style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">
+				<ANY translate="pagina.planificacion.logica.titulo.var2"></ANY>
+			</span> 
+			<ANY translate="pagina.planificacion.logica.titulo.var3"></ANY>
+		</h1>
 		<div class="col-lg-7 col-md-7">
 			<div class="ffffff border_tabla pt_4em">
 				<table class="table tabla_usuarios">
 					<thead>
 						<tr>
 							<th class="w_5_por borde_azul">&nbsp;</th>
-							<th class="w_40_por borde_azul pl_0">Nombre del local</th>
-							<th class="w_15_por text-center">Publicar</th>
-							<th class="w_40_por text-center">&nbsp;</th>
+							<th class="w_50_por borde_azul pl_0">
+								<ANY translate="pagina.planificacion.logica.tabla.titulo.columna1"></ANY>
+							</th>
+							<th class="w_15_por text-center">
+								<ANY translate="pagina.planificacion.logica.tabla.titulo.columna2"></ANY>
+							</th>
+							<th class="w_30_por text-center">&nbsp;</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -48,7 +58,9 @@
 				<table class="table tabla_usuarios mt_10 color_7fd0d9">
 					<thead>
 						<tr>
-							<th width="200" class="pl_0 pr_0 h_47_LightC" colspan="4">Grupos de atención</th>
+							<th width="200" class="pl_0 pr_0 h_47_LightC" colspan="4">
+								<ANY translate="pagina.planificacion.logica.slide.tabla.titulo.columna1"></ANY>
+							</th>
 							<th width="20" class="text-center h_47_LightC color_gris_oscuro" 
 								ng-repeat="ventanilla in ventanillas">
 								{{ventanilla['nombre']}}
@@ -83,7 +95,9 @@
 				<table class="table tabla_usuarios mt_10">
 					<thead>
 						<tr>
-							<th colspan="4" width="200" class="pl_0 pr_0 h_47_LightC">Jerarquías</th>
+							<th colspan="4" width="200" class="pl_0 pr_0 h_47_LightC">
+								<ANY translate="pagina.planificacion.logica.slide.tabla.titulo.columna2"></ANY>
+							</th>
 							<th width="20" class="text-center h_47_LightC color_gris_oscuro" 
 								ng-repeat="ventanilla in ventanillas">
 								{{ventanilla['nombre']}}

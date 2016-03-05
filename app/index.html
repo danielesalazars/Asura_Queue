@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="bower_components/jquery-minicolors/jquery.minicolors.css" />
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -50,6 +51,13 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right hidden-xs">
+                        <li style="margin: 12px 0;">
+                            <select 
+                              ng-change="cambia_idioma()" 
+                              ng-model="idioma" 
+                              ng-options="cr.idioma as cr.idioma for cr in idiomas">
+                            </select>
+                        </li> 
                         <li><a href="#" class="pr_0 usuario h_47_LightC">Juan Perez</a></li>
                         <li><a href="#" class="pr_0 ml_-6"><i class="fa fa-user"></i></a></li>
                         <li><a href="#"><i class="fa fa-question-circle"></i></a></li>
@@ -97,42 +105,123 @@
             <div class="sidebar sub_sidebar">
                 <nav class="navbar">
                     <ul id="navegacion_01" class="nav nav-sidebar none text-left">
-                        <li class="title"><a href="#/configurar"class="sidebar_01">Configuración</a></li>
-                        <li><a href="#/configurar/roles" class="sidebar_01">Roles</a></li>
-                        <li><a href="#/configurar/usuarios" class="sidebar_01">Usuarios</a></li>
-                        <li><a href="#/configurar/logicakioscos" class="sidebar_01">Lógica de kioscos</a></li>
-                        <li><a href="#/configurar/estilos" class="sidebar_01">Estilos</a></li>
-                        <li><a href="#/configurar/seguridad" class="sidebar_01">Seguridad</a></li>
-                        <li><a href="#/configurar/peticiones" class="sidebar_01">Peticiones de acceso <i class="fa fa-exclamation color_rojo exclamacion"></i></a></li>
+                        <li class="title">
+                            <a href="#/configurar" class="sidebar_01" 
+                            translate="menu.configuracion.item1"></a>
+                        </li>
+                        <li>
+                            <a href="#/configurar/roles" class="sidebar_01" 
+                            translate="menu.configuracion.item2"></a>
+                        </li>
+                        <li>
+                            <a href="#/configurar/usuarios" class="sidebar_01" 
+                            translate="menu.configuracion.item3"></a>
+                        </li>
+                        <li>
+                            <a href="#/configurar/logicakioscos" class="sidebar_01" 
+                            translate="menu.configuracion.item4"></a>
+                        </li>
+                        <li>
+                            <a href="#/configurar/estilos" class="sidebar_01" 
+                            translate="menu.configuracion.item5"></a>
+                        </li>
+                        <li>
+                            <a href="#/configurar/seguridad" class="sidebar_01" 
+                            translate="menu.configuracion.item6"></a>
+                        </li>
+                        <li>
+                            <a href="#/configurar/peticiones" class="sidebar_01">
+                                <ANY translate="menu.configuracion.item7"></ANY> 
+                                <i class="fa fa-exclamation color_rojo exclamacion"></i>
+                            </a>
+                        </li>
                     </ul>
                     <ul id="navegacion_02" class="nav nav-sidebar none text-left">
-                        <li class="title"><a href="#/planificacion" class="sidebar_02">Planificación</a></li>
-                        <li><a href="#/planificacion/locales" class="sidebar_02">Locales / Kioscos</a></li>
-                        <li><a href="#/planificacion/jerarquia" class="sidebar_02">Clientes y jerarquías</a></li>
-                        <li><a href="#/planificacion/gatencion" class="sidebar_02">Grupo de atención</a></li>
-                        <li><a href="#/planificacion/logica" class="sidebar_02">Lógica</a></li>
+                        <li class="title">
+                            <a href="#/planificacion" class="sidebar_02"
+                            translate="menu.planificacion.item1"></a>
+                        </li>
+                        <li>
+                            <a href="#/planificacion/locales" class="sidebar_02"
+                            translate="menu.planificacion.item2"></a>
+                        </li>
+                        <li>
+                            <a href="#/planificacion/jerarquia/clientes" class="sidebar_02"
+                            translate="menu.planificacion.item3"></a>
+                        </li>
+                        <li>
+                            <a href="#/planificacion/gatencion" class="sidebar_02"
+                            translate="menu.planificacion.item4"></a>
+                        </li>
+                        <li>
+                            <a href="#/planificacion/logica" class="sidebar_02"
+                            translate="menu.planificacion.item5"></a>
+                        </li>
                     </ul>
                     <ul id="navegacion_03" class="nav nav-sidebar none text-left">
-                        <li class="title"><a href="#/video" class="sidebar_03">Video</a></li>
-                        <li><a href="#/video/playlist_local" class="sidebar_03">Playlist locales</a></li>
-                        <li><a href="#/video/playlist_youtube" class="sidebar_03">Playlist de Yotube</a></li>
+                        <li class="title">
+                            <a href="#/video" class="sidebar_03"
+                            translate="menu.video.item1"></a>
+                        </li>
+                        <li>
+                            <a href="#/video/playlist" class="sidebar_03"
+                            translate="menu.video.item2"></a>
+                        </li>
                     </ul>
                     <ul id="navegacion_04" class="nav nav-sidebar none text-left">
-                        <li class="title"><a href="#/atencion" class="sidebar_04">Atención</a></li>
-                        <li><a href="#/atencion/mod_atencion2" class="sidebar_04">Módulo de atención</a></li>
-                        <li><a href="#/atencion/supervision" class="sidebar_04">Supervisión</a></li>
-                        <li><a href="#/atencion/crit_atencion" class="sidebar_04">Criterios de atención</a></li>
-                        <li><a href="#/atencion/msj_alerta" class="sidebar_04">Mensajes de alerta</a></li>
+                        <li class="title">
+                            <a href="#/atencion" class="sidebar_04"
+                            translate="menu.atencion.item1"></a>
+                        </li>
+                        <li>
+                            <a href="#/atencion/mod_atencion2" class="sidebar_04"
+                            translate="menu.atencion.item2"></a>
+                        </li>
+                        <li>
+                            <a href="#/atencion/supervision" class="sidebar_04"
+                            translate="menu.atencion.item3"></a>
+                        </li>
+                        <li>
+                            <a href="#/atencion/crit_atencion" class="sidebar_04"
+                            translate="menu.atencion.item4"></a>
+                        </li>
+                        <li>
+                            <a href="#/atencion/msj_alerta" class="sidebar_04"
+                            translate="menu.atencion.item5"></a>
+                        </li>
                     </ul>
                     <ul id="navegacion_05" class="nav nav-sidebar none text-left">
-                        <li class="title"><a href="#/reportes" class="sidebar_05">Reportes</a></li>
-                        <li><a href="#/reportes/clt_atendidos" class="sidebar_05">Clientes atendidos</a></li>
-                        <li><a href="#/reportes/clt_salteados" class="sidebar_05">Clientes salteados</a></li>
-                        <li><a href="#/reportes/tkt_impresos" class="sidebar_05">Tickets impresos</a></li>
-                        <li><a href="#/reportes/movil_escaneos" class="sidebar_05">Móvil: Escaneos</a></li>
-                        <li><a href="#/reportes/movil_tickets" class="sidebar_05">Móvil: tickets</a></li>
-                        <li><a href="#/reportes/descarga_datos" class="sidebar_05">Descarga de datos</a></li>
-                        <li><a href="#/reportes/comparativo_tickets" class="sidebar_05">Comparativo de tickets</a></li>
+                        <li class="title">
+                            <a href="#/reportes" class="sidebar_05"
+                            translate="menu.reportes.item1"></a></li>
+                        <li>
+                            <a href="#/reportes/clt_atendidos" class="sidebar_05"
+                            translate="menu.reportes.item2"></a>
+                        </li>
+                        <li>
+                            <a href="#/reportes/clt_salteados" class="sidebar_05"
+                            translate="menu.reportes.item3"></a>
+                        </li>
+                        <li>
+                            <a href="#/reportes/tkt_impresos" class="sidebar_05"
+                            translate="menu.reportes.item4"></a>
+                        </li>
+                        <li>
+                            <a href="#/reportes/movil_escaneos" class="sidebar_05"
+                            translate="menu.reportes.item5"></a>
+                        </li>
+                        <li>
+                            <a href="#/reportes/movil_tickets" class="sidebar_05"
+                            translate="menu.reportes.item6"></a>
+                        </li>
+                        <li>
+                            <a href="#/reportes/comparativo_tickets" class="sidebar_05"
+                            translate="menu.reportes.item8"></a>
+                        </li>
+                        <li>
+                            <a href="#/reportes/descarga_datos" class="sidebar_05"
+                            translate="menu.reportes.item7"></a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -199,12 +288,17 @@
     <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
     <script src="bower_components/lodash/dist/lodash.compat.js"></script>
     <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/Chart.js/Chart.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script src="bower_components/angular-google-chart/ng-google-chart.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/services/language.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/services/mainfactory.js"></script>
         <script src="scripts/controllers/home.js"></script>

@@ -1,7 +1,13 @@
 <div class="row">
 	<div class="col-lg-9 col-lg-offset-1">
-		<h1 class="color_gris_oscuro h_37_ThinC f_33">Consulta nuestros <span class="h_47_LightC" 
-	style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">reportes</span> sobre la actividad realizada</h1>
+		<h1 class="color_gris_oscuro h_37_ThinC f_33">
+			<ANY translate="pagina.reportes.index.titulo.var1"></ANY> 
+			<span class="h_47_LightC" 
+				style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">
+				<ANY translate="pagina.reportes.index.titulo.var2"></ANY>
+			</span> 
+			<ANY translate="pagina.reportes.index.titulo.var3"></ANY>
+		</h1>
 		<div class="row configuracion">								
 			<div class="col-lg-6 col-md-6 pb_3em">
 				<div class="row">
@@ -11,8 +17,14 @@
 						</div>
 					</div>
 					<div class="col-lg-8 col-md-8">
-						<a href="#/reportes/clt_atendidos"><h2 class="color_gris_oscuro h_37_ThinC f_29">Clientes atendidos <i class="fa fa-angle-right" style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}"></i></h2></a>
-						<p>Revisa el número de clientes<br>atendidos por local, puesto,<br>jerarquía, criterio y fecha.</p>
+						<a href="#/reportes/clt_atendidos">
+							<h2 class="color_gris_oscuro h_37_ThinC f_29">
+								<ANY translate="pagina.reportes.index.item.atendidos.titulo"></ANY>
+								<i class="fa fa-angle-right" style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">
+								</i>
+							</h2>
+						</a>
+						<ANY translate="pagina.reportes.index.item.atendidos.descripcion"></ANY>
 					</div>
 				</div>								
 			</div>							
@@ -24,8 +36,14 @@
 						</div>
 					</div>
 					<div class="col-lg-8 col-md-8">
-						<h2 class="color_gris_oscuro h_37_ThinC f_29">Clientes salteados <i class="fa fa-angle-right" style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}"></i></h2>
-						<p>Revisa el número de clientes<br>salteados por local, puesto,<br>jerarquía, criterio y fecha.</p>
+						<a href="#/reportes/clt_salteados">
+							<h2 class="color_gris_oscuro h_37_ThinC f_29">
+								<ANY translate="pagina.reportes.index.item.salteados.titulo"></ANY>
+								<i class="fa fa-angle-right" style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">
+								</i>
+							</h2>
+						</a>
+						<ANY translate="pagina.reportes.index.item.salteados.descripcion"></ANY>
 					</div>
 				</div>								
 			</div>							
@@ -37,8 +55,15 @@
 						</div>
 					</div>
 					<div class="col-lg-8 col-md-8">
-						<h2 class="color_gris_oscuro h_37_ThinC f_29">Tickets impresos<i class="fa fa-angle-right" style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}"></i></h2>
-						<p>Revisa el número de tickets impresos<br>realizados en la App por local,<br> puesto, jerarquía, criterio y fecha.</p>
+						<a href="#/reportes/tkt_impresos">
+							<h2 class="color_gris_oscuro h_37_ThinC f_29">
+								<ANY translate="pagina.reportes.index.item.impresos.titulo"></ANY>
+								<i class="fa fa-angle-right" 
+								style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">
+								</i>
+							</h2>
+						</a>
+						<ANY translate="pagina.reportes.index.item.impresos.descripcion"></ANY>
 					</div>
 				</div>								
 			</div>							
@@ -50,8 +75,15 @@
 						</div>
 					</div>
 					<div class="col-lg-8 col-md-8">
-						<h2 class="color_gris_oscuro h_37_ThinC f_29">Móvil: Escaneos<i class="fa fa-angle-right" style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}"></i></h2>
-						<p>Revisa el número de escaneos<br>realizados en la App por local,<br> puesto, jerarquía, criterio y fecha.</p>
+						<a href="#/reportes/movil_escaneos">
+							<h2 class="color_gris_oscuro h_37_ThinC f_29">
+								<ANY translate="pagina.reportes.index.item.escaneos.titulo"></ANY>
+								<i class="fa fa-angle-right" 
+								style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">
+								</i>
+							</h2>
+						</a>
+						<ANY translate="pagina.reportes.index.item.escaneos.descripcion"></ANY>
 					</div>
 				</div>								
 			</div>
@@ -63,10 +95,37 @@
 						</div>
 					</div>
 					<div class="col-lg-8 col-md-8 pr_0">
-						<h2 class="color_gris_oscuro h_37_ThinC f_29">Móvil: tickets<i class="fa fa-angle-right" style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}"></i></h2>
-						<p>Revisa el número de tickets impresos<br>realizados en la App por local,<br> puesto, jerarquía, criterio y fecha.</p>		
+						<a href="#/reportes/movil_tickets">
+							<h2 class="color_gris_oscuro h_37_ThinC f_29">
+								<ANY translate="pagina.reportes.index.item.tickets.titulo"></ANY>
+								<i class="fa fa-angle-right" 
+								style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">
+								</i>
+							</h2>
+						</a>
+						<ANY translate="pagina.reportes.index.item.tickets.descripcion"></ANY>
 					</div>
 				</div>
+			</div>						
+			<div class="col-lg-6 col-md-6 pb_3em">
+				<div class="row">
+					<div class="col-lg-4 col-md-4">
+						<div class="circle circle_gris">									
+							<a href="#/reportes/comparativo_tickets"><i class="fa fa-clipboard f_50"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-8 col-md-8 pr_0">
+						<a href="#/reportes/comparativo_tickets">
+							<h2 class="color_gris_oscuro h_37_ThinC f_29">
+								<ANY translate="pagina.reportes.index.item.comparativo.titulo"></ANY>
+								<i class="fa fa-angle-right" 
+								style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">
+								</i>
+							</h2>
+						</a>
+						<ANY translate="pagina.reportes.index.item.comparativo.descripcion"></ANY>	
+					</div>
+				</div>								
 			</div>
 			<div class="col-lg-6 col-md-6 pb_3em">
 				<div class="row">
@@ -76,24 +135,18 @@
 						</div>
 					</div>
 					<div class="col-lg-8 col-md-8">
-						<h2 class="color_gris_oscuro h_37_ThinC f_29">Descarga de datos <i class="fa fa-angle-right" style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}"></i></h2>
-						<p>Descarga los resportes en formato<br>XLS para poder realizar consultas<br>más personalizadas.</p>
+						<a href="#/reportes/descarga_datos">
+							<h2 class="color_gris_oscuro h_37_ThinC f_29">
+								<ANY translate="pagina.reportes.index.item.descarga.titulo"></ANY>
+								<i class="fa fa-angle-right" 
+								style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">
+								</i>
+							</h2>
+						</a>
+						<ANY translate="pagina.reportes.index.item.descarga.descripcion"></ANY>
 					</div>
 				</div>								
-			</div>							
-			<div class="col-lg-6 col-md-6 pb_3em">
-				<div class="row">
-					<div class="col-lg-4 col-md-4">
-						<div class="circle circle_gris">									
-							<a href="#/reportes/comparativo_tickets"><i class="fa fa-clipboard f_50"></i></a>
-						</div>
-					</div>
-					<div class="col-lg-8 col-md-8 pr_0">
-						<h2 class="color_gris_oscuro h_37_ThinC f_29">Comparativo de tickets<i class="fa fa-angle-right" style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}"></i></h2>
-						<p>Revisa un cuadro comparativo de<br> tickets que se generaron en el<br>Kiosco como Movil.</p>		
-					</div>
-				</div>								
-			</div>				
+			</div>					
 		</div>
 	</div>
 </div>
