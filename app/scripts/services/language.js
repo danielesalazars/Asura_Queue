@@ -207,13 +207,16 @@ var en = {
         },
         tabla: {
           titulo: {
-            columna1: 'Styles for applications httpGO',
+            columna1: 'Styles for applications Qmatiq',
           },
           cuerpo: {
             fila1: 'Qmatiq Console',
-            fila2: 'Qmatiq Kiosk - Menu and Administration',
-            fila3: 'Qmatiq Video',
-            fila4: 'Qmatiq Mobile',
+            fila2: 'Qmatiq Kiosk - Welcome',
+            fila3: 'Qmatiq Kiosk - Identification',
+            fila4: 'Qmatiq Kiosk - Escaneo',
+            fila5: 'Qmatiq Kiosk - Menu and Administration',
+            fila6: 'Qmatiq Video',
+            fila7: 'Qmatiq Mobile',
           }
         },
         slide: {
@@ -880,10 +883,13 @@ var es = {
             columna1: 'Estilos para aplicaciones htpGO',
           },
           cuerpo: {
-            fila1: 'Qmatiq consola',
-            fila2: 'Qmatiq Kiosk - Menú y Administración',
-            fila3: 'Qmatiq Video',
-            fila4: 'Qmatiq Mobile',
+            fila1: 'Qmatiq Consola',
+            fila2: 'Qmatiq Kiosk - Welcome',
+            fila3: 'Qmatiq Kiosk - Identificación',
+            fila4: 'Qmatiq Kiosk - Escaneo',
+            fila5: 'Qmatiq Kiosk - Menú y Administración',
+            fila6: 'Qmatiq Video',
+            fila7: 'Qmatiq Móviles',
           }
         },
         slide: {
