@@ -210,10 +210,10 @@ var en = {
             columna1: 'Styles for applications httpGO',
           },
           cuerpo: {
-            fila1: 'Console styles',
-            fila2: 'Kiosk styles',
-            fila3: 'Video presentation styles',
-            fila4: 'Mobile application styles',
+            fila1: 'Qmatiq Console',
+            fila2: 'Qmatiq Kiosk - Menu and Administration',
+            fila3: 'Qmatiq Video',
+            fila4: 'Qmatiq Mobile',
           }
         },
         slide: {
@@ -880,10 +880,10 @@ var es = {
             columna1: 'Estilos para aplicaciones htpGO',
           },
           cuerpo: {
-            fila1: 'Estilos para la consola',
-            fila2: 'Estilos para los kioscos',
-            fila3: 'Estilos para la presentación de videos',
-            fila4: 'Estilos para la aplicación móvil',
+            fila1: 'Qmatiq consola',
+            fila2: 'Qmatiq Kiosk - Menú y Administración',
+            fila3: 'Qmatiq Video',
+            fila4: 'Qmatiq Mobile',
           }
         },
         slide: {
