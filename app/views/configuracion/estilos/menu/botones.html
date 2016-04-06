@@ -1,25 +1,5 @@
-<form class="plr_15 pt_1" ng-controller="FileCtrl" name="form_menu">				
-	<div class="pt_5 plr_15">
-		<label for="" class="w_45 h_47_LightC mb_0 color_687a8b">
-			<ANY translate="pagina.configuracion.estilos.slide.kioscos.tab.item4.form.label1"></ANY>
-		</label>
-		<div class="inline_block">
-			<input class="h_47_LightC w_120 input_for" type="text" id="input_logotipo"
-			ng-model="configuraciones[0]['estilo_consola_logo1_archivo']['url']"
-			ng-disabled="true">
-			<div class="fileupload pointer fa fa-search color_gris_oscuro">
-				<input type="file" accept="images/*" id="logotipo">
-			</div>
-			<span class="color_gris_claro a4afb9 h_47_LightC">*.PNG 800x480</span>	
-			<i class="fa pointer"
-				ng-class="(configuraciones[0]['estilo_kiosco_menu_fondo_visible'] == 1) ?
-				'fa-eye color_gris_oscuro' :
-				'fa-eye-slash color_rojo' "
-				ng-click="checked('estilo_kiosco_menu_fondo_visible')"
-				ng-model="configuraciones[0]['estilo_kiosco_menu_fondo_visible']"></i>
-		</div>
-	</div>				
-	<div class="pt_10 plr_15 h_47_LightC">		
+<form class="plr_15 pt_1" ng-controller="FileCtrl" name="form_menu">							
+	<div class="pt_5 plr_15 h_47_LightC">		
 		<span class="pointer color_687a8b">
 			<i class="fa check" 
 			ng-class="(configuraciones[0]['estilo_kiosco_menu_transparencia_activar'] == 1) ?
@@ -42,7 +22,7 @@
 			ng-model="configuraciones[0]['estilo_kiosco_menu_reemplazar_activar']"></i>  
 			<ANY translate="pagina.configuracion.estilos.slide.kioscos.tab.item4.form.check.item2"></ANY>
 		</span>
-		<div class="minicolor_generales mini_kiosko_texto mini_kiosko_texto_menu ml_40">
+		<div class="minicolor_generales mini_kiosko_texto mini_kiosko_texto_menu ml_15">
 			<input 
 			    minicolors="mini_generales"
 			    class="form-control"
@@ -60,7 +40,7 @@
 			ng-model="configuraciones[0]['estilo_kiosco_menu_delineado_activar']"></i>  
 			<ANY translate="pagina.configuracion.estilos.slide.kioscos.tab.item4.form.check.item3"></ANY>
 		</span>
-		<div class="minicolor_generales mini_kiosko_texto mini_kiosko_texto_menu ml_40">
+		<div class="minicolor_generales mini_kiosko_texto mini_kiosko_texto_menu ml_15">
 			<input 
 			    minicolors="mini_generales"
 			    class="form-control"

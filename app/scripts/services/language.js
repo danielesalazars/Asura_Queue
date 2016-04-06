@@ -832,6 +832,7 @@ var es = {
             label1: 'Nombre de usuario',
             label2: 'Correo electrónico',
             label3: 'Rol asignado',
+            label4: 'Locales',
             tabla: {
               titulo: {
                 columna1: 'Locales',
@@ -883,13 +884,13 @@ var es = {
             columna1: 'Estilos para aplicaciones htpGO',
           },
           cuerpo: {
-            fila1: 'Qmatiq Consola',
-            fila2: 'Qmatiq Kiosk - Welcome',
+            fila1: 'Qmatiq Console',
+            fila2: 'Qmatiq Kiosk - Bienvenida',
             fila3: 'Qmatiq Kiosk - Identificación',
             fila4: 'Qmatiq Kiosk - Escaneo',
             fila5: 'Qmatiq Kiosk - Menú y Administración',
             fila6: 'Qmatiq Video',
-            fila7: 'Qmatiq Móviles',
+            fila7: 'Qmatiq Mobile',
           }
         },
         slide: {
@@ -948,20 +949,20 @@ var es = {
                 titulo: 'Botones',
                 form: {
                   grupo1: {
-                    titulo: 'Digita documento',
+                    titulo: 'Soy Cliente',
                   },
                   grupo2: {
-                    titulo: 'Sin documento',
+                    titulo: 'No soy cliente',
                   },
                   label1: 'Icono',
-                  label2: 'Línea 1',
-                  label3: 'Línea 2',
-                  label4: 'Text color',
-                  label5: 'Color botón',
+                  label2: 'Txt1',
+                  label3: 'Txt2',
+                  label4: 'Texto',
+                  label5: 'Botón',
                 }
               },
               item4: {
-                titulo: 'Menú',
+                titulo: 'Botón Ticket',
                 form: {
                   label1: 'Fondo',
                   check: {
@@ -971,6 +972,15 @@ var es = {
                   }
                 }
               },
+              item5: {
+                titulo: 'Imágenes',
+                form: {
+                  label1: 'Fondo 1',
+                  label2: 'Fondo 2',
+                  label3: 'Fondo 3',
+                  label4: 'Fondo 4',
+                }
+              },  
             }
           },
           videos: {
