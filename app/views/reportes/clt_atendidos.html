@@ -1,47 +1,84 @@
 <div class="row">
-	<div class="col-lg-7 col-md-10 pt_1-5em">
+	<div class="col-lg-8 col-md-11 pt_1-5em">
 		<h1 class="color_gris_oscuro h_37_ThinC f_33">
-			<ANY translate="pagina.reportes.atendidos.titulo.var1"></ANY> 
+			<ANY translate="pagina.reportes.alcance.titulo.var1"></ANY> 
 			<span class="h_47_LightC" 
 				style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">
-				<ANY translate="pagina.reportes.atendidos.titulo.var2"></ANY>
+				<ANY translate="pagina.reportes.alcance.titulo.var2"></ANY>
 			</span> 
-			<ANY translate="pagina.reportes.atendidos.titulo.var3"></ANY> 
+			<ANY translate="pagina.reportes.alcance.titulo.var3"></ANY> 
 			<span class="color_verde h_47_LightC" 
 			style="color:{{configuraciones[0]['estilo_consola_principal_texto_color']}}">
-				<ANY translate="pagina.reportes.atendidos.titulo.var4"></ANY>
+				<ANY translate="pagina.reportes.alcance.titulo.var4"></ANY>
 			</span>
-			<ANY translate="pagina.reportes.atendidos.titulo.var5"></ANY>
+			<ANY translate="pagina.reportes.alcance.titulo.var5"></ANY>
 		</h1>
 		<div class="col-lg-12 col-md-12">
 			<div class="ffffff border_tabla">
-				<!-- <div class="etiqueta_add pb_2em">
-					<i class="fa fa-external-link"
-					style="color:{{configuraciones[0]['estilo_consola_secundario_fondo_color']}}"></i>
-					<span>Exportar</span>
+				<div class="pl_2-5em pt_20 h_47_LightC">
+					<i class="f_23 color_4cbdca fa fa-bar-chart"></i>
+					<select name="locales" class="combx w_30_por">
+						<option value="1">Todos los locales</option>
+					</select>
+					<select name="reporte" class="combx w_20_por">
+						<option value="1">Reporte anual</option>
+					</select>
+					<span class="right mr_10 color_687a8b">Exportar 
+						<i class="f_19 color_2bb673 fa fa-external-link" aria-hidden="true"></i>
+					</span>
 				</div>
-				<div class="text-center">
-					<img src="images/cuadro_estadistico.png" alt="">
-				</div> -->
-				<div google-chart chart="chartObject"></div>
+				<div class="pt_20 pb_10">
+					<img class="pl_2-5em pr_1em w_100_por" src="images/reporte1.png" alt="">
+				</div>
+				<!--<div google-chart chart="chartObject"></div>-->
 				<table class="table tabla_usuarios">
 					<thead>
 						<tr>
-							<th class="w_12_por borde_azul">&nbsp;</th>
-							<th class="w_30_por borde_azul">Nombre del local</th>
-							<th class="w_30_por text-center">Clientes atendidos</th>
-							<th class="w_13_por text-center">&nbsp;</th>
-							<th class="w_15_por text-right"><i class="color_celeste f_19 fa fa-search"></i> <i class="color_celeste fa fa-angle-double-right"></i></th>
+							<th class="w_5_por borde_azul">&nbsp;</th>
+							<th class="w_20_por borde_azul">Nombre del local</th>
+							<th class="w_15_por text-center color_97bbcd">Turnos exitosos</th>
+							<th class="w_20_por text-center color_e1ae6c">Turnos incompletos</th>
+							<th class="w_15_por text-center color_e17777">Turnos vencidos</th>
+							<th class="w_20_por text-center">Total atenciones</th>
+							<th class="w_5_por">&nbsp;</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr ng-repeat="reporte in reportes" class="activar">
-							<td class="bb_0 text-right">
-								<i style="color:{{reporte.color}}" class="fa fa-circle">
-							</td>
-							<td class="text-left" ng-bind="reporte.nombre"></td>
-							<td class="text-center" ng-bind="reporte.atendidos"></td>
+						<!--ng-repeat="reporte in reportes"-->
+						<tr class="activar">
 							<td class="bb_0">&nbsp;</td>
+							<td class="text-left">Benavides</td>
+							<td class="text-center">17,658</td>
+							<td class="text-center">4,250</td>
+							<td class="text-center">2,586</td>
+							<td class="text-center">24,215</td>
+							<td class="bb_0">&nbsp;</td>
+						</tr>
+						<tr class="">
+							<td class="bb_0">&nbsp;</td>
+							<td class="text-left">Angamos</td>
+							<td class="text-center">17,658</td>
+							<td class="text-center">4,250</td>
+							<td class="text-center">2,586</td>
+							<td class="text-center">24,215</td>
+							<td class="bb_0">&nbsp;</td>
+						</tr>
+						<tr class="">
+							<td class="bb_0">&nbsp;</td>
+							<td class="text-left">Javier Prado</td>
+							<td class="text-center">17,658</td>
+							<td class="text-center">4,250</td>
+							<td class="text-center">2,586</td>
+							<td class="text-center">24,215</td>
+							<td class="bb_0">&nbsp;</td>
+						</tr>
+						<tr class="">
+							<td class="bb_0">&nbsp;</td>
+							<td class="text-left h_Cond">Total</td>
+							<td class="text-center h_Cond">56,542</td>
+							<td class="text-center h_Cond">12,562</td>
+							<td class="text-center h_Cond">6.874</td>
+							<td class="text-center h_Cond">73,851</td>
 							<td class="bb_0">&nbsp;</td>
 						</tr>
 					</tbody>

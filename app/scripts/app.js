@@ -128,7 +128,7 @@
   })
   .when("/atencion/mod_atencion2",{
     controller:   "ModAtencion2Ctrl",
-    templateUrl:  "views/atencion/mod_atencion2.html"
+    templateUrl:  "views/atencion/mod_atencion1.html"
   })
   .when("/atencion/supervision",{
     controller:   "SupervisionCtrl",

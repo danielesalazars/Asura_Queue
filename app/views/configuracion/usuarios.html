@@ -43,6 +43,7 @@
 						<th class="w_40_por">
 							<ANY translate="pagina.configuracion.usuarios.tabla.titulo.columna3"></ANY>
 						</th>
+						
 						<th class="w_5_por">&nbsp;</th>
 						<th class="w_5_por">&nbsp;</th>
 					</tr>
@@ -97,6 +98,9 @@
 			<div class="plr_15 pt_1">	
 				<label for="" class="h_47_LightC mb_0 color_687a8b">
 					<ANY translate="pagina.configuracion.usuarios.slide.form.label4"></ANY>
+					<span class="f_13 color_99a7b5">
+						<ANY translate="pagina.configuracion.usuarios.slide.form.label5"></ANY>
+					</span>
 				</label><br>
 				<select name="" id="" class="h_47_LightC w_100_por input_for" ng-model="usuario.rol_id" ng-disabled="usuario.disabled">
 				  	<option ng-repeat="rol in roles" value="{{rol.id}}">{{rol.nombre}}</option>
