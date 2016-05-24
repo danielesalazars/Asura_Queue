@@ -26,15 +26,15 @@
   'chart.js',
   'googlechart'
   ])
-/* 
+ 
 .constant('URL',{ 
   'path' : 'http://api.asura.piensamasalla.com/' 
 })
-*/
+/*
 .constant('URL',{ 
   'path' : 'http://localhost/asura-api/' 
 })
- 
+ */
 
 .config(function(uiGmapGoogleMapApiProvider) {
   uiGmapGoogleMapApiProvider.configure({
