@@ -365,7 +365,7 @@ var en = {
               columna1: 'Update authentication code',
             },
             fila2: {
-              columna1: 'Update code in kiosks',
+              columna1: 'Update code in videos',
             },
           }
         },
@@ -1017,7 +1017,7 @@ var es = {
               columna1: 'Actualización de código de autenticación',
             },
             fila2: {
-              columna1: 'Actualización de código en kioscos',
+              columna1: 'Actualización de código en videos',
             },
           }
         },

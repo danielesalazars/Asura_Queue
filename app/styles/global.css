@@ -1037,7 +1037,7 @@ table tbody tr:last-child td{
 	background-color: #f2f3f8;
 	border: 1px solid #e3e6eb;
 	color: #687a8b;
-	width: 88px;
+	width: 25%;
 }
 
 /* Tabla Roles y Tabla Usuarios */
@@ -1425,7 +1425,7 @@ tr.activar:hover .eliminar{
   overflow-y: scroll;
 }
 .slide_flotante .table_roles tbody td i{
-	padding-left: 15px;
+	padding-left: 40px;
 }
 
 .scroll_usuario tbody {

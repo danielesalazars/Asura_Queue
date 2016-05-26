@@ -22,6 +22,7 @@
 			$scope.act_btn_crear 	= true;
 			$scope.act_btn_up 		= !$scope.act_btn_crear;
 	    	$scope.title_slide = 'Crear Rol';
+	    	$scope.disabled = false;
 			//asignar nombre al input
 	    	$scope.rol.nombre = '';
 	    	//agregamos y limpiamos los check
